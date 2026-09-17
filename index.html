@@ -3,81 +3,861 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blood Test & Laboratory (NABL ACCREDITED LAB) | Greater Kailash</title>
-<meta name="description" content="Diagnostic laboratory services in Greater Kailash-1, New Delhi. Blood tests, pathology and laboratory services.">
+
+<title>Blood Test & Laboratory | NABL ACCREDITED LAB</title>
+<meta name="description" content="Blood Test & Laboratory - Blood tests, health packages and home sample collection. Call or WhatsApp for booking.">
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#18324b;background:#f6fbfd}
-header{background:#087f8c;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:5}
-.logo{font-size:22px;font-weight:800}.btn{background:#fff;color:#087f8c;padding:11px 17px;border-radius:25px;text-decoration:none;font-weight:700}
-.hero{padding:70px 6%;background:linear-gradient(135deg,#e5fbfa,#fff);text-align:center}
-.hero h1{font-size:42px;margin:10px 0;color:#075c68}.hero p{font-size:18px;max-width:700px;margin:15px auto 28px;line-height:1.6}
-.actions a{display:inline-block;margin:6px;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:700}.primary{background:#087f8c;color:white}.secondary{border:1px solid #087f8c;color:#087f8c}
-section{padding:55px 6%;max-width:1150px;margin:auto}h2{text-align:center;color:#075c68;font-size:30px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:28px}.card{background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px #073b4c12}.card h3{margin-top:0}.icon{font-size:30px}
-.about{background:white;max-width:none}.about-inner{max-width:1150px;margin:auto}
-.contact{background:#075c68;color:white;max-width:none}.contact-inner{max-width:1150px;margin:auto}.contact h2{color:white}
-footer{text-align:center;padding:22px;background:#043e48;color:#d8f6f7}
-small{opacity:.85}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f5f8fc;
+  color:#172033;
+  line-height:1.6;
+}
+
+header{
+  background:linear-gradient(135deg,#061b35,#0b4f8a);
+  color:white;
+  padding:18px 6%;
+  position:sticky;
+  top:0;
+  z-index:999;
+  box-shadow:0 4px 18px rgba(0,0,0,.18);
+}
+
+.nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:800;
+}
+
+.logo span{
+  display:block;
+  font-size:11px;
+  color:#b9e8ff;
+  letter-spacing:1px;
+  margin-top:2px;
+}
+
+.nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.hero{
+  background:
+  linear-gradient(rgba(3,24,48,.88),rgba(7,67,117,.88)),
+  radial-gradient(circle at top right,#1c9be0,transparent 40%);
+  color:white;
+  padding:75px 6% 65px;
+}
+
+.hero-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.4fr .8fr;
+  gap:35px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.25);
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:48px;
+  line-height:1.12;
+  margin-bottom:18px;
+}
+
+.hero h1 span{
+  color:#55d6ff;
+}
+
+.hero p{
+  font-size:17px;
+  color:#e5f5ff;
+  max-width:650px;
+  margin-bottom:28px;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  padding:13px 20px;
+  border-radius:12px;
+  font-weight:bold;
+  font-size:14px;
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  background:#19c37d;
+  color:white;
+}
+
+.btn-light{
+  background:white;
+  color:#083b68;
+}
+
+.btn-outline{
+  border:1px solid rgba(255,255,255,.5);
+  color:white;
+}
+
+.hero-card{
+  background:white;
+  color:#172033;
+  border-radius:24px;
+  padding:28px;
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.hero-card h3{
+  margin-bottom:15px;
+  color:#073d70;
+}
+
+.info{
+  display:flex;
+  gap:12px;
+  padding:12px 0;
+  border-bottom:1px solid #e7edf4;
+  font-size:14px;
+}
+
+.info:last-child{
+  border-bottom:0;
+}
+
+section{
+  padding:65px 6%;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.section-title h2{
+  font-size:32px;
+  color:#073d70;
+}
+
+.section-title p{
+  color:#68778b;
+  margin-top:6px;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.feature{
+  background:white;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 8px 25px rgba(21,55,90,.08);
+  border:1px solid #e7edf4;
+}
+
+.icon{
+  width:50px;
+  height:50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#e9f6ff;
+  border-radius:14px;
+  font-size:24px;
+  margin-bottom:15px;
+}
+
+.feature h3{
+  margin-bottom:8px;
+  color:#093f70;
+}
+
+.feature p{
+  color:#68778b;
+  font-size:14px;
+}
+
+.package-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+  max-width:850px;
+  margin:auto;
+}
+
+.package{
+  background:white;
+  border-radius:22px;
+  padding:30px;
+  border:1px solid #e2eaf2;
+  box-shadow:0 10px 30px rgba(20,55,90,.08);
+  position:relative;
+  overflow:hidden;
+}
+
+.package:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:5px;
+  background:#0a75bd;
+}
+
+.package.gold:before{
+  background:#d49b19;
+}
+
+.package h3{
+  color:#073d70;
+  font-size:22px;
+}
+
+.price{
+  font-size:34px;
+  font-weight:800;
+  margin:12px 0 18px;
+  color:#0a75bd;
+}
+
+.gold .price{
+  color:#b17b00;
+}
+
+.package ul{
+  list-style:none;
+  margin-bottom:20px;
+}
+
+.package li{
+  padding:7px 0;
+  color:#526276;
+  font-size:14px;
+}
+
+.package li:before{
+  content:"✓";
+  color:#0aa66b;
+  font-weight:bold;
+  margin-right:8px;
+}
+
+.search-box{
+  max-width:650px;
+  margin:0 auto 25px;
+}
+
+.search-box input{
+  width:100%;
+  padding:16px 20px;
+  border:1px solid #d6e1ec;
+  border-radius:14px;
+  outline:none;
+  font-size:15px;
+  box-shadow:0 5px 18px rgba(0,0,0,.05);
+}
+
+.tests{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.test{
+  background:white;
+  border:1px solid #e3eaf1;
+  padding:17px;
+  border-radius:14px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:center;
+}
+
+.test strong{
+  color:#1d3045;
+  font-size:14px;
+}
+
+.test span{
+  color:#0878c5;
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+.contact{
+  background:linear-gradient(135deg,#06213d,#0a659c);
+  color:white;
+}
+
+.contact .section-title h2{
+  color:white;
+}
+
+.contact .section-title p{
+  color:#d7efff;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-card{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:20px;
+  padding:28px;
+}
+
+.contact-card h3{
+  margin-bottom:15px;
+}
+
+.contact-line{
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.13);
+}
+
+.contact-line:last-child{
+  border:0;
+}
+
+footer{
+  background:#041323;
+  color:#9eb1c5;
+  text-align:center;
+  padding:25px 6%;
+  font-size:13px;
+}
+
+footer strong{
+  color:white;
+}
+
+.bottom-bar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:white;
+  padding:9px;
+  display:none;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:7px;
+  z-index:1000;
+  box-shadow:0 -4px 18px rgba(0,0,0,.15);
+}
+
+.bottom-bar a{
+  text-align:center;
+  padding:11px 5px;
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.call{
+  background:#0b75bd;
+}
+
+.whatsapp{
+  background:#16b86d;
+}
+
+.book{
+  background:#f19a19;
+}
+
+@media(max-width:850px){
+
+  .nav a{
+    display:none;
+  }
+
+  .hero{
+    padding:55px 5%;
+  }
+
+  .hero-inner{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:37px;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .package-grid{
+    grid-template-columns:1fr;
+  }
+
+  .tests{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .bottom-bar{
+    display:grid;
+  }
+
+  footer{
+    padding-bottom:85px;
+  }
+}
+
+@media(max-width:500px){
+
+  section{
+    padding:50px 5%;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .tests{
+    grid-template-columns:1fr;
+  }
+
+  .section-title h2{
+    font-size:27px;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="logo">Blood Test & Laboratory (NABL ACCREDITED LAB)</div>
-<a class="btn" href="tel:+919818962098">Call Now</a>
+  <div class="nav">
+    <div class="logo">
+      Blood Test & Laboratory
+      <span>NABL ACCREDITED LAB</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#tests">Tests</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<div class="hero">
-<h1>Accurate Diagnostics. Trusted Care.</h1>
-<p>Professional diagnostic and laboratory services in Greater Kailash-1, New Delhi, with a focus on reliable testing and patient convenience.</p>
-<div class="actions">
-<a class="primary" href="https://wa.me/919818962098">WhatsApp</a>
-<a class="secondary" target="_blank" href="https://www.google.com/maps/place/Blood+test+%26+Laboratory+(NABL+ACCREDITED+LAB),+E+343%2FC,+Greater+Kailash-1,+Block+S,+Greater+Kailash+I,+Greater+Kailash,+New+Delhi,+Delhi+110048">Get Directions</a>
-</div>
-</div>
 
-<section>
-<h2>Our Services</h2>
-<div class="cards">
-<div class="card"><div class="icon">🩸</div><h3>Blood Tests</h3><p>Routine and specialized blood investigations.</p></div>
-<div class="card"><div class="icon">🔬</div><h3>Pathology</h3><p>Laboratory investigations with professional sample handling.</p></div>
-<div class="card"><div class="icon">🧪</div><h3>Biochemistry</h3><p>Biochemistry investigations for routine health assessment.</p></div>
-<div class="card"><div class="icon">🧫</div><h3>Urine & Stool</h3><p>Routine urine and stool laboratory analysis.</p></div>
-</div>
+<section class="hero" id="home">
+  <div class="hero-inner">
+
+    <div>
+      <div class="badge">🧪 PROFESSIONAL DIAGNOSTIC SERVICES</div>
+
+      <h1>
+        Accurate Testing.<br>
+        <span>Better Health.</span>
+      </h1>
+
+      <p>
+        Blood Test & Laboratory provides reliable diagnostic testing,
+        health packages and convenient home sample collection.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary"
+           href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20a%20blood%20test."
+           target="_blank">
+          💬 WhatsApp Booking
+        </a>
+
+        <a class="btn btn-light"
+           href="tel:+919818962098">
+          📞 Call Now
+        </a>
+
+        <a class="btn btn-outline"
+           href="https://maps.app.goo.gl/goz6WmqaSdZ8zSHPA?g_st=awb"
+           target="_blank">
+          📍 Get Directions
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>Quick Information</h3>
+
+      <div class="info">
+        <span>🕗</span>
+        <div>
+          <strong>Lab Timing</strong><br>
+          8:00 AM – 7:30 PM
+        </div>
+      </div>
+
+      <div class="info">
+        <span>🏠</span>
+        <div>
+          <strong>Home Collection</strong><br>
+          Available
+        </div>
+      </div>
+
+      <div class="info">
+        <span>📱</span>
+        <div>
+          <strong>WhatsApp / Call</strong><br>
+          +91 98189 62098
+        </div>
+      </div>
+
+      <div class="info">
+        <span>🧪</span>
+        <div>
+          <strong>Diagnostic Tests</strong><br>
+          Blood & Routine Tests
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<div class="about">
-<section class="about-inner">
-<h2>About Our Centre</h2>
-<p style="text-align:center;max-width:800px;margin:auto;line-height:1.8">
-Blood Test & Laboratory (NABL ACCREDITED LAB) provides convenient diagnostic laboratory services for patients in and around Greater Kailash-1. Contact us to confirm available tests, sample requirements, timings and report collection options.
-</p>
+
+<section id="services">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Convenient diagnostic services for your everyday healthcare needs.</p>
+    </div>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="icon">🩸</div>
+        <h3>Blood Testing</h3>
+        <p>
+          CBC, LFT, Lipid Profile, HbA1c, Iron Profile,
+          Vitamin tests and more.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🏠</div>
+        <h3>Home Sample Collection</h3>
+        <p>
+          Get your sample collected conveniently from
+          your home. Contact us for booking.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">⚡</div>
+        <h3>Easy Booking</h3>
+        <p>
+          Call or WhatsApp us to enquire about tests,
+          prices and sample collection.
+        </p>
+      </div>
+
+    </div>
+  </div>
 </section>
+
+
+<section id="packages">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Health Packages</h2>
+      <p>Choose a package according to your healthcare needs.</p>
+    </div>
+
+    <div class="package-grid">
+
+      <div class="package">
+        <h3>Silver Health Package</h3>
+
+        <div class="price">₹1,500</div>
+
+        <ul>
+          <li>Routine health screening</li>
+          <li>Essential diagnostic tests</li>
+          <li>Convenient sample collection</li>
+          <li>Contact laboratory for details</li>
+        </ul>
+
+        <a class="btn btn-primary"
+           href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20details%20about%20the%20Silver%20Health%20Package."
+           target="_blank">
+          Ask on WhatsApp
+        </a>
+      </div>
+
+
+      <div class="package gold">
+        <h3>Gold / Jubilee Health Package</h3>
+
+        <div class="price">₹2,500</div>
+
+        <ul>
+          <li>Comprehensive health screening</li>
+          <li>Multiple diagnostic tests</li>
+          <li>Convenient sample collection</li>
+          <li>Contact laboratory for details</li>
+        </ul>
+
+        <a class="btn btn-primary"
+           href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20details%20about%20the%20Gold%20Health%20Package."
+           target="_blank">
+          Ask on WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="tests">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Test & Price List</h2>
+      <p>Search the test you need.</p>
+    </div>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="search"
+        placeholder="🔎 Search test e.g. CBC, Vitamin D, HbA1c..."
+        onkeyup="searchTests()">
+    </div>
+
+    <div class="tests" id="testList">
+
+      <div class="test"><strong>CBC</strong><span>₹300</span></div>
+      <div class="test"><strong>LFT</strong><span>₹600</span></div>
+      <div class="test"><strong>Lipid Profile</strong><span>₹600</span></div>
+      <div class="test"><strong>BSF</strong><span>₹100</span></div>
+      <div class="test"><strong>HbA1c</strong><span>₹400</span></div>
+      <div class="test"><strong>Urine RM</strong><span>₹100</span></div>
+      <div class="test"><strong>Vitamin D</strong><span>₹1500</span></div>
+      <div class="test"><strong>Vitamin B12</strong><span>₹1000</span></div>
+      <div class="test"><strong>Iron Profile</strong><span>₹500</span></div>
+      <div class="test"><strong>Beta HCG</strong><span>₹600</span></div>
+      <div class="test"><strong>Iron</strong><span>₹400</span></div>
+      <div class="test"><strong>LH</strong><span>₹500</span></div>
+      <div class="test"><strong>FSH</strong><span>₹500</span></div>
+      <div class="test"><strong>Phosphorus</strong><span>₹300</span></div>
+      <div class="test"><strong>Magnesium</strong><span>₹1000</span></div>
+      <div class="test"><strong>Hb</strong><span>₹100</span></div>
+      <div class="test"><strong>Blood Group</strong><span>₹100</span></div>
+      <div class="test"><strong>Prolactin</strong><span>₹500</span></div>
+      <div class="test"><strong>PR / INR</strong><span>₹400</span></div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Book Your Test</h2>
+      <p>Call or WhatsApp us for test booking and home sample collection.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <h3>📞 Contact Us</h3>
+
+        <div class="contact-line">
+          <strong>Phone / WhatsApp</strong><br>
+          +91 98189 62098
+        </div>
+
+        <div class="contact-line">
+          <strong>Lab Timing</strong><br>
+          8:00 AM – 7:30 PM
+        </div>
+
+        <div class="contact-line">
+          <strong>Home Sample Collection</strong><br>
+          Available
+        </div>
+
+        <br>
+
+        <div class="buttons">
+
+          <a class="btn btn-primary"
+             href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20a%20test."
+             target="_blank">
+            💬 WhatsApp
+          </a>
+
+          <a class="btn btn-light"
+             href="tel:+919818962098">
+            📞 Call
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <h3>📍 Find Us</h3>
+
+        <p>
+          Click below to open the location in Google Maps
+          and get directions to the laboratory.
+        </p>
+
+        <br>
+
+        <a class="btn btn-light"
+           href="https://maps.app.goo.gl/goz6WmqaSdZ8zSHPA?g_st=awb"
+           target="_blank">
+          📍 Open Google Maps
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  <strong>Blood Test & Laboratory</strong><br>
+  NABL ACCREDITED LAB<br><br>
+  © 2026 Blood Test & Laboratory. All Rights Reserved.
+</footer>
+
+
+<div class="bottom-bar">
+
+  <a class="call" href="tel:+919818962098">
+    📞 Call
+  </a>
+
+  <a class="whatsapp"
+     href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20a%20test."
+     target="_blank">
+    💬 WhatsApp
+  </a>
+
+  <a class="book"
+     href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20home%20sample%20collection."
+     target="_blank">
+    🏠 Home Collection
+  </a>
+
 </div>
 
-<section>
-<h2>Why Choose Us</h2>
-<div class="cards">
-<div class="card"><h3>Patient Convenience</h3><p>Easy location and direct communication through phone and WhatsApp.</p></div>
-<div class="card"><h3>Professional Testing</h3><p>Organized laboratory workflow and careful sample handling.</p></div>
-<div class="card"><h3>Easy Directions</h3><p>Find the centre quickly using Google Maps.</p></div>
-</div>
-</section>
 
-<div class="contact">
-<section class="contact-inner">
-<h2>Contact Us</h2>
-<p style="text-align:center;font-size:18px;line-height:1.8">
-<strong>Address:</strong> E-343/C, Greater Kailash-1, Block S, Greater Kailash I, New Delhi, Delhi 110048<br>
-<strong>Phone:</strong> +91 98189 62098
-</p>
-<div class="actions" style="text-align:center">
-<a class="btn" href="tel:+919818962098">Call</a>
-<a class="btn" href="https://wa.me/919818962098">WhatsApp</a>
-<a class="btn" target="_blank" href="https://www.google.com/maps/place/Blood+test+%26+Laboratory+(NABL+ACCREDITED+LAB),+E+343%2FC,+Greater+Kailash-1,+Block+S,+Greater+Kailash,+New+Delhi,+Delhi+110048">Google Maps</a>
-</div>
-</section>
-</div>
+<script>
 
-<footer>© 2026 Blood Test & Laboratory (NABL ACCREDITED LAB) · Greater Kailash-1, New Delhi<br><small>Please confirm test availability and timings before visiting.</small></footer>
+function searchTests(){
+
+  let input =
+    document.getElementById("search").value.toLowerCase();
+
+  let tests =
+    document.querySelectorAll(".test");
+
+  tests.forEach(function(test){
+
+    let name =
+      test.innerText.toLowerCase();
+
+    if(name.includes(input)){
+      test.style.display="flex";
+    }else{
+      test.style.display="none";
+    }
+
+  });
+
+}
+
+</script>
+
 </body>
 </html>
