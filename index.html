@@ -492,6 +492,391 @@ footer strong{
   }
 }
 </style>
+<!-- ================= PREMIUM COLORFUL LAB THEME ================= -->
+<style>
+
+/* ===== GLOBAL ===== */
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f9ff;
+  color:#183b56;
+}
+
+/* ===== MAIN HEADINGS ===== */
+h1,h2,h3,h4{
+  font-weight:800;
+}
+
+section{
+  position:relative;
+}
+
+/* ===== PREMIUM SECTIONS ===== */
+section:not(#packages){
+  transition:.3s ease;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+header,
+nav{
+  background:linear-gradient(135deg,#ffffff,#f0f9ff) !important;
+  box-shadow:0 5px 25px rgba(0,82,150,.10) !important;
+  border-bottom:1px solid #dceeff;
+}
+
+/* ===== LOGO / BRAND ===== */
+.logo,
+.logo h1,
+.logo h2,
+.brand,
+.brand h1{
+  color:#075da8 !important;
+  font-weight:900 !important;
+}
+
+/* ===== LINKS ===== */
+a{
+  transition:.25s ease;
+}
+
+nav a,
+header a{
+  color:#164b73 !important;
+  font-weight:700;
+}
+
+nav a:hover,
+header a:hover{
+  color:#0878d1 !important;
+}
+
+/* ===== HERO ===== */
+.hero,
+#home{
+  background:
+    radial-gradient(circle at 10% 20%,rgba(0,180,255,.18),transparent 30%),
+    radial-gradient(circle at 90% 10%,rgba(0,220,170,.16),transparent 28%),
+    linear-gradient(135deg,#f8fdff 0%,#eaf7ff 50%,#f7ffff 100%) !important;
+}
+
+/* Hero headings */
+.hero h1,
+#home h1{
+  color:#073b68 !important;
+  font-weight:900 !important;
+}
+
+.hero h1 span,
+#home h1 span{
+  color:#0878d1 !important;
+}
+
+/* ===== PREMIUM BUTTONS ===== */
+button,
+.btn,
+.button{
+  border:none;
+  border-radius:12px !important;
+  font-weight:800 !important;
+  cursor:pointer;
+  transition:.25s ease !important;
+}
+
+button:hover,
+.btn:hover,
+.button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(0,110,190,.20);
+}
+
+/* WhatsApp buttons */
+a[href*="wa.me"],
+a[href*="whatsapp"]{
+  background:linear-gradient(135deg,#18c96b,#08a957) !important;
+  color:#fff !important;
+  box-shadow:0 7px 20px rgba(18,190,92,.20);
+  border-radius:11px !important;
+  font-weight:800 !important;
+}
+
+a[href*="wa.me"]:hover,
+a[href*="whatsapp"]:hover{
+  background:linear-gradient(135deg,#08b85d,#07974d) !important;
+  transform:translateY(-3px);
+}
+
+/* ===== GENERAL CARDS ===== */
+.card,
+.service-card,
+.test-card,
+.feature-card,
+.box{
+  background:rgba(255,255,255,.96) !important;
+  border:1px solid #e0eef8 !important;
+  border-radius:20px !important;
+  box-shadow:0 8px 30px rgba(20,85,130,.09) !important;
+  transition:.3s ease !important;
+}
+
+.card:hover,
+.service-card:hover,
+.test-card:hover,
+.feature-card:hover,
+.box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(10,90,150,.15) !important;
+}
+
+/* ===== SECTION TITLES ===== */
+section h2{
+  color:#073b68 !important;
+  font-weight:900 !important;
+}
+
+section h2::after{
+  content:"";
+  display:block;
+  width:55px;
+  height:4px;
+  margin:12px auto 0;
+  border-radius:10px;
+  background:linear-gradient(90deg,#0878d1,#19c889);
+}
+
+/* ===== SERVICES ===== */
+.service-card:nth-child(1){
+  border-top:4px solid #0878d1 !important;
+}
+
+.service-card:nth-child(2){
+  border-top:4px solid #19c889 !important;
+}
+
+.service-card:nth-child(3){
+  border-top:4px solid #8057d8 !important;
+}
+
+.service-card:nth-child(4){
+  border-top:4px solid #f3ae22 !important;
+}
+
+/* ===== TESTS AREA ===== */
+#tests{
+  background:linear-gradient(180deg,#f7fcff,#eef8ff) !important;
+}
+
+#tests .card,
+#tests .test-card{
+  background:#fff !important;
+  border-radius:16px !important;
+}
+
+/* ===== PACKAGES ===== */
+#packages{
+  padding:80px 5% !important;
+  background:
+    radial-gradient(circle at 0% 0%,rgba(0,150,255,.12),transparent 25%),
+    radial-gradient(circle at 100% 100%,rgba(0,200,150,.10),transparent 25%),
+    linear-gradient(180deg,#f5fbff,#edf8ff) !important;
+}
+
+/* Package cards */
+.premium-package-card{
+  background:rgba(255,255,255,.98) !important;
+  border:1px solid #dcebf6 !important;
+  border-radius:22px !important;
+  box-shadow:0 10px 35px rgba(7,71,112,.10) !important;
+  transition:all .3s ease !important;
+}
+
+.premium-package-card:hover{
+  transform:translateY(-8px) scale(1.01);
+  box-shadow:0 22px 45px rgba(5,90,150,.17) !important;
+}
+
+/* Package price */
+.package-price{
+  color:#0878d1 !important;
+  font-weight:900 !important;
+}
+
+/* Gold package */
+.gold-card{
+  border:2px solid #f2c14e !important;
+  background:
+    linear-gradient(180deg,#fffdf6,#ffffff) !important;
+  box-shadow:0 12px 38px rgba(212,160,20,.15) !important;
+}
+
+.gold-card .package-price{
+  color:#c28a00 !important;
+}
+
+.popular-ribbon{
+  background:linear-gradient(135deg,#f7c331,#e7a600) !important;
+}
+
+/* Package labels */
+.silver-label{
+  background:#eef2f6 !important;
+  color:#53687a !important;
+}
+
+.gold-label{
+  background:#fff4ce !important;
+  color:#a87500 !important;
+}
+
+.fever-label{
+  background:#e6f6ff !important;
+  color:#0878d1 !important;
+}
+
+.vitamin-label{
+  background:#fff0d5 !important;
+  color:#b86c00 !important;
+}
+
+.special-label{
+  background:#eee7ff !important;
+  color:#6743ad !important;
+}
+
+/* ===== BOOK BUTTON ===== */
+.premium-book-btn{
+  background:linear-gradient(135deg,#0878d1,#045da8) !important;
+  border-radius:12px !important;
+  box-shadow:0 6px 15px rgba(0,108,190,.18);
+}
+
+.premium-book-btn:hover{
+  background:linear-gradient(135deg,#075fa8,#034b89) !important;
+}
+
+.gold-btn{
+  background:linear-gradient(135deg,#123e61,#082d49) !important;
+}
+
+/* ===== HOME SAMPLE COLLECTION ===== */
+#home-sample,
+.home-sample,
+.sample-collection{
+  background:
+    radial-gradient(circle at 90% 20%,rgba(0,210,150,.15),transparent 25%),
+    linear-gradient(135deg,#eafaff,#f5fffb) !important;
+}
+
+/* ===== CONTACT ===== */
+#contact{
+  background:linear-gradient(135deg,#073b68,#0878c9) !important;
+  color:#fff !important;
+}
+
+#contact h2,
+#contact h3,
+#contact p{
+  color:#fff !important;
+}
+
+#contact a{
+  border-radius:12px !important;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:linear-gradient(135deg,#062d4d,#075b91) !important;
+  color:#fff !important;
+}
+
+footer a{
+  color:#d9f2ff !important;
+}
+
+/* ===== INPUTS ===== */
+input,
+textarea,
+select{
+  width:100%;
+  border:1px solid #d7e8f4 !important;
+  border-radius:11px !important;
+  padding:13px 15px !important;
+  background:#fff !important;
+  outline:none;
+  transition:.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-color:#0878d1 !important;
+  box-shadow:0 0 0 4px rgba(8,120,209,.10);
+}
+
+/* ===== FLOATING WHATSAPP ===== */
+.whatsapp-float,
+.whatsapp-button,
+.whatsapp-floating{
+  background:linear-gradient(135deg,#20d96f,#0baa52) !important;
+  box-shadow:0 8px 25px rgba(0,180,90,.30) !important;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:700px){
+
+  section{
+    overflow:hidden;
+  }
+
+  .hero,
+  #home{
+    padding:50px 20px !important;
+  }
+
+  .hero h1,
+  #home h1{
+    font-size:32px !important;
+    line-height:1.15 !important;
+  }
+
+  section h2{
+    font-size:28px !important;
+  }
+
+  .premium-packages{
+    padding:55px 4% !important;
+  }
+
+  .premium-package-card{
+    border-radius:18px !important;
+  }
+
+}
+
+/* ===== SMALL PREMIUM ANIMATION ===== */
+@keyframes premiumFloat{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-4px);
+  }
+}
+
+.package-icon{
+  animation:premiumFloat 3s ease-in-out infinite;
+}
+
+</style>
+<!-- ================= END PREMIUM COLORFUL LAB THEME ================= -->
 </head>
 
 <body>
