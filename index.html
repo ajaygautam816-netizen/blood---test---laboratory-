@@ -5,9 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Blood Test & Laboratory | NABL ACCREDITED LAB</title>
-<meta name="description" content="Blood Test & Laboratory - Diagnostic tests, health packages and home sample collection.">
+
+<meta name="description" content="Blood Test & Laboratory - Blood tests, health packages and home sample collection.">
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
 *{
@@ -23,7 +25,7 @@ html{
 body{
     font-family:'DM Sans',Arial,sans-serif;
     color:#183344;
-    background:#f4fbfc;
+    background:#f5fbfc;
     overflow-x:hidden;
 }
 
@@ -35,16 +37,13 @@ a{
     --blue:#087ea4;
     --deep:#07516c;
     --cyan:#25bfd0;
-    --aqua:#dff9f8;
-    --mint:#e9fbf6;
     --white:#ffffff;
-    --text:#183344;
     --muted:#718692;
-    --line:rgba(14,111,137,.12);
-    --shadow:0 20px 60px rgba(32,117,137,.10);
 }
 
-/* WATER BACKGROUND */
+/* =========================
+   WATER BACKGROUND
+========================= */
 
 .water{
     position:fixed;
@@ -93,18 +92,25 @@ a{
 }
 
 @keyframes float{
-    0%,100%{transform:translate(0,0) scale(1);}
-    50%{transform:translate(30px,-25px) scale(1.08);}
+    0%,100%{
+        transform:translate(0,0) scale(1);
+    }
+
+    50%{
+        transform:translate(30px,-25px) scale(1.08);
+    }
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 header{
     position:sticky;
     top:0;
     z-index:1000;
     padding:13px 5%;
-    background:rgba(255,255,255,.72);
+    background:rgba(255,255,255,.76);
     backdrop-filter:blur(22px);
     -webkit-backdrop-filter:blur(22px);
     border-bottom:1px solid rgba(255,255,255,.7);
@@ -152,12 +158,13 @@ nav a:hover{
     color:var(--blue);
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
     min-height:720px;
     padding:90px 5% 70px;
-    position:relative;
     display:flex;
     align-items:center;
 }
@@ -250,7 +257,9 @@ nav a:hover{
     border:1px solid rgba(13,123,147,.12);
 }
 
-/* LIQUID CARD */
+/* =========================
+   HERO LIQUID CARD
+========================= */
 
 .liquid-card{
     min-height:480px;
@@ -258,9 +267,13 @@ nav a:hover{
     overflow:hidden;
     padding:30px;
     border-radius:42px;
-    background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(222,249,249,.52));
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.78),
+        rgba(222,249,249,.52)
+    );
     border:1px solid rgba(255,255,255,.95);
-    box-shadow:var(--shadow);
+    box-shadow:0 20px 60px rgba(32,117,137,.10);
     backdrop-filter:blur(20px);
 }
 
@@ -330,7 +343,9 @@ nav a:hover{
     font-size:12px;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
     padding:90px 5%;
@@ -368,7 +383,9 @@ section{
     font-size:14px;
 }
 
-/* GLASS SERVICE CARDS */
+/* =========================
+   SERVICES
+========================= */
 
 .services{
     display:grid;
@@ -415,7 +432,9 @@ section{
     line-height:1.7;
 }
 
-/* PACKAGES */
+/* =========================
+   HEALTH PACKAGES
+========================= */
 
 .package-wrap{
     display:grid;
@@ -432,11 +451,15 @@ section{
     border-radius:30px;
     background:rgba(255,255,255,.76);
     border:1px solid rgba(255,255,255,.95);
-    box-shadow:var(--shadow);
+    box-shadow:0 20px 60px rgba(32,117,137,.10);
 }
 
 .package.gold{
-    background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(255,248,222,.72));
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.85),
+        rgba(255,248,222,.72)
+    );
 }
 
 .package-tag{
@@ -489,7 +512,9 @@ section{
     margin-right:9px;
 }
 
-/* TESTS */
+/* =========================
+   TEST SEARCH
+========================= */
 
 .test-search{
     max-width:650px;
@@ -542,7 +567,9 @@ section{
     font-weight:800;
 }
 
-/* EXTRA PACKAGES */
+/* =========================
+   SPECIAL PACKAGES
+========================= */
 
 .extra-grid{
     display:grid;
@@ -576,7 +603,9 @@ section{
     line-height:1.7;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-section{
     padding-bottom:120px;
@@ -588,7 +617,11 @@ section{
     padding:45px;
     border-radius:35px;
     background:
-        linear-gradient(135deg,rgba(7,126,159,.94),rgba(30,188,193,.90));
+        linear-gradient(
+            135deg,
+            rgba(7,126,159,.94),
+            rgba(30,188,193,.90)
+        );
     color:white;
     box-shadow:0 25px 70px rgba(11,133,157,.22);
 }
@@ -623,6 +656,7 @@ section{
     color:#dcffff;
     font-size:14px;
     line-height:1.8;
+    margin-bottom:22px;
 }
 
 .contact-info{
@@ -630,17 +664,29 @@ section{
     gap:12px;
 }
 
+/* CLICKABLE CONTACT ROWS */
+
 .contact-row{
-    padding:16px;
+    display:block;
+    width:100%;
+    padding:17px;
     border-radius:17px;
     background:rgba(255,255,255,.12);
     border:1px solid rgba(255,255,255,.16);
+    color:white;
+    transition:.25s;
+    cursor:pointer;
+}
+
+.contact-row:hover{
+    background:rgba(255,255,255,.22);
+    transform:translateY(-3px);
 }
 
 .contact-row b{
     display:block;
     font-size:12px;
-    margin-bottom:3px;
+    margin-bottom:4px;
 }
 
 .contact-row span{
@@ -649,12 +695,13 @@ section{
 }
 
 .map-btn{
-    margin-top:18px;
     background:white;
     color:#087a95;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     padding:35px 5%;
@@ -669,7 +716,9 @@ footer strong{
     font-size:15px;
 }
 
-/* MOBILE BAR */
+/* =========================
+   MOBILE BOTTOM BAR
+========================= */
 
 .mobile-bar{
     display:none;
@@ -680,7 +729,7 @@ footer strong{
     z-index:2000;
     padding:8px;
     gap:7px;
-    background:rgba(255,255,255,.88);
+    background:rgba(255,255,255,.90);
     backdrop-filter:blur(18px);
     box-shadow:0 -8px 30px rgba(0,0,0,.10);
 }
@@ -709,7 +758,9 @@ footer strong{
     color:#087f91;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:900px){
 
@@ -724,10 +775,6 @@ footer strong{
     .hero-inner{
         grid-template-columns:1fr;
         gap:40px;
-    }
-
-    .hero h1{
-        letter-spacing:-2px;
     }
 
     .services{
@@ -808,10 +855,14 @@ footer strong{
         font-size:30px;
     }
 }
+
 </style>
 </head>
 
+
 <body>
+
+<!-- WATER BACKGROUND -->
 
 <div class="water">
     <div class="blob one"></div>
@@ -820,9 +871,12 @@ footer strong{
 </div>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <header>
+
     <div class="nav">
 
         <div class="logo">
@@ -839,10 +893,13 @@ footer strong{
         </nav>
 
     </div>
+
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
@@ -868,8 +925,9 @@ footer strong{
             <div class="actions">
 
                 <a class="btn primary"
-                   href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20a%20test."
-                   target="_blank">
+                   href="https://wa.me/919818962098?text=Hello%20Blood%20Test%20%26%20Laboratory%2C%20I%20want%20to%20book%20a%20test."
+                   target="_blank"
+                   rel="noopener">
                     💬 Book on WhatsApp
                 </a>
 
@@ -885,7 +943,9 @@ footer strong{
 
         <div class="liquid-card">
 
-            <div class="lab-orb">🧪</div>
+            <div class="lab-orb">
+                🧪
+            </div>
 
             <div class="quick">
 
@@ -904,10 +964,13 @@ footer strong{
                     <span>+91 98189 62098</span>
                 </div>
 
-                <div class="quick-box">
+                <a class="quick-box"
+                   href="https://maps.app.goo.gl/goz6WmqaSdZ8zSHPA?g_st=awb"
+                   target="_blank"
+                   rel="noopener">
                     <b>📍 Location</b>
-                    <span>Open Google Maps</span>
-                </div>
+                    <span>Open Google Maps →</span>
+                </a>
 
             </div>
 
@@ -918,49 +981,85 @@ footer strong{
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section id="services">
 
     <div class="container">
 
         <div class="heading">
-            <div class="eyebrow">Simple • Comfortable • Reliable</div>
-            <h2>Everything You Need</h2>
+
+            <div class="eyebrow">
+                SIMPLE • COMFORTABLE • RELIABLE
+            </div>
+
+            <h2>
+                Everything You Need
+            </h2>
+
             <p>
                 Diagnostic services presented simply, so you can find
                 what you need without unnecessary complexity.
             </p>
+
         </div>
 
 
         <div class="services">
 
             <div class="glass">
-                <div class="icon">🩸</div>
-                <h3>Blood Testing</h3>
+
+                <div class="icon">
+                    🩸
+                </div>
+
+                <h3>
+                    Blood Testing
+                </h3>
+
                 <p>
                     CBC, LFT, Lipid Profile, HbA1c, Vitamin tests,
                     Hormone tests and more.
                 </p>
+
             </div>
 
+
             <div class="glass">
-                <div class="icon">🏠</div>
-                <h3>Home Sample Collection</h3>
+
+                <div class="icon">
+                    🏠
+                </div>
+
+                <h3>
+                    Home Sample Collection
+                </h3>
+
                 <p>
                     Prefer testing from home? Contact us to arrange
                     convenient sample collection.
                 </p>
+
             </div>
 
+
             <div class="glass">
-                <div class="icon">💙</div>
-                <h3>Easy Booking</h3>
+
+                <div class="icon">
+                    💙
+                </div>
+
+                <h3>
+                    Easy Booking
+                </h3>
+
                 <p>
                     Quickly enquire about tests, prices and packages
                     through WhatsApp or phone.
                 </p>
+
             </div>
 
         </div>
@@ -970,30 +1069,49 @@ footer strong{
 </section>
 
 
-<!-- HEALTH PACKAGES -->
+<!-- =========================
+     HEALTH PACKAGES
+========================= -->
 
 <section id="packages">
 
     <div class="container">
 
         <div class="heading">
-            <div class="eyebrow">Health Screening</div>
-            <h2>Health Packages</h2>
+
+            <div class="eyebrow">
+                HEALTH SCREENING
+            </div>
+
+            <h2>
+                Health Packages
+            </h2>
+
             <p>
                 Select a package and contact us for complete test details.
             </p>
+
         </div>
 
 
         <div class="package-wrap">
 
+
+            <!-- SILVER -->
+
             <div class="package">
 
-                <span class="package-tag">POPULAR</span>
+                <span class="package-tag">
+                    POPULAR
+                </span>
 
-                <h3>Silver Health Package</h3>
+                <h3>
+                    Silver Health Package
+                </h3>
 
-                <div class="price">₹1,500</div>
+                <div class="price">
+                    ₹1,500
+                </div>
 
                 <ul>
                     <li>Routine health screening</li>
@@ -1003,75 +1121,13 @@ footer strong{
                 </ul>
 
                 <a class="btn primary"
-                   href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20details%20about%20the%20Silver%20Health%20Package."
-                   target="_blank">
+                   href="https://wa.me/919818962098?text=Hello%20Blood%20Test%20%26%20Laboratory%2C%20I%20want%20details%20about%20the%20Silver%20Health%20Package."
+                   target="_blank"
+                   rel="noopener">
                     💬 Get Details
                 </a>
 
             </div>
 
 
-            <div class="package gold">
-
-                <span class="package-tag">PREMIUM</span>
-
-                <h3>Gold / Jubilee Health Package</h3>
-
-                <div class="price">₹2,500</div>
-
-                <ul>
-                    <li>Comprehensive health screening</li>
-                    <li>Multiple diagnostic tests</li>
-                    <li>Convenient sample collection</li>
-                    <li>Contact laboratory for details</li>
-                </ul>
-
-                <a class="btn primary"
-                   href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20details%20about%20the%20Gold%20Health%20Package."
-                   target="_blank">
-                    💬 Get Details
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- TESTS -->
-
-<section id="tests">
-
-    <div class="container">
-
-        <div class="heading">
-            <div class="eyebrow">Transparent Pricing</div>
-            <h2>Tests & Prices</h2>
-            <p>
-                Search below to quickly find a test.
-            </p>
-        </div>
-
-
-        <div class="test-search">
-            <input
-                type="text"
-                id="search"
-                placeholder="🔎  Search CBC, Vitamin D, HbA1c..."
-                onkeyup="searchTests()">
-        </div>
-
-
-        <div class="tests" id="testList">
-
-            <div class="test"><strong>CBC</strong><span>₹300/-</span></div>
-            <div class="test"><strong>LFT</strong><span>₹600/-</span></div>
-            <div class="test"><strong>Lipid Profile</strong><span>₹600/-</span></div>
-            <div class="test"><strong>BSF</strong><span>₹100/-</span></div>
-            <div class="test"><strong>HbA1c</strong><span>₹400/-</span></div>
-            <div class="test"><strong>Urine RM</strong><span>₹100/-</span></div>
-            <div class="test"><strong>Vitamin D</strong><span>₹1500/-</span></div>
-            <div class="test"><strong>Vitamin B12</strong><span>₹1000/-</span></d
+            <!
