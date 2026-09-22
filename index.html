@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Blood Test & Laboratory | Premium Diagnostic Services</title>
-
-<meta name="description" content="Blood Test & Laboratory - Diagnostic testing, health packages and home sample collection.">
+<title>Blood Test & Laboratory | NABL ACCREDITED LAB</title>
+<meta name="description" content="Blood Test & Laboratory - Diagnostic tests, health packages and home sample collection.">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -20,185 +21,216 @@ html{
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f9ff;
-    color:#17233c;
+    font-family:'DM Sans',Arial,sans-serif;
+    color:#183344;
+    background:#f4fbfc;
     overflow-x:hidden;
 }
 
 a{
     text-decoration:none;
-    color:inherit;
 }
 
-.container{
-    width:92%;
-    max-width:1200px;
-    margin:auto;
+:root{
+    --blue:#087ea4;
+    --deep:#07516c;
+    --cyan:#25bfd0;
+    --aqua:#dff9f8;
+    --mint:#e9fbf6;
+    --white:#ffffff;
+    --text:#183344;
+    --muted:#718692;
+    --line:rgba(14,111,137,.12);
+    --shadow:0 20px 60px rgba(32,117,137,.10);
 }
 
-/* NAVBAR */
+/* WATER BACKGROUND */
 
-.navbar{
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:rgba(255,255,255,.94);
-    backdrop-filter:blur(15px);
-    box-shadow:0 4px 25px rgba(0,0,0,.08);
-}
-
-.nav-inner{
-    min-height:76px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:20px;
-    font-weight:800;
-}
-
-.logo-icon{
-    width:45px;
-    height:45px;
-    border-radius:14px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:linear-gradient(135deg,#0878d1,#00b8a9);
-    color:white;
-    font-size:22px;
-    box-shadow:0 8px 20px rgba(0,130,210,.25);
-}
-
-.logo span{
-    color:#0878d1;
-}
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:25px;
-}
-
-.nav-links a{
-    font-size:14px;
-    font-weight:700;
-    color:#34415c;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:#0878d1;
-}
-
-.nav-btn{
-    background:linear-gradient(135deg,#0878d1,#00a99d);
-    color:white!important;
-    padding:12px 18px;
-    border-radius:30px;
-    box-shadow:0 8px 20px rgba(0,130,210,.2);
-}
-
-/* HERO */
-
-.hero{
-    position:relative;
+.water{
+    position:fixed;
+    inset:0;
+    z-index:-5;
     overflow:hidden;
-    min-height:650px;
-    display:flex;
-    align-items:center;
     background:
-    radial-gradient(circle at 85% 20%,rgba(0,190,180,.18),transparent 30%),
-    radial-gradient(circle at 10% 80%,rgba(90,70,220,.14),transparent 30%),
-    linear-gradient(135deg,#eef8ff,#f9ffff);
+        radial-gradient(circle at 10% 10%,#dffafa 0,transparent 30%),
+        radial-gradient(circle at 90% 20%,#e4f5ff 0,transparent 28%),
+        radial-gradient(circle at 50% 90%,#e7fff8 0,transparent 35%),
+        #f8fcfd;
 }
 
 .blob{
     position:absolute;
     border-radius:50%;
-    filter:blur(5px);
-    opacity:.35;
-    pointer-events:none;
+    filter:blur(2px);
+    opacity:.55;
+    animation:float 12s ease-in-out infinite;
 }
 
 .blob.one{
-    width:280px;
-    height:280px;
-    background:#55cfff;
-    right:-100px;
-    top:70px;
+    width:380px;
+    height:380px;
+    background:#bceff0;
+    top:-140px;
+    left:-100px;
 }
 
 .blob.two{
-    width:220px;
-    height:220px;
-    background:#8c78ff;
-    left:-100px;
-    bottom:40px;
+    width:300px;
+    height:300px;
+    background:#cceaff;
+    right:-100px;
+    top:250px;
+    animation-delay:2s;
 }
 
-.hero-content{
-    position:relative;
-    z-index:2;
-    padding:80px 0;
-    max-width:700px;
+.blob.three{
+    width:340px;
+    height:340px;
+    background:#c9f7e9;
+    left:35%;
+    bottom:-180px;
+    animation-delay:4s;
 }
 
-.badge{
-    display:inline-block;
-    padding:9px 16px;
-    border-radius:30px;
-    background:white;
-    color:#0878d1;
-    font-size:13px;
+@keyframes float{
+    0%,100%{transform:translate(0,0) scale(1);}
+    50%{transform:translate(30px,-25px) scale(1.08);}
+}
+
+/* NAVBAR */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    padding:13px 5%;
+    background:rgba(255,255,255,.72);
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+    border-bottom:1px solid rgba(255,255,255,.7);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:var(--deep);
+    font-size:19px;
     font-weight:800;
-    box-shadow:0 8px 25px rgba(0,0,0,.07);
-    margin-bottom:22px;
+    line-height:1.1;
+}
+
+.logo small{
+    display:block;
+    color:#23a5b6;
+    font-size:9px;
+    letter-spacing:2px;
+    margin-top:5px;
+}
+
+nav{
+    display:flex;
+    gap:7px;
+}
+
+nav a{
+    color:#41616e;
+    padding:10px 13px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    transition:.25s;
+}
+
+nav a:hover{
+    background:#e5f8f8;
+    color:var(--blue);
+}
+
+/* HERO */
+
+.hero{
+    min-height:720px;
+    padding:90px 5% 70px;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.hero-inner{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:55px;
+    align-items:center;
+}
+
+.pill{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 15px;
+    border-radius:50px;
+    background:rgba(255,255,255,.72);
+    border:1px solid rgba(31,170,185,.16);
+    color:#087c94;
+    font-size:12px;
+    font-weight:700;
+    box-shadow:0 8px 30px rgba(34,132,145,.07);
+}
+
+.dot{
+    width:8px;
+    height:8px;
+    background:#28c89a;
+    border-radius:50%;
+    box-shadow:0 0 0 5px rgba(40,200,154,.12);
 }
 
 .hero h1{
-    font-size:clamp(42px,6vw,72px);
-    line-height:1.04;
-    margin-bottom:22px;
-    letter-spacing:-2px;
+    font-size:clamp(43px,6vw,76px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    margin:22px 0 20px;
+    color:#123c4d;
 }
 
 .hero h1 span{
-    background:linear-gradient(135deg,#0878d1,#00a99d,#7559d9);
+    background:linear-gradient(90deg,#0785a7,#25bdc7);
     -webkit-background-clip:text;
     color:transparent;
 }
 
 .hero p{
-    font-size:19px;
-    line-height:1.7;
-    color:#5b6780;
-    max-width:620px;
+    max-width:650px;
+    font-size:17px;
+    color:#6c818b;
+    line-height:1.8;
     margin-bottom:30px;
 }
 
-.hero-buttons{
+.actions{
     display:flex;
+    gap:12px;
     flex-wrap:wrap;
-    gap:14px;
 }
 
 .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    padding:15px 23px;
-    border-radius:14px;
-    font-weight:800;
-    border:none;
-    cursor:pointer;
+    gap:8px;
+    padding:14px 20px;
+    border-radius:15px;
+    font-size:14px;
+    font-weight:700;
     transition:.3s;
 }
 
@@ -206,495 +238,574 @@ a{
     transform:translateY(-3px);
 }
 
-.btn-primary{
-    background:linear-gradient(135deg,#0878d1,#00a99d);
+.primary{
     color:white;
-    box-shadow:0 12px 25px rgba(0,130,210,.23);
+    background:linear-gradient(135deg,#0784a5,#22bdc4);
+    box-shadow:0 12px 28px rgba(15,157,178,.25);
 }
 
-.btn-secondary{
-    background:white;
-    color:#0878d1;
-    border:1px solid #dbe7f5;
+.soft{
+    color:#087894;
+    background:rgba(255,255,255,.75);
+    border:1px solid rgba(13,123,147,.12);
 }
 
-/* SECTION */
+/* LIQUID CARD */
+
+.liquid-card{
+    min-height:480px;
+    position:relative;
+    overflow:hidden;
+    padding:30px;
+    border-radius:42px;
+    background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(222,249,249,.52));
+    border:1px solid rgba(255,255,255,.95);
+    box-shadow:var(--shadow);
+    backdrop-filter:blur(20px);
+}
+
+.liquid-card:before{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:rgba(61,207,213,.20);
+    top:-110px;
+    right:-70px;
+}
+
+.liquid-card:after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(95,185,255,.14);
+    bottom:-110px;
+    left:-70px;
+}
+
+.lab-orb{
+    position:relative;
+    z-index:2;
+    width:145px;
+    height:145px;
+    margin:5px auto 30px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:68px;
+    background:linear-gradient(145deg,#ffffff,#d9f7f7);
+    box-shadow:
+        inset 8px 8px 25px rgba(255,255,255,.9),
+        0 20px 50px rgba(31,149,169,.15);
+}
+
+.quick{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.quick-box{
+    padding:17px;
+    border-radius:20px;
+    background:rgba(255,255,255,.62);
+    border:1px solid rgba(255,255,255,.9);
+}
+
+.quick-box b{
+    display:block;
+    color:#14546a;
+    font-size:13px;
+    margin-bottom:5px;
+}
+
+.quick-box span{
+    color:#728690;
+    font-size:12px;
+}
+
+/* SECTIONS */
 
 section{
-    padding:85px 0;
-    position:relative;
+    padding:90px 5%;
 }
 
-.section-head{
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.heading{
     text-align:center;
-    max-width:720px;
-    margin:0 auto 45px;
+    margin-bottom:45px;
 }
 
-.section-head .small{
-    color:#0878d1;
-    font-size:13px;
-    font-weight:900;
-    text-transform:uppercase;
+.eyebrow{
+    color:#16a1ae;
+    font-size:11px;
+    font-weight:800;
     letter-spacing:2px;
-    margin-bottom:10px;
+    text-transform:uppercase;
 }
 
-.section-head h2{
-    font-size:40px;
-    margin-bottom:14px;
+.heading h2{
+    margin-top:9px;
+    font-size:38px;
+    letter-spacing:-1px;
+    color:#153e4d;
 }
 
-.section-head p{
-    color:#68758d;
-    line-height:1.7;
+.heading p{
+    margin:10px auto 0;
+    max-width:620px;
+    color:#788b94;
+    font-size:14px;
 }
 
-/* CARDS */
+/* GLASS SERVICE CARDS */
 
-.grid{
+.services{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
-.card{
-    background:white;
-    border-radius:22px;
-    padding:28px;
-    box-shadow:0 12px 35px rgba(30,70,120,.08);
-    border:1px solid #e9f0f8;
-    transition:.35s;
+.glass{
+    padding:30px;
+    border-radius:28px;
+    background:rgba(255,255,255,.66);
+    border:1px solid rgba(255,255,255,.95);
+    box-shadow:0 15px 45px rgba(35,120,135,.08);
+    backdrop-filter:blur(15px);
+    transition:.3s;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 45px rgba(30,70,120,.14);
+.glass:hover{
+    transform:translateY(-7px);
+    box-shadow:0 25px 55px rgba(35,120,135,.13);
 }
 
 .icon{
     width:58px;
     height:58px;
-    border-radius:18px;
+    border-radius:20px;
     display:flex;
     align-items:center;
     justify-content:center;
     font-size:27px;
-    background:linear-gradient(135deg,#e7f6ff,#e5fffa);
+    background:linear-gradient(145deg,#e5fbfa,#dcefff);
     margin-bottom:20px;
 }
 
-.card h3{
-    margin-bottom:10px;
-    font-size:20px;
+.glass h3{
+    color:#17495b;
+    margin-bottom:9px;
+    font-size:19px;
 }
 
-.card p{
-    color:#6c7890;
-    line-height:1.6;
-    font-size:14px;
-}
-
-/* TESTS */
-
-.tests{
-    background:#ffffff;
-}
-
-.test-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.test-card{
-    background:#f8fbff;
-    border:1px solid #e3edf8;
-    border-radius:18px;
-    padding:20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    transition:.3s;
-}
-
-.test-card:hover{
-    transform:translateY(-4px);
-    background:white;
-    box-shadow:0 12px 28px rgba(0,80,160,.1);
-}
-
-.test-name{
-    font-weight:800;
-}
-
-.price{
-    color:#0878d1;
-    font-weight:900;
-    white-space:nowrap;
+.glass p{
+    color:#778a93;
+    font-size:13px;
+    line-height:1.7;
 }
 
 /* PACKAGES */
 
-.package-grid{
+.package-wrap{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    max-width:900px;
+    margin:auto;
 }
 
 .package{
-    background:white;
-    border-radius:25px;
-    padding:30px;
-    border:1px solid #e4edf8;
-    box-shadow:0 14px 35px rgba(30,70,120,.08);
     position:relative;
     overflow:hidden;
-    transition:.35s;
+    padding:32px;
+    border-radius:30px;
+    background:rgba(255,255,255,.76);
+    border:1px solid rgba(255,255,255,.95);
+    box-shadow:var(--shadow);
 }
 
-.package:hover{
-    transform:translateY(-8px);
-    box-shadow:0 22px 50px rgba(30,70,120,.14);
+.package.gold{
+    background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(255,248,222,.72));
+}
+
+.package-tag{
+    display:inline-block;
+    padding:7px 11px;
+    border-radius:20px;
+    background:#e1f8f6;
+    color:#09879a;
+    font-size:10px;
+    font-weight:800;
+}
+
+.gold .package-tag{
+    background:#fff0c5;
+    color:#a87612;
 }
 
 .package h3{
-    font-size:23px;
-    margin-bottom:10px;
+    margin-top:16px;
+    color:#16495a;
+    font-size:21px;
 }
 
-.package-price{
-    font-size:32px;
-    font-weight:900;
-    color:#0878d1;
-    margin:15px 0 20px;
+.price{
+    font-size:38px;
+    font-weight:800;
+    color:#087f9d;
+    margin:9px 0 18px;
+}
+
+.gold .price{
+    color:#b07a10;
 }
 
 .package ul{
     list-style:none;
-    margin-bottom:24px;
+    margin-bottom:22px;
 }
 
 .package li{
-    margin:11px 0;
-    color:#5e6b82;
-    font-size:14px;
+    padding:8px 0;
+    color:#71858e;
+    font-size:13px;
 }
 
-.package li::before{
+.package li:before{
     content:"✓";
-    color:#00a38f;
-    font-weight:900;
-    margin-right:8px;
+    color:#1ab88b;
+    font-weight:bold;
+    margin-right:9px;
 }
 
-.popular{
-    position:absolute;
-    right:-35px;
-    top:18px;
-    transform:rotate(35deg);
-    background:linear-gradient(135deg,#ff8a00,#ff4d6d);
-    color:white;
-    padding:7px 45px;
-    font-size:11px;
-    font-weight:900;
+/* TESTS */
+
+.test-search{
+    max-width:650px;
+    margin:0 auto 28px;
 }
 
-/* HOME COLLECTION */
-
-.collection{
-    background:linear-gradient(135deg,#0678d0,#00a99d);
-    color:white;
-    overflow:hidden;
-}
-
-.collection .section-head .small,
-.collection .section-head p{
-    color:white;
-}
-
-.collection .section-head h2{
-    color:white;
-}
-
-.collection-box{
-    background:rgba(255,255,255,.13);
-    border:1px solid rgba(255,255,255,.25);
-    backdrop-filter:blur(10px);
-    border-radius:28px;
-    padding:35px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.collection-item{
-    padding:20px;
-    text-align:center;
-}
-
-.collection-item .big{
-    font-size:38px;
-    margin-bottom:12px;
-}
-
-.collection-item h3{
-    margin-bottom:8px;
-}
-
-.collection-item p{
+.test-search input{
+    width:100%;
+    border:1px solid rgba(23,128,149,.12);
+    background:rgba(255,255,255,.78);
+    border-radius:18px;
+    padding:17px 20px;
+    outline:none;
     font-size:14px;
-    opacity:.9;
-    line-height:1.6;
+    color:#234452;
+    box-shadow:0 12px 35px rgba(30,116,132,.07);
 }
 
-/* WHY US */
-
-.why-grid{
+.tests{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    gap:13px;
+}
+
+.test{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:17px 18px;
+    border-radius:17px;
+    background:rgba(255,255,255,.68);
+    border:1px solid rgba(255,255,255,.95);
+    box-shadow:0 7px 25px rgba(30,116,132,.055);
+    transition:.25s;
+}
+
+.test:hover{
+    transform:translateY(-3px);
+    background:white;
+}
+
+.test strong{
+    color:#315463;
+    font-size:13px;
+}
+
+.test span{
+    color:#07839e;
+    font-size:13px;
+    font-weight:800;
+}
+
+/* EXTRA PACKAGES */
+
+.extra-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.extra{
+    padding:25px;
+    border-radius:25px;
+    background:rgba(255,255,255,.7);
+    border:1px solid rgba(255,255,255,.95);
+    box-shadow:0 12px 35px rgba(30,116,132,.06);
+}
+
+.extra h3{
+    color:#155167;
+    font-size:18px;
+}
+
+.extra .amount{
+    color:#0b91a6;
+    font-weight:800;
+    font-size:20px;
+    margin:8px 0;
+}
+
+.extra p{
+    color:#778b94;
+    font-size:13px;
+    line-height:1.7;
 }
 
 /* CONTACT */
 
-.contact{
-    background:#fff;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
+.contact-section{
+    padding-bottom:120px;
 }
 
 .contact-card{
-    background:#f7fbff;
-    border:1px solid #e4edf7;
-    border-radius:24px;
-    padding:30px;
+    position:relative;
+    overflow:hidden;
+    padding:45px;
+    border-radius:35px;
+    background:
+        linear-gradient(135deg,rgba(7,126,159,.94),rgba(30,188,193,.90));
+    color:white;
+    box-shadow:0 25px 70px rgba(11,133,157,.22);
+}
+
+.contact-card:after{
+    content:"";
+    position:absolute;
+    width:330px;
+    height:330px;
+    border-radius:50%;
+    background:rgba(255,255,255,.10);
+    right:-90px;
+    top:-150px;
+}
+
+.contact-inner{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.contact-card h2{
+    font-size:38px;
+    line-height:1.15;
+    margin-bottom:15px;
+}
+
+.contact-card p{
+    color:#dcffff;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.contact-info{
+    display:grid;
+    gap:12px;
 }
 
 .contact-row{
-    display:flex;
-    gap:15px;
-    align-items:flex-start;
-    margin:20px 0;
+    padding:16px;
+    border-radius:17px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.16);
 }
 
-.contact-icon{
-    width:48px;
-    height:48px;
-    flex:none;
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#e5f5ff;
-    font-size:21px;
+.contact-row b{
+    display:block;
+    font-size:12px;
+    margin-bottom:3px;
 }
 
-.contact-row h4{
-    margin-bottom:5px;
+.contact-row span{
+    color:#d7ffff;
+    font-size:13px;
 }
 
-.contact-row p{
-    color:#68758c;
-    line-height:1.5;
-    font-size:14px;
-}
-
-.map{
-    width:100%;
-    min-height:330px;
-    border:0;
-    border-radius:24px;
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
+.map-btn{
+    margin-top:18px;
+    background:white;
+    color:#087a95;
 }
 
 /* FOOTER */
 
 footer{
-    background:#101d35;
-    color:white;
-    padding:45px 0 25px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:30px;
-}
-
-footer h3{
-    margin-bottom:14px;
-}
-
-footer p,
-footer a{
-    color:#b9c5d9;
-    line-height:1.8;
-    font-size:14px;
-}
-
-.footer-bottom{
-    border-top:1px solid rgba(255,255,255,.1);
-    margin-top:30px;
-    padding-top:20px;
+    padding:35px 5%;
+    background:#0b3443;
+    color:#9db7bf;
     text-align:center;
-    color:#8e9bb0;
-    font-size:13px;
+    font-size:12px;
 }
 
-/* WHATSAPP */
+footer strong{
+    color:white;
+    font-size:15px;
+}
+
+/* MOBILE BAR */
+
+.mobile-bar{
+    display:none;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:2000;
+    padding:8px;
+    gap:7px;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(18px);
+    box-shadow:0 -8px 30px rgba(0,0,0,.10);
+}
+
+.mobile-bar a{
+    flex:1;
+    padding:12px 5px;
+    text-align:center;
+    border-radius:13px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.call{
+    background:#e1f4ff;
+    color:#0879a0;
+}
 
 .whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    z-index:1000;
-    width:62px;
-    height:62px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#25D366;
-    color:white;
-    font-size:29px;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
-    animation:pulse 2s infinite;
+    background:#dff9ee;
+    color:#07966a;
 }
 
-@keyframes pulse{
-    0%,100%{
-        transform:scale(1);
-    }
-    50%{
-        transform:scale(1.08);
-    }
+.home{
+    background:#e1f8f7;
+    color:#087f91;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
-    .nav-links{
-        gap:12px;
-    }
-
-    .nav-links a{
-        font-size:12px;
-    }
-
-    .grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .test-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .package-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .why-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .collection-box{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:650px){
-
-    .nav-inner{
-        min-height:68px;
-    }
-
-    .logo{
-        font-size:15px;
-    }
-
-    .logo-icon{
-        width:40px;
-        height:40px;
-        font-size:19px;
-    }
-
-    .nav-links{
-        gap:9px;
-    }
-
-    .nav-links a:nth-child(2),
-    .nav-links a:nth-child(3){
+    nav{
         display:none;
     }
 
-    .nav-btn{
-        padding:9px 12px;
+    .hero{
+        padding-top:60px;
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .tests{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contact-inner{
+        grid-template-columns:1fr;
+    }
+
+    .mobile-bar{
+        display:flex;
+    }
+
+    footer{
+        padding-bottom:90px;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:70px 5%;
     }
 
     .hero{
         min-height:auto;
-    }
-
-    .hero-content{
-        padding:70px 0;
+        padding:55px 5% 60px;
     }
 
     .hero h1{
         font-size:43px;
-        letter-spacing:-1px;
     }
 
     .hero p{
-        font-size:16px;
+        font-size:15px;
     }
 
-    section{
-        padding:65px 0;
+    .liquid-card{
+        min-height:auto;
+        padding:24px;
+        border-radius:30px;
     }
 
-    .section-head h2{
-        font-size:31px;
+    .lab-orb{
+        width:120px;
+        height:120px;
+        font-size:55px;
     }
 
-    .grid,
-    .test-grid,
-    .package-grid,
-    .why-grid,
-    .contact-grid,
-    .collection-box,
-    .footer-grid{
+    .quick{
         grid-template-columns:1fr;
     }
 
-    .card,
-    .package{
-        padding:24px;
+    .heading h2{
+        font-size:31px;
     }
 
-    .test-card{
-        padding:17px;
+    .package-wrap,
+    .extra-grid{
+        grid-template-columns:1fr;
     }
 
-    .collection-box{
-        padding:20px;
+    .tests{
+        grid-template-columns:1fr;
     }
 
-    .whatsapp{
-        width:56px;
-        height:56px;
-        right:15px;
-        bottom:15px;
+    .contact-card{
+        padding:30px 22px;
+        border-radius:28px;
+    }
+
+    .contact-card h2{
+        font-size:30px;
     }
 }
 </style>
@@ -702,26 +813,32 @@ footer a{
 
 <body>
 
-<!-- NAVBAR -->
-
-<header class="navbar">
-<div class="container nav-inner">
-
-<a href="#home" class="logo">
-<div class="logo-icon">🩸</div>
-<div>Blood Test <span>&</span> Laboratory</div>
-</a>
-
-<nav class="nav-links">
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#tests">Tests</a>
-<a href="#packages">Packages</a>
-<a href="#collection">Home Collection</a>
-<a class="nav-btn" href="https://wa.me/919818962098?text=Hello%20I%20want%20to%20book%20a%20blood%20test.">WhatsApp</a>
-</nav>
-
+<div class="water">
+    <div class="blob one"></div>
+    <div class="blob two"></div>
+    <div class="blob three"></div>
 </div>
+
+
+<!-- NAVIGATION -->
+
+<header>
+    <div class="nav">
+
+        <div class="logo">
+            Blood Test & Laboratory
+            <small>NABL ACCREDITED LAB</small>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#packages">Packages</a>
+            <a href="#tests">Tests</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </div>
 </header>
 
 
@@ -729,34 +846,75 @@ footer a{
 
 <section class="hero" id="home">
 
-<div class="blob one"></div>
-<div class="blob two"></div>
+    <div class="hero-inner">
 
-<div class="container">
-<div class="hero-content">
+        <div>
 
-<div class="badge">✦ NABL ACCREDITED LAB</div>
+            <div class="pill">
+                <span class="dot"></span>
+                PROFESSIONAL DIAGNOSTIC CARE
+            </div>
 
-<h1>
-Better Health Starts With
-<span>Better Testing.</span>
-</h1>
+            <h1>
+                Your Health.<br>
+                Our <span>Precision.</span>
+            </h1>
 
-<p>
-Reliable diagnostic testing with convenient home sample collection.
-Quality-focused laboratory services for you and your family.
-</p>
+            <p>
+                Reliable blood testing, health packages and convenient
+                home sample collection — designed around your comfort.
+            </p>
 
-<div class="hero-buttons">
-<a class="btn btn-primary" href="#packages">View Packages</a>
+            <div class="actions">
 
-<a class="btn btn-secondary" href="https://wa.me/919818962098?text=Hello%20I%20want%20to%20book%20a%20test.">
-💬 Book Test on WhatsApp
-</a>
-</div>
+                <a class="btn primary"
+                   href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20a%20test."
+                   target="_blank">
+                    💬 Book on WhatsApp
+                </a>
 
-</div>
-</div>
+                <a class="btn soft"
+                   href="tel:+919818962098">
+                    📞 Call Laboratory
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="liquid-card">
+
+            <div class="lab-orb">🧪</div>
+
+            <div class="quick">
+
+                <div class="quick-box">
+                    <b>🕐 Lab Timing</b>
+                    <span>8:00 AM – 7:30 PM</span>
+                </div>
+
+                <div class="quick-box">
+                    <b>🏠 Home Collection</b>
+                    <span>Available</span>
+                </div>
+
+                <div class="quick-box">
+                    <b>📱 WhatsApp</b>
+                    <span>+91 98189 62098</span>
+                </div>
+
+                <div class="quick-box">
+                    <b>📍 Location</b>
+                    <span>Open Google Maps</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
 
@@ -764,416 +922,156 @@ Quality-focused laboratory services for you and your family.
 
 <section id="services">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-head">
-<div class="small">Our Services</div>
-<h2>Complete Diagnostic Care</h2>
-<p>
-From routine blood tests to health packages, get essential laboratory services at one place.
-</p>
-</div>
+        <div class="heading">
+            <div class="eyebrow">Simple • Comfortable • Reliable</div>
+            <h2>Everything You Need</h2>
+            <p>
+                Diagnostic services presented simply, so you can find
+                what you need without unnecessary complexity.
+            </p>
+        </div>
 
-<div class="grid">
 
-<div class="card">
-<div class="icon">🩸</div>
-<h3>Blood Tests</h3>
-<p>CBC, Hb, blood group, iron profile, hormonal tests and other laboratory investigations.</p>
-</div>
+        <div class="services">
 
-<div class="card">
-<div class="icon">🧪</div>
-<h3>Biochemistry</h3>
-<p>LFT, lipid profile, HbA1c, blood sugar and other biochemical investigations.</p>
-</div>
+            <div class="glass">
+                <div class="icon">🩸</div>
+                <h3>Blood Testing</h3>
+                <p>
+                    CBC, LFT, Lipid Profile, HbA1c, Vitamin tests,
+                    Hormone tests and more.
+                </p>
+            </div>
 
-<div class="card">
-<div class="icon">🔬</div>
-<h3>Pathology</h3>
-<p>Routine laboratory investigations with convenient sample collection.</p>
-</div>
+            <div class="glass">
+                <div class="icon">🏠</div>
+                <h3>Home Sample Collection</h3>
+                <p>
+                    Prefer testing from home? Contact us to arrange
+                    convenient sample collection.
+                </p>
+            </div>
 
-<div class="card">
-<div class="icon">🏠</div>
-<h3>Home Collection</h3>
-<p>Book a home sample collection through WhatsApp for added convenience.</p>
-</div>
+            <div class="glass">
+                <div class="icon">💙</div>
+                <h3>Easy Booking</h3>
+                <p>
+                    Quickly enquire about tests, prices and packages
+                    through WhatsApp or phone.
+                </p>
+            </div>
 
-</div>
-</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HEALTH PACKAGES -->
+
+<section id="packages">
+
+    <div class="container">
+
+        <div class="heading">
+            <div class="eyebrow">Health Screening</div>
+            <h2>Health Packages</h2>
+            <p>
+                Select a package and contact us for complete test details.
+            </p>
+        </div>
+
+
+        <div class="package-wrap">
+
+            <div class="package">
+
+                <span class="package-tag">POPULAR</span>
+
+                <h3>Silver Health Package</h3>
+
+                <div class="price">₹1,500</div>
+
+                <ul>
+                    <li>Routine health screening</li>
+                    <li>Essential diagnostic tests</li>
+                    <li>Convenient sample collection</li>
+                    <li>Contact laboratory for details</li>
+                </ul>
+
+                <a class="btn primary"
+                   href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20details%20about%20the%20Silver%20Health%20Package."
+                   target="_blank">
+                    💬 Get Details
+                </a>
+
+            </div>
+
+
+            <div class="package gold">
+
+                <span class="package-tag">PREMIUM</span>
+
+                <h3>Gold / Jubilee Health Package</h3>
+
+                <div class="price">₹2,500</div>
+
+                <ul>
+                    <li>Comprehensive health screening</li>
+                    <li>Multiple diagnostic tests</li>
+                    <li>Convenient sample collection</li>
+                    <li>Contact laboratory for details</li>
+                </ul>
+
+                <a class="btn primary"
+                   href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20details%20about%20the%20Gold%20Health%20Package."
+                   target="_blank">
+                    💬 Get Details
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
 
 <!-- TESTS -->
 
-<section class="tests" id="tests">
-
-<div class="container">
-
-<div class="section-head">
-<div class="small">Popular Tests</div>
-<h2>Tests & Prices</h2>
-<p>Selected laboratory tests and their current listed prices.</p>
-</div>
-
-<div class="test-grid">
-
-<div class="test-card">
-<div class="test-name">CBC</div>
-<div class="price">₹300</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">LFT</div>
-<div class="price">₹600</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">Lipid Profile</div>
-<div class="price">₹600</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">BSF</div>
-<div class="price">₹100</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">HbA1c</div>
-<div class="price">₹400</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">Urine RM</div>
-<div class="price">₹100</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">Vitamin D</div>
-<div class="price">₹1500</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">Vitamin B12</div>
-<div class="price">₹1000</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">Iron Profile</div>
-<div class="price">₹500</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">Beta HCG</div>
-<div class="price">₹600</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">Iron</div>
-<div class="price">₹400</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">LH</div>
-<div class="price">₹500</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">FSH</div>
-<div class="price">₹500</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">Phosphorus</div>
-<div class="price">₹300</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">Magnesium</div>
-<div class="price">₹1000</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">Hb</div>
-<div class="price">₹100</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">Blood Group</div>
-<div class="price">₹100</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">Prolactin</div>
-<div class="price">₹500</div>
-</div>
-
-<div class="test-card">
-<div class="test-name">PT / INR</div>
-<div class="price">₹400</div>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- PACKAGES -->
-
-<section id="packages">
-
-<div class="container">
-
-<div class="section-head">
-<div class="small">Health Packages</div>
-<h2>Choose Your Health Package</h2>
-<p>Convenient diagnostic packages for different health testing needs.</p>
-</div>
-
-<div class="package-grid">
-
-<!-- SILVER -->
-
-<div class="package">
-<h3>Silver Health Package</h3>
-
-<div class="package-price">₹1500</div>
-
-<ul>
-<li>Complete health screening</li>
-<li>Routine laboratory investigations</li>
-<li>Basic health assessment</li>
-</ul>
-
-<a class="btn btn-primary" href="https://wa.me/919818962098?text=Hello%20I%20want%20details%20for%20Silver%20Health%20Package.">
-Get Details
-</a>
-</div>
-
-
-<!-- GOLD -->
-
-<div class="package">
-
-<div class="popular">POPULAR</div>
-
-<h3>Gold / Jubilee Health Package</h3>
-
-<div class="package-price">₹2500</div>
-
-<ul>
-<li>Comprehensive health screening</li>
-<li>Advanced laboratory investigations</li>
-<li>Routine health assessment</li>
-</ul>
-
-<a class="btn btn-primary" href="https://wa.me/919818962098?text=Hello%20I%20want%20details%20for%20Gold%20Jubilee%20Health%20Package.">
-Get Details
-</a>
-</div>
-
-
-<!-- FEVER 1.1 -->
-
-<div class="package">
-<h3>Fever Package 1.1</h3>
-
-<div class="package-price">₹950</div>
-
-<ul>
-<li>CBC</li>
-<li>Malaria Antigen</li>
-<li>Widal</li>
-<li>Typhidot IgG and IgM</li>
-</ul>
-
-<a class="btn btn-primary" href="https://wa.me/919818962098?text=Hello%20I%20want%20Fever%20Package%201.1.">
-Book Now
-</a>
-</div>
-
-
-<!-- FEVER 1.2 -->
-
-<div class="package">
-<h3>Fever Package 1.2</h3>
-
-<div class="package-price">₹500</div>
-
-<ul>
-<li>Malaria Parasite (Slide)</li>
-<li>CBC</li>
-<li>Widal</li>
-<li>Urine Routine and Microscopy</li>
-</ul>
-
-<a class="btn btn-primary" href="https://wa.me/919818962098?text=Hello%20I%20want%20Fever%20Package%201.2.">
-Book Now
-</a>
-</div>
-
-
-<!-- VITAMIN -->
-
-<div class="package">
-<h3>Vitamin Profile</h3>
-
-<div class="package-price">₹1250</div>
-
-<ul>
-<li>Vitamin D (25-OH Hydroxy)</li>
-<li>Vitamin B12</li>
-</ul>
-
-<a class="btn btn-primary" href="https://wa.me/919818962098?text=Hello%20I%20want%20Vitamin%20Profile.">
-Book Now
-</a>
-</div>
-
-
-<!-- STD -->
-
-<div class="package">
-<h3>STD Panel</h3>
-
-<div class="package-price">₹2050</div>
-
-<ul>
-<li>HIV I & II</li>
-<li>HSV Combined</li>
-<li>Chlamydia - M</li>
-<li>TPHA</li>
-</ul>
-
-<a class="btn btn-primary" href="https://wa.me/919818962098?text=Hello%20I%20want%20STD%20Panel.">
-Book Now
-</a>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- HOME COLLECTION -->
-
-<section class="collection" id="collection">
-
-<div class="container">
-
-<div class="section-head">
-<div class="small">Convenience At Your Doorstep</div>
-<h2>Home Sample Collection</h2>
-<p>
-No need to visit the laboratory for every test. Contact us to enquire about home sample collection.
-</p>
-</div>
-
-<div class="collection-box">
-
-<div class="collection-item">
-<div class="big">🏠</div>
-<h3>Home Visit</h3>
-<p>Convenient sample collection from your home.</p>
-</div>
-
-<div class="collection-item">
-<div class="big">⏰</div>
-<h3>8:00 AM – 7:30 PM</h3>
-<p>Laboratory timing for enquiries and services.</p>
-</div>
-
-<div class="collection-item">
-<div class="big">📱</div>
-<h3>Easy Booking</h3>
-<p>Book your test through WhatsApp.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- WHY CHOOSE US -->
-
-<section>
-
-<div class="container">
-
-<div class="section-head">
-<div class="small">Why Choose Us</div>
-<h2>Healthcare Made Convenient</h2>
-<p>Simple booking, convenient collection and a wide range of laboratory tests.</p>
-</div>
-
-<div class="why-grid">
-
-<div class="card">
-<div class="icon">⚡</div>
-<h3>Convenient Booking</h3>
-<p>Contact us directly through WhatsApp for test enquiries and bookings.</p>
-</div>
-
-<div class="card">
-<div class="icon">🏠</div>
-<h3>Home Collection</h3>
-<p>Home sample collection is available. Contact us for details.</p>
-</div>
-
-<div class="card">
-<div class="icon">💙</div>
-<h3>Patient Focused</h3>
-<p>We aim to make diagnostic testing simple and convenient.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<div class="container">
-
-<div class="section-head">
-<div class="small">Contact Us</div>
-<h2>Get In Touch</h2>
-<p>For test bookings, packages and home collection enquiries.</p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-
-<div class="contact-row">
-<div class="contact-icon">📍</div>
-<div>
-<h4>Address</h4>
-<p>
-E-343/C, Greater Kailash-1, Block S,<br>
-Greater Kailash I, New Delhi,<br>
-Delhi 110048
-</p>
-</div>
-</div>
-
-<div class="contact-row">
-<div class="contact-icon">📞</div>
-<div>
-<h4>Phone / WhatsApp</h4>
-<p>+91 98189 62098</p>
-</div>
-</div>
-
-<div class="contact-row">
-<div class="contact-icon">⏰</div>
-<div>
-<h4>Lab Timing</h4>
-<p>8:00 AM – 7:30 PM</p>
-</div>
-</div>
-
-<a class="btn btn-primary" href="https://wa.me/919818962098?text=He
+<section id="tests">
+
+    <div class="container">
+
+        <div class="heading">
+            <div class="eyebrow">Transparent Pricing</div>
+            <h2>Tests & Prices</h2>
+            <p>
+                Search below to quickly find a test.
+            </p>
+        </div>
+
+
+        <div class="test-search">
+            <input
+                type="text"
+                id="search"
+                placeholder="🔎  Search CBC, Vitamin D, HbA1c..."
+                onkeyup="searchTests()">
+        </div>
+
+
+        <div class="tests" id="testList">
+
+            <div class="test"><strong>CBC</strong><span>₹300/-</span></div>
+            <div class="test"><strong>LFT</strong><span>₹600/-</span></div>
+            <div class="test"><strong>Lipid Profile</strong><span>₹600/-</span></div>
+            <div class="test"><strong>BSF</strong><span>₹100/-</span></div>
+            <div class="test"><strong>HbA1c</strong><span>₹400/-</span></div>
+            <div class="test"><strong>Urine RM</strong><span>₹100/-</span></div>
+            <div class="test"><strong>Vitamin D</strong><span>₹1500/-</span></div>
+            <div class="test"><strong>Vitamin B12</strong><span>₹1000/-</span></d
