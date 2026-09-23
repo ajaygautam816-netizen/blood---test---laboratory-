@@ -6,11 +6,13 @@
 
 <title>Blood Test & Laboratory | NABL ACCREDITED LAB</title>
 
-<meta name="description" content="Blood Test & Laboratory - Blood tests, health packages and home sample collection.">
+<meta name="description" content="Blood Test & Laboratory - Diagnostic and laboratory testing services in Greater Kailash, New Delhi. Home sample collection available.">
 
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+/* =========================
+   BASIC RESET
+========================= */
 
 *{
     margin:0;
@@ -23,210 +25,222 @@ html{
 }
 
 body{
-    font-family:'DM Sans',Arial,sans-serif;
-    color:#183344;
-    background:#f5fbfc;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7fbff;
+    color:#17324d;
+    line-height:1.6;
     overflow-x:hidden;
 }
 
 a{
     text-decoration:none;
+    color:inherit;
 }
 
-:root{
-    --blue:#087ea4;
-    --deep:#07516c;
-    --cyan:#25bfd0;
-    --white:#ffffff;
-    --muted:#718692;
+button,
+a{
+    -webkit-tap-highlight-color:transparent;
 }
+
+img{
+    max-width:100%;
+    display:block;
+}
+
 
 /* =========================
-   WATER BACKGROUND
+   COLORS
 ========================= */
 
-.water{
-    position:fixed;
-    inset:0;
-    z-index:-5;
-    overflow:hidden;
-    background:
-        radial-gradient(circle at 10% 10%,#dffafa 0,transparent 30%),
-        radial-gradient(circle at 90% 20%,#e4f5ff 0,transparent 28%),
-        radial-gradient(circle at 50% 90%,#e7fff8 0,transparent 35%),
-        #f8fcfd;
+:root{
+    --blue:#087cf5;
+    --blue-dark:#0757b8;
+    --cyan:#00c6ff;
+    --purple:#7547ff;
+    --pink:#ff4f9a;
+    --red:#ef3f55;
+    --green:#16b878;
+    --dark:#17324d;
+    --muted:#6d8195;
+    --white:#ffffff;
+    --light:#f7fbff;
+    --border:#e7eef5;
+    --shadow:0 18px 50px rgba(20,75,120,.10);
 }
 
-.blob{
-    position:absolute;
-    border-radius:50%;
-    filter:blur(2px);
-    opacity:.55;
-    animation:float 12s ease-in-out infinite;
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+    background:linear-gradient(90deg,#0757b8,#087cf5,#00aeea);
+    color:#fff;
+    text-align:center;
+    padding:9px 15px;
+    font-size:13px;
+    font-weight:600;
 }
 
-.blob.one{
-    width:380px;
-    height:380px;
-    background:#bceff0;
-    top:-140px;
-    left:-100px;
+.topbar span{
+    margin:0 8px;
 }
 
-.blob.two{
-    width:300px;
-    height:300px;
-    background:#cceaff;
-    right:-100px;
-    top:250px;
-    animation-delay:2s;
-}
-
-.blob.three{
-    width:340px;
-    height:340px;
-    background:#c9f7e9;
-    left:35%;
-    bottom:-180px;
-    animation-delay:4s;
-}
-
-@keyframes float{
-    0%,100%{
-        transform:translate(0,0) scale(1);
-    }
-
-    50%{
-        transform:translate(30px,-25px) scale(1.08);
-    }
-}
 
 /* =========================
    NAVBAR
 ========================= */
 
-header{
+.navbar{
     position:sticky;
     top:0;
-    z-index:1000;
-    padding:13px 5%;
-    background:rgba(255,255,255,.76);
-    backdrop-filter:blur(22px);
-    -webkit-backdrop-filter:blur(22px);
-    border-bottom:1px solid rgba(255,255,255,.7);
+    left:0;
+    width:100%;
+    background:rgba(255,255,255,.96);
+    border-bottom:1px solid #e8eef5;
+    z-index:9999;
 }
 
-.nav{
+.nav-inner{
     max-width:1200px;
     margin:auto;
+    min-height:76px;
+    padding:12px 20px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:20px;
 }
 
 .logo{
-    color:var(--deep);
-    font-size:19px;
-    font-weight:800;
-    line-height:1.1;
-}
-
-.logo small{
-    display:block;
-    color:#23a5b6;
-    font-size:9px;
-    letter-spacing:2px;
-    margin-top:5px;
-}
-
-nav{
     display:flex;
-    gap:7px;
+    align-items:center;
+    gap:11px;
+    font-weight:800;
+    font-size:17px;
 }
 
-nav a{
-    color:#41616e;
-    padding:10px 13px;
+.logo-icon{
+    width:44px;
+    height:44px;
+    border-radius:14px;
+    background:linear-gradient(135deg,#087cf5,#00c6ff);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    box-shadow:0 10px 25px rgba(8,124,245,.25);
+}
+
+.logo-text{
+    line-height:1.15;
+}
+
+.logo-text small{
+    display:block;
+    margin-top:4px;
+    color:#087cf5;
+    font-size:10px;
+    letter-spacing:1.2px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.nav-links a{
+    font-size:14px;
+    font-weight:700;
+    color:#526b80;
+    transition:.25s ease;
+}
+
+.nav-links a:hover{
+    color:#087cf5;
+}
+
+.nav-call{
+    color:#fff !important;
+    background:linear-gradient(135deg,#087cf5,#7547ff);
+    padding:11px 17px;
     border-radius:30px;
-    font-size:13px;
-    font-weight:600;
-    transition:.25s;
+    box-shadow:0 8px 22px rgba(8,124,245,.22);
 }
 
-nav a:hover{
-    background:#e5f8f8;
-    color:var(--blue);
-}
 
 /* =========================
    HERO
 ========================= */
 
 .hero{
-    min-height:720px;
-    padding:90px 5% 70px;
-    display:flex;
-    align-items:center;
+    position:relative;
+    overflow:hidden;
+    padding:75px 20px 85px;
+    background:
+        radial-gradient(circle at 85% 15%,rgba(0,198,255,.18),transparent 30%),
+        radial-gradient(circle at 10% 20%,rgba(117,71,255,.12),transparent 30%),
+        linear-gradient(135deg,#ffffff 0%,#f1f8ff 100%);
 }
 
-.hero-inner{
+.hero-container{
     max-width:1200px;
-    width:100%;
     margin:auto;
     display:grid;
-    grid-template-columns:1.15fr .85fr;
-    gap:55px;
+    grid-template-columns:1.1fr .9fr;
     align-items:center;
+    gap:60px;
 }
 
-.pill{
+.badge{
     display:inline-flex;
     align-items:center;
     gap:8px;
-    padding:9px 15px;
-    border-radius:50px;
-    background:rgba(255,255,255,.72);
-    border:1px solid rgba(31,170,185,.16);
-    color:#087c94;
+    padding:8px 14px;
+    border-radius:30px;
+    background:#fff;
+    border:1px solid #dfeefa;
+    color:#087cf5;
     font-size:12px;
-    font-weight:700;
-    box-shadow:0 8px 30px rgba(34,132,145,.07);
+    font-weight:800;
+    box-shadow:0 8px 25px rgba(30,90,130,.08);
+    margin-bottom:20px;
 }
 
-.dot{
+.badge-dot{
     width:8px;
     height:8px;
-    background:#28c89a;
+    background:#16b878;
     border-radius:50%;
-    box-shadow:0 0 0 5px rgba(40,200,154,.12);
 }
 
 .hero h1{
-    font-size:clamp(43px,6vw,76px);
-    line-height:1.02;
-    letter-spacing:-3px;
-    margin:22px 0 20px;
-    color:#123c4d;
+    font-size:clamp(38px,5vw,68px);
+    line-height:1.05;
+    letter-spacing:-2px;
+    color:#102d47;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
-    background:linear-gradient(90deg,#0785a7,#25bdc7);
+    background:linear-gradient(90deg,#087cf5,#7547ff,#00aeea);
     -webkit-background-clip:text;
     color:transparent;
 }
 
 .hero p{
     max-width:650px;
+    color:#64798c;
     font-size:17px;
-    color:#6c818b;
-    line-height:1.8;
     margin-bottom:30px;
 }
 
-.actions{
+.hero-buttons{
     display:flex;
-    gap:12px;
     flex-wrap:wrap;
+    gap:13px;
 }
 
 .btn{
@@ -234,626 +248,810 @@ nav a:hover{
     align-items:center;
     justify-content:center;
     gap:8px;
-    padding:14px 20px;
-    border-radius:15px;
+    padding:14px 21px;
+    border-radius:14px;
+    font-weight:800;
     font-size:14px;
-    font-weight:700;
-    transition:.3s;
+    transition:.25s ease;
+    cursor:pointer;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
+.btn-primary{
+    background:linear-gradient(135deg,#087cf5,#00aeea);
+    color:#fff;
+    box-shadow:0 12px 30px rgba(8,124,245,.25);
 }
 
-.primary{
-    color:white;
-    background:linear-gradient(135deg,#0784a5,#22bdc4);
-    box-shadow:0 12px 28px rgba(15,157,178,.25);
+.btn-primary:hover{
+    transform:translateY(-2px);
 }
 
-.soft{
-    color:#087894;
-    background:rgba(255,255,255,.75);
-    border:1px solid rgba(13,123,147,.12);
+.btn-outline{
+    background:#fff;
+    color:#087cf5;
+    border:1px solid #d9e8f5;
 }
 
-/* =========================
-   HERO LIQUID CARD
-========================= */
+.btn-outline:hover{
+    border-color:#087cf5;
+}
 
-.liquid-card{
-    min-height:480px;
+
+/* HERO CARD */
+
+.hero-card{
     position:relative;
-    overflow:hidden;
-    padding:30px;
-    border-radius:42px;
-    background:linear-gradient(
-        145deg,
-        rgba(255,255,255,.78),
-        rgba(222,249,249,.52)
-    );
-    border:1px solid rgba(255,255,255,.95);
-    box-shadow:0 20px 60px rgba(32,117,137,.10);
-    backdrop-filter:blur(20px);
+    background:#fff;
+    border-radius:30px;
+    padding:28px;
+    box-shadow:0 25px 70px rgba(35,85,125,.14);
+    border:1px solid rgba(255,255,255,.8);
 }
 
-.liquid-card:before{
-    content:"";
-    position:absolute;
-    width:280px;
-    height:280px;
-    border-radius:50%;
-    background:rgba(61,207,213,.20);
-    top:-110px;
-    right:-70px;
-}
-
-.liquid-card:after{
-    content:"";
-    position:absolute;
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    background:rgba(95,185,255,.14);
-    bottom:-110px;
-    left:-70px;
-}
-
-.lab-orb{
-    position:relative;
-    z-index:2;
-    width:145px;
-    height:145px;
-    margin:5px auto 30px;
-    border-radius:50%;
+.hero-main-icon{
+    height:230px;
+    border-radius:24px;
+    background:
+        radial-gradient(circle at 25% 20%,rgba(0,198,255,.35),transparent 25%),
+        linear-gradient(135deg,#eaf7ff,#f4efff);
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:68px;
-    background:linear-gradient(145deg,#ffffff,#d9f7f7);
-    box-shadow:
-        inset 8px 8px 25px rgba(255,255,255,.9),
-        0 20px 50px rgba(31,149,169,.15);
+    font-size:95px;
+    margin-bottom:20px;
 }
 
-.quick{
-    position:relative;
-    z-index:2;
+.hero-card h3{
+    font-size:22px;
+    margin-bottom:6px;
+}
+
+.hero-card p{
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.hero-mini-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
 }
 
-.quick-box{
-    padding:17px;
-    border-radius:20px;
-    background:rgba(255,255,255,.62);
-    border:1px solid rgba(255,255,255,.9);
+.hero-mini{
+    padding:12px 8px;
+    text-align:center;
+    background:#f7fbff;
+    border-radius:14px;
+    font-size:11px;
+    font-weight:700;
+    color:#557087;
 }
 
-.quick-box b{
+.hero-mini strong{
     display:block;
-    color:#14546a;
-    font-size:13px;
-    margin-bottom:5px;
+    font-size:18px;
+    color:#087cf5;
 }
 
-.quick-box span{
-    color:#728690;
-    font-size:12px;
-}
 
 /* =========================
-   SECTIONS
+   COMMON SECTION
 ========================= */
 
 section{
-    padding:90px 5%;
+    padding:80px 20px;
 }
 
-.container{
+.section-container{
     max-width:1200px;
     margin:auto;
 }
 
-.heading{
+.section-head{
     text-align:center;
-    margin-bottom:45px;
+    max-width:700px;
+    margin:0 auto 45px;
 }
 
-.eyebrow{
-    color:#16a1ae;
-    font-size:11px;
-    font-weight:800;
-    letter-spacing:2px;
+.section-label{
+    color:#087cf5;
+    font-size:12px;
+    font-weight:900;
     text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:9px;
 }
 
-.heading h2{
-    margin-top:9px;
-    font-size:38px;
-    letter-spacing:-1px;
-    color:#153e4d;
+.section-head h2{
+    font-size:clamp(30px,4vw,44px);
+    line-height:1.15;
+    margin-bottom:12px;
+    color:#17324d;
 }
 
-.heading p{
-    margin:10px auto 0;
-    max-width:620px;
-    color:#788b94;
-    font-size:14px;
+.section-head p{
+    color:#718396;
+    font-size:15px;
 }
+
 
 /* =========================
    SERVICES
 ========================= */
 
 .services{
+    background:#fff;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.service-card{
+    background:#fff;
+    border:1px solid #e7eef5;
+    border-radius:22px;
+    padding:27px 20px;
+    transition:.25s ease;
+    box-shadow:0 10px 35px rgba(30,75,110,.05);
+}
+
+.service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow);
+    border-color:#cce5fa;
+}
+
+.service-icon{
+    width:55px;
+    height:55px;
+    border-radius:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    background:linear-gradient(135deg,#e7f6ff,#f0eaff);
+    margin-bottom:18px;
+}
+
+.service-card h3{
+    font-size:18px;
+    margin-bottom:7px;
+}
+
+.service-card p{
+    font-size:13px;
+    color:#718396;
+}
+
+
+/* =========================
+   TESTS
+========================= */
+
+.tests-section{
+    background:#f7fbff;
+}
+
+.test-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.test-card{
+    background:#fff;
+    border:1px solid #e7eef5;
+    border-radius:17px;
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    transition:.25s ease;
+}
+
+.test-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 35px rgba(30,75,110,.08);
+}
+
+.test-name{
+    font-weight:700;
+    font-size:14px;
+}
+
+.test-price{
+    color:#087cf5;
+    font-weight:900;
+    white-space:nowrap;
+}
+
+
+/* =========================
+   PACKAGES
+========================= */
+
+.packages-section{
+    background:#fff;
+}
+
+.package-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
-.glass{
-    padding:30px;
-    border-radius:28px;
-    background:rgba(255,255,255,.66);
-    border:1px solid rgba(255,255,255,.95);
-    box-shadow:0 15px 45px rgba(35,120,135,.08);
-    backdrop-filter:blur(15px);
-    transition:.3s;
-}
-
-.glass:hover{
-    transform:translateY(-7px);
-    box-shadow:0 25px 55px rgba(35,120,135,.13);
-}
-
-.icon{
-    width:58px;
-    height:58px;
-    border-radius:20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:27px;
-    background:linear-gradient(145deg,#e5fbfa,#dcefff);
-    margin-bottom:20px;
-}
-
-.glass h3{
-    color:#17495b;
-    margin-bottom:9px;
-    font-size:19px;
-}
-
-.glass p{
-    color:#778a93;
-    font-size:13px;
-    line-height:1.7;
-}
-
-/* =========================
-   HEALTH PACKAGES
-========================= */
-
-.package-wrap{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:24px;
-    max-width:900px;
-    margin:auto;
-}
-
-.package{
+.package-card{
     position:relative;
+    background:#fff;
+    border:1px solid #e2ebf3;
+    border-radius:25px;
+    padding:28px;
     overflow:hidden;
-    padding:32px;
-    border-radius:30px;
-    background:rgba(255,255,255,.76);
-    border:1px solid rgba(255,255,255,.95);
-    box-shadow:0 20px 60px rgba(32,117,137,.10);
+    box-shadow:0 12px 40px rgba(25,75,110,.06);
+    transition:.25s ease;
 }
 
-.package.gold{
-    background:linear-gradient(
-        145deg,
-        rgba(255,255,255,.85),
-        rgba(255,248,222,.72)
-    );
+.package-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 22px 55px rgba(25,75,110,.12);
 }
 
-.package-tag{
-    display:inline-block;
-    padding:7px 11px;
-    border-radius:20px;
-    background:#e1f8f6;
-    color:#09879a;
-    font-size:10px;
-    font-weight:800;
+.package-card.featured{
+    border:2px solid #087cf5;
 }
 
-.gold .package-tag{
-    background:#fff0c5;
-    color:#a87612;
-}
-
-.package h3{
-    margin-top:16px;
-    color:#16495a;
-    font-size:21px;
-}
-
-.price{
-    font-size:38px;
-    font-weight:800;
-    color:#087f9d;
-    margin:9px 0 18px;
-}
-
-.gold .price{
-    color:#b07a10;
-}
-
-.package ul{
-    list-style:none;
-    margin-bottom:22px;
-}
-
-.package li{
-    padding:8px 0;
-    color:#71858e;
-    font-size:13px;
-}
-
-.package li:before{
-    content:"✓";
-    color:#1ab88b;
-    font-weight:bold;
-    margin-right:9px;
-}
-
-/* =========================
-   TEST SEARCH
-========================= */
-
-.test-search{
-    max-width:650px;
-    margin:0 auto 28px;
-}
-
-.test-search input{
-    width:100%;
-    border:1px solid rgba(23,128,149,.12);
-    background:rgba(255,255,255,.78);
-    border-radius:18px;
-    padding:17px 20px;
-    outline:none;
-    font-size:14px;
-    color:#234452;
-    box-shadow:0 12px 35px rgba(30,116,132,.07);
-}
-
-.tests{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:13px;
-}
-
-.test{
+.package-top{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    padding:17px 18px;
-    border-radius:17px;
-    background:rgba(255,255,255,.68);
-    border:1px solid rgba(255,255,255,.95);
-    box-shadow:0 7px 25px rgba(30,116,132,.055);
-    transition:.25s;
+    gap:15px;
+    align-items:flex-start;
 }
 
-.test:hover{
-    transform:translateY(-3px);
-    background:white;
+.package-card h3{
+    font-size:20px;
 }
 
-.test strong{
-    color:#315463;
+.package-price{
+    color:#087cf5;
+    font-size:24px;
+    font-weight:900;
+    white-space:nowrap;
+}
+
+.package-card p{
+    color:#72869a;
     font-size:13px;
+    margin:13px 0 18px;
 }
 
-.test span{
-    color:#07839e;
+.package-list{
+    list-style:none;
+}
+
+.package-list li{
+    padding:7px 0;
+    color:#536d82;
+    font-size:13px;
+    border-bottom:1px dashed #e8eef3;
+}
+
+.package-list li:last-child{
+    border-bottom:0;
+}
+
+.package-list li::before{
+    content:"✓";
+    color:#16b878;
+    font-weight:900;
+    margin-right:8px;
+}
+
+.package-button{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    padding:12px;
+    background:#eef7ff;
+    color:#087cf5;
+    border-radius:12px;
     font-size:13px;
     font-weight:800;
 }
 
+.package-button:hover{
+    background:#087cf5;
+    color:#fff;
+}
+
+
 /* =========================
-   SPECIAL PACKAGES
+   HOME COLLECTION
 ========================= */
 
-.extra-grid{
+.collection{
+    background:
+        radial-gradient(circle at 90% 20%,rgba(0,198,255,.20),transparent 30%),
+        linear-gradient(135deg,#0757b8,#087cf5);
+    color:#fff;
+}
+
+.collection-container{
+    max-width:1200px;
+    margin:auto;
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:50px;
+}
+
+.collection h2{
+    font-size:clamp(30px,4vw,46px);
+    line-height:1.1;
+    margin-bottom:15px;
+}
+
+.collection p{
+    color:rgba(255,255,255,.84);
+    margin-bottom:25px;
+}
+
+.collection-features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.collection-feature{
+    padding:16px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:16px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.collection-feature span{
+    font-size:21px;
+    display:block;
+    margin-bottom:4px;
+}
+
+.collection-box{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.20);
+    border-radius:30px;
+    padding:35px;
+    text-align:center;
+}
+
+.collection-box-icon{
+    font-size:80px;
+    margin-bottom:12px;
+}
+
+.collection-box h3{
+    font-size:25px;
+    margin-bottom:7px;
+}
+
+.collection-box p{
+    margin:0;
+}
+
+
+/* =========================
+   WHY US
+========================= */
+
+.why{
+    background:#f7fbff;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
-.extra{
-    padding:25px;
-    border-radius:25px;
-    background:rgba(255,255,255,.7);
-    border:1px solid rgba(255,255,255,.95);
-    box-shadow:0 12px 35px rgba(30,116,132,.06);
+.why-card{
+    background:#fff;
+    border-radius:22px;
+    padding:27px;
+    border:1px solid #e7eef5;
 }
 
-.extra h3{
-    color:#155167;
+.why-number{
+    font-size:14px;
+    font-weight:900;
+    color:#087cf5;
+    margin-bottom:12px;
+}
+
+.why-card h3{
     font-size:18px;
+    margin-bottom:7px;
 }
 
-.extra .amount{
-    color:#0b91a6;
-    font-weight:800;
-    font-size:20px;
-    margin:8px 0;
-}
-
-.extra p{
-    color:#778b94;
+.why-card p{
+    color:#718396;
     font-size:13px;
-    line-height:1.7;
 }
+
 
 /* =========================
    CONTACT
 ========================= */
 
-.contact-section{
-    padding-bottom:120px;
+.contact{
+    background:#fff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:25px;
 }
 
 .contact-card{
-    position:relative;
-    overflow:hidden;
-    padding:45px;
-    border-radius:35px;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(7,126,159,.94),
-            rgba(30,188,193,.90)
-        );
-    color:white;
-    box-shadow:0 25px 70px rgba(11,133,157,.22);
+    background:#f7fbff;
+    border:1px solid #e5eef5;
+    border-radius:25px;
+    padding:30px;
 }
 
-.contact-card:after{
-    content:"";
-    position:absolute;
-    width:330px;
-    height:330px;
-    border-radius:50%;
-    background:rgba(255,255,255,.10);
-    right:-90px;
-    top:-150px;
+.contact-item{
+    display:flex;
+    gap:15px;
+    padding:16px 0;
+    border-bottom:1px solid #e5edf4;
 }
 
-.contact-inner{
-    position:relative;
-    z-index:2;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
+.contact-item:last-child{
+    border-bottom:0;
+}
+
+.contact-icon{
+    width:45px;
+    height:45px;
+    min-width:45px;
+    background:#eaf6ff;
+    border-radius:13px;
+    display:flex;
     align-items:center;
+    justify-content:center;
+    font-size:21px;
 }
 
-.contact-card h2{
-    font-size:38px;
-    line-height:1.15;
-    margin-bottom:15px;
-}
-
-.contact-card p{
-    color:#dcffff;
+.contact-item strong{
+    display:block;
     font-size:14px;
-    line-height:1.8;
-    margin-bottom:22px;
+    margin-bottom:2px;
 }
 
-.contact-info{
-    display:grid;
-    gap:12px;
-}
-
-/* CLICKABLE CONTACT ROWS */
-
-.contact-row{
-    display:block;
-    width:100%;
-    padding:17px;
-    border-radius:17px;
-    background:rgba(255,255,255,.12);
-    border:1px solid rgba(255,255,255,.16);
-    color:white;
-    transition:.25s;
-    cursor:pointer;
-}
-
-.contact-row:hover{
-    background:rgba(255,255,255,.22);
-    transform:translateY(-3px);
-}
-
-.contact-row b{
-    display:block;
-    font-size:12px;
-    margin-bottom:4px;
-}
-
-.contact-row span{
-    color:#d7ffff;
+.contact-item span,
+.contact-item a{
     font-size:13px;
+    color:#718396;
 }
 
-.map-btn{
-    background:white;
-    color:#087a95;
+.contact-item a:hover{
+    color:#087cf5;
 }
+
+.map-card{
+    border-radius:25px;
+    overflow:hidden;
+    min-height:400px;
+    border:1px solid #e5eef5;
+    box-shadow:var(--shadow);
+}
+
+.map-card iframe{
+    width:100%;
+    height:100%;
+    min-height:400px;
+    border:0;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    padding:55px 20px;
+    background:#f7fbff;
+}
+
+.cta-box{
+    max-width:1200px;
+    margin:auto;
+    border-radius:28px;
+    padding:42px;
+    background:linear-gradient(135deg,#eef8ff,#f4efff);
+    border:1px solid #e1ebf5;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.cta-box h2{
+    font-size:30px;
+    margin-bottom:5px;
+}
+
+.cta-box p{
+    color:#718396;
+    font-size:14px;
+}
+
 
 /* =========================
    FOOTER
 ========================= */
 
 footer{
-    padding:35px 5%;
-    background:#0b3443;
-    color:#9db7bf;
-    text-align:center;
-    font-size:12px;
+    background:#102d47;
+    color:#fff;
+    padding:45px 20px 25px;
 }
 
-footer strong{
-    color:white;
-    font-size:15px;
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:40px;
 }
+
+.footer-brand h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.footer-brand p{
+    color:#a9bbca;
+    font-size:13px;
+    max-width:430px;
+}
+
+.footer-column h4{
+    margin-bottom:12px;
+    font-size:14px;
+}
+
+.footer-column a{
+    display:block;
+    color:#a9bbca;
+    font-size:13px;
+    margin:8px 0;
+}
+
+.footer-column a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    max-width:1200px;
+    margin:30px auto 0;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.10);
+    color:#91a8ba;
+    font-size:12px;
+    text-align:center;
+}
+
 
 /* =========================
-   MOBILE BOTTOM BAR
+   FLOATING WHATSAPP
 ========================= */
-
-.mobile-bar{
-    display:none;
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    z-index:2000;
-    padding:8px;
-    gap:7px;
-    background:rgba(255,255,255,.90);
-    backdrop-filter:blur(18px);
-    box-shadow:0 -8px 30px rgba(0,0,0,.10);
-}
-
-.mobile-bar a{
-    flex:1;
-    padding:12px 5px;
-    text-align:center;
-    border-radius:13px;
-    font-size:11px;
-    font-weight:800;
-}
-
-.call{
-    background:#e1f4ff;
-    color:#0879a0;
-}
 
 .whatsapp{
-    background:#dff9ee;
-    color:#07966a;
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:29px;
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+    z-index:10000;
+    transition:.25s ease;
 }
 
-.home{
-    background:#e1f8f7;
-    color:#087f91;
+.whatsapp:hover{
+    transform:scale(1.08);
 }
+
 
 /* =========================
-   RESPONSIVE
+   MOBILE
 ========================= */
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
-    nav{
+    .nav-links{
+        gap:11px;
+    }
+
+    .nav-links a{
+        font-size:12px;
+    }
+
+    .hero-container{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding-top:55px;
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .test-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .package-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+
+@media(max-width:700px){
+
+    .topbar{
+        font-size:11px;
+        padding:8px;
+    }
+
+    .topbar span{
+        display:none;
+    }
+
+    .nav-inner{
+        min-height:65px;
+        padding:10px 15px;
+    }
+
+    .logo{
+        font-size:14px;
+    }
+
+    .logo-icon{
+        width:39px;
+        height:39px;
+        font-size:20px;
+        border-radius:12px;
+    }
+
+    .logo-text small{
+        font-size:8px;
+    }
+
+    .nav-links{
         display:none;
     }
 
     .hero{
-        padding-top:60px;
+        padding:50px 17px 60px;
     }
 
-    .hero-inner{
-        grid-template-columns:1fr;
-        gap:40px;
-    }
-
-    .services{
-        grid-template-columns:1fr;
-    }
-
-    .tests{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .contact-inner{
-        grid-template-columns:1fr;
-    }
-
-    .mobile-bar{
-        display:flex;
-    }
-
-    footer{
-        padding-bottom:90px;
-    }
-}
-
-@media(max-width:600px){
-
-    section{
-        padding:70px 5%;
-    }
-
-    .hero{
-        min-height:auto;
-        padding:55px 5% 60px;
+    .hero-container{
+        gap:35px;
     }
 
     .hero h1{
-        font-size:43px;
+        font-size:42px;
+        letter-spacing:-1.5px;
     }
 
     .hero p{
         font-size:15px;
     }
 
-    .liquid-card{
-        min-height:auto;
-        padding:24px;
-        border-radius:30px;
+    .hero-main-icon{
+        height:180px;
+        font-size:75px;
     }
 
-    .lab-orb{
-        width:120px;
-        height:120px;
-        font-size:55px;
+    section{
+        padding:60px 16px;
     }
 
-    .quick{
+    .section-head{
+        margin-bottom:30px;
+    }
+
+    .service-grid,
+    .test-grid,
+    .package-grid,
+    .why-grid{
         grid-template-columns:1fr;
     }
 
-    .heading h2{
-        font-size:31px;
+    .collection-container{
+        grid-template-columns:1fr;
+        gap:30px;
     }
 
-    .package-wrap,
-    .extra-grid{
+    .collection-features{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contact-grid{
         grid-template-columns:1fr;
     }
 
-    .tests{
-        grid-template-columns:1fr;
+    .map-card{
+        min-height:300px;
     }
 
-    .contact-card{
+    .map-card iframe{
+        min-height:300px;
+    }
+
+    .cta-box{
         padding:30px 22px;
-        border-radius:28px;
+        flex-direction:column;
+        align-items:flex-start;
     }
 
-    .contact-card h2{
-        font-size:30px;
+    .cta-box h2{
+        font-size:25px;
     }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+}
+
+
+/* =========================
+   EXTRA SMALL
+========================= */
+
+@media(max-width:380px){
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero-mini-grid{
+        grid-template-columns:1fr;
+    }
+
+    .collection-features{
+        grid-template-columns:1fr;
+    }
+
 }
 
 </style>
@@ -862,34 +1060,53 @@ footer strong{
 
 <body>
 
-<!-- WATER BACKGROUND -->
 
-<div class="water">
-    <div class="blob one"></div>
-    <div class="blob two"></div>
-    <div class="blob three"></div>
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="topbar">
+    🕒 Open Daily: 8:00 AM – 7:30 PM
+    <span>•</span>
+    🏠 Home Sample Collection Available
 </div>
 
 
 <!-- =========================
-     NAVIGATION
+     NAVBAR
 ========================= -->
 
-<header>
+<header class="navbar">
 
-    <div class="nav">
+    <div class="nav-inner">
 
-        <div class="logo">
-            Blood Test & Laboratory
-            <small>NABL ACCREDITED LAB</small>
-        </div>
+        <a href="#home" class="logo">
 
-        <nav>
+            <div class="logo-icon">🩸</div>
+
+            <div class="logo-text">
+                Blood Test & Laboratory
+                <small>NABL ACCREDITED LAB</small>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
             <a href="#home">Home</a>
             <a href="#services">Services</a>
-            <a href="#packages">Packages</a>
             <a href="#tests">Tests</a>
+            <a href="#packages">Packages</a>
+            <a href="#home-collection">Home Collection</a>
             <a href="#contact">Contact</a>
+
+            <a
+                href="tel:+919818962098"
+                class="nav-call">
+                📞 Call Now
+            </a>
+
         </nav>
 
     </div>
@@ -903,37 +1120,39 @@ footer strong{
 
 <section class="hero" id="home">
 
-    <div class="hero-inner">
+    <div class="hero-container">
 
         <div>
 
-            <div class="pill">
-                <span class="dot"></span>
-                PROFESSIONAL DIAGNOSTIC CARE
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Trusted Laboratory Services
             </div>
 
             <h1>
-                Your Health.<br>
-                Our <span>Precision.</span>
+                Better Health Starts
+                With <span>Better Testing.</span>
             </h1>
 
             <p>
-                Reliable blood testing, health packages and convenient
-                home sample collection — designed around your comfort.
+                Reliable laboratory testing with convenient
+                home sample collection in Greater Kailash,
+                New Delhi.
             </p>
 
-            <div class="actions">
+            <div class="hero-buttons">
 
-                <a class="btn primary"
-                   href="https://wa.me/919818962098?text=Hello%20Blood%20Test%20%26%20Laboratory%2C%20I%20want%20to%20book%20a%20test."
-                   target="_blank"
-                   rel="noopener">
+                <a
+                    class="btn btn-primary"
+                    href="https://wa.me/919818962098?text=Hello%20I%20want%20to%20book%20a%20blood%20test."
+                    target="_blank">
                     💬 Book on WhatsApp
                 </a>
 
-                <a class="btn soft"
-                   href="tel:+919818962098">
-                    📞 Call Laboratory
+                <a
+                    class="btn btn-outline"
+                    href="#tests">
+                    🔬 View Tests
                 </a>
 
             </div>
@@ -941,36 +1160,37 @@ footer strong{
         </div>
 
 
-        <div class="liquid-card">
+        <div class="hero-card">
 
-            <div class="lab-orb">
+            <div class="hero-main-icon">
                 🧪
             </div>
 
-            <div class="quick">
+            <h3>
+                Complete Laboratory Testing
+            </h3>
 
-                <div class="quick-box">
-                    <b>🕐 Lab Timing</b>
-                    <span>8:00 AM – 7:30 PM</span>
+            <p>
+                Blood tests, pathology, biochemistry,
+                urine testing and health packages.
+            </p>
+
+            <div class="hero-mini-grid">
+
+                <div class="hero-mini">
+                    <strong>19+</strong>
+                    Tests
                 </div>
 
-                <div class="quick-box">
-                    <b>🏠 Home Collection</b>
-                    <span>Available</span>
+                <div class="hero-mini">
+                    <strong>6</strong>
+                    Packages
                 </div>
 
-                <div class="quick-box">
-                    <b>📱 WhatsApp</b>
-                    <span>+91 98189 62098</span>
+                <div class="hero-mini">
+                    <strong>8–7:30</strong>
+                    Timing
                 </div>
-
-                <a class="quick-box"
-                   href="https://maps.app.goo.gl/goz6WmqaSdZ8zSHPA?g_st=awb"
-                   target="_blank"
-                   rel="noopener">
-                    <b>📍 Location</b>
-                    <span>Open Google Maps →</span>
-                </a>
 
             </div>
 
@@ -985,149 +1205,14 @@ footer strong{
      SERVICES
 ========================= -->
 
-<section id="services">
+<section class="services" id="services">
 
-    <div class="container">
+    <div class="section-container">
 
-        <div class="heading">
+        <div class="section-head">
 
-            <div class="eyebrow">
-                SIMPLE • COMFORTABLE • RELIABLE
+            <div class="section-label">
+                Our Services
             </div>
 
-            <h2>
-                Everything You Need
-            </h2>
-
-            <p>
-                Diagnostic services presented simply, so you can find
-                what you need without unnecessary complexity.
-            </p>
-
-        </div>
-
-
-        <div class="services">
-
-            <div class="glass">
-
-                <div class="icon">
-                    🩸
-                </div>
-
-                <h3>
-                    Blood Testing
-                </h3>
-
-                <p>
-                    CBC, LFT, Lipid Profile, HbA1c, Vitamin tests,
-                    Hormone tests and more.
-                </p>
-
-            </div>
-
-
-            <div class="glass">
-
-                <div class="icon">
-                    🏠
-                </div>
-
-                <h3>
-                    Home Sample Collection
-                </h3>
-
-                <p>
-                    Prefer testing from home? Contact us to arrange
-                    convenient sample collection.
-                </p>
-
-            </div>
-
-
-            <div class="glass">
-
-                <div class="icon">
-                    💙
-                </div>
-
-                <h3>
-                    Easy Booking
-                </h3>
-
-                <p>
-                    Quickly enquire about tests, prices and packages
-                    through WhatsApp or phone.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     HEALTH PACKAGES
-========================= -->
-
-<section id="packages">
-
-    <div class="container">
-
-        <div class="heading">
-
-            <div class="eyebrow">
-                HEALTH SCREENING
-            </div>
-
-            <h2>
-                Health Packages
-            </h2>
-
-            <p>
-                Select a package and contact us for complete test details.
-            </p>
-
-        </div>
-
-
-        <div class="package-wrap">
-
-
-            <!-- SILVER -->
-
-            <div class="package">
-
-                <span class="package-tag">
-                    POPULAR
-                </span>
-
-                <h3>
-                    Silver Health Package
-                </h3>
-
-                <div class="price">
-                    ₹1,500
-                </div>
-
-                <ul>
-                    <li>Routine health screening</li>
-                    <li>Essential diagnostic tests</li>
-                    <li>Convenient sample collection</li>
-                    <li>Contact laboratory for details</li>
-                </ul>
-
-                <a class="btn primary"
-                   href="https://wa.me/919818962098?text=Hello%20Blood%20Test%20%26%20Laboratory%2C%20I%20want%20details%20about%20the%20Silver%20Health%20Package."
-                   target="_blank"
-                   rel="noopener">
-                    💬 Get Details
-                </a>
-
-            </div>
-
-
-            <!
+            <h
