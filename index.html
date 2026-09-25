@@ -6,18 +6,13 @@
 
 <title>Blood Test & Laboratory | NABL ACCREDITED LAB</title>
 
-<meta name="description" content="Blood Test & Laboratory - Diagnostic and laboratory testing services in Greater Kailash, New Delhi. Home sample collection available.">
+<meta name="description" content="Blood Test & Laboratory - Blood tests, pathology, health packages and home sample collection.">
 
 <style>
-
-/* =========================
-   BASIC RESET
-========================= */
-
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 html{
@@ -25,87 +20,39 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f7fbff;
-    color:#17324d;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#172033;
+    background:#f6fbff;
     line-height:1.6;
-    overflow-x:hidden;
 }
 
 a{
     text-decoration:none;
-    color:inherit;
-}
-
-button,
-a{
-    -webkit-tap-highlight-color:transparent;
 }
 
 img{
     max-width:100%;
-    display:block;
 }
 
-
-/* =========================
-   COLORS
-========================= */
-
-:root{
-    --blue:#087cf5;
-    --blue-dark:#0757b8;
-    --cyan:#00c6ff;
-    --purple:#7547ff;
-    --pink:#ff4f9a;
-    --red:#ef3f55;
-    --green:#16b878;
-    --dark:#17324d;
-    --muted:#6d8195;
-    --white:#ffffff;
-    --light:#f7fbff;
-    --border:#e7eef5;
-    --shadow:0 18px 50px rgba(20,75,120,.10);
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
 }
 
+/* HEADER */
 
-/* =========================
-   TOP BAR
-========================= */
-
-.topbar{
-    background:linear-gradient(90deg,#0757b8,#087cf5,#00aeea);
-    color:#fff;
-    text-align:center;
-    padding:9px 15px;
-    font-size:13px;
-    font-weight:600;
-}
-
-.topbar span{
-    margin:0 8px;
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar{
+header{
     position:sticky;
     top:0;
-    left:0;
-    width:100%;
-    background:rgba(255,255,255,.96);
-    border-bottom:1px solid #e8eef5;
-    z-index:9999;
+    z-index:1000;
+    background:rgba(255,255,255,.97);
+    border-bottom:1px solid #e3edf5;
+    box-shadow:0 3px 18px rgba(20,80,120,.08);
 }
 
-.nav-inner{
-    max-width:1200px;
-    margin:auto;
-    min-height:76px;
-    padding:12px 20px;
+.nav{
+    min-height:72px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -113,372 +60,253 @@ img{
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:11px;
+    color:#087ea4;
+    font-size:20px;
     font-weight:800;
-    font-size:17px;
+    line-height:1.2;
 }
 
-.logo-icon{
-    width:44px;
-    height:44px;
-    border-radius:14px;
-    background:linear-gradient(135deg,#087cf5,#00c6ff);
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:24px;
-    box-shadow:0 10px 25px rgba(8,124,245,.25);
-}
-
-.logo-text{
-    line-height:1.15;
-}
-
-.logo-text small{
+.logo small{
     display:block;
-    margin-top:4px;
-    color:#087cf5;
+    color:#66788a;
     font-size:10px;
-    letter-spacing:1.2px;
+    letter-spacing:1px;
+    margin-top:4px;
 }
 
 .nav-links{
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:8px;
+    flex-wrap:wrap;
 }
 
 .nav-links a{
+    color:#26384a;
+    padding:9px 12px;
+    border-radius:20px;
     font-size:14px;
-    font-weight:700;
-    color:#526b80;
-    transition:.25s ease;
+    font-weight:600;
 }
 
 .nav-links a:hover{
-    color:#087cf5;
+    background:#e8f8fc;
+    color:#087ea4;
 }
 
-.nav-call{
-    color:#fff !important;
-    background:linear-gradient(135deg,#087cf5,#7547ff);
-    padding:11px 17px;
-    border-radius:30px;
-    box-shadow:0 8px 22px rgba(8,124,245,.22);
-}
-
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     position:relative;
     overflow:hidden;
-    padding:75px 20px 85px;
-    background:
-        radial-gradient(circle at 85% 15%,rgba(0,198,255,.18),transparent 30%),
-        radial-gradient(circle at 10% 20%,rgba(117,71,255,.12),transparent 30%),
-        linear-gradient(135deg,#ffffff 0%,#f1f8ff 100%);
+    padding:85px 0 70px;
+    background:linear-gradient(135deg,#e8fbff,#f7ffff 45%,#eef7ff);
 }
 
-.hero-container{
-    max-width:1200px;
+.hero:before{
+    content:"";
+    position:absolute;
+    width:360px;
+    height:360px;
+    border-radius:50%;
+    background:rgba(82,205,224,.16);
+    right:-120px;
+    top:-120px;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background:rgba(110,168,255,.12);
+    left:-120px;
+    bottom:-100px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+    text-align:center;
     margin:auto;
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    align-items:center;
-    gap:60px;
 }
 
 .badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:8px 14px;
+    display:inline-block;
+    padding:8px 16px;
+    background:#ffffff;
+    color:#087ea4;
+    border:1px solid #cceef5;
     border-radius:30px;
-    background:#fff;
-    border:1px solid #dfeefa;
-    color:#087cf5;
     font-size:12px;
     font-weight:800;
-    box-shadow:0 8px 25px rgba(30,90,130,.08);
-    margin-bottom:20px;
-}
-
-.badge-dot{
-    width:8px;
-    height:8px;
-    background:#16b878;
-    border-radius:50%;
+    letter-spacing:1px;
+    margin-bottom:18px;
 }
 
 .hero h1{
-    font-size:clamp(38px,5vw,68px);
+    font-size:clamp(34px,6vw,62px);
     line-height:1.05;
-    letter-spacing:-2px;
-    color:#102d47;
-    margin-bottom:20px;
+    color:#123b55;
+    margin-bottom:18px;
 }
 
 .hero h1 span{
-    background:linear-gradient(90deg,#087cf5,#7547ff,#00aeea);
-    -webkit-background-clip:text;
-    color:transparent;
+    color:#08a0ad;
 }
 
 .hero p{
-    max-width:650px;
-    color:#64798c;
+    max-width:700px;
+    margin:0 auto 28px;
+    color:#526679;
     font-size:17px;
-    margin-bottom:30px;
 }
 
-.hero-buttons{
+.buttons{
     display:flex;
+    justify-content:center;
+    gap:12px;
     flex-wrap:wrap;
-    gap:13px;
 }
 
 .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap:8px;
-    padding:14px 21px;
-    border-radius:14px;
-    font-weight:800;
-    font-size:14px;
-    transition:.25s ease;
+    min-height:48px;
+    padding:12px 22px;
+    border-radius:30px;
+    font-weight:700;
     cursor:pointer;
+    border:0;
+    transition:.2s ease;
 }
 
-.btn-primary{
-    background:linear-gradient(135deg,#087cf5,#00aeea);
-    color:#fff;
-    box-shadow:0 12px 30px rgba(8,124,245,.25);
-}
-
-.btn-primary:hover{
+.btn:hover{
     transform:translateY(-2px);
 }
 
-.btn-outline{
-    background:#fff;
-    color:#087cf5;
-    border:1px solid #d9e8f5;
+.btn-primary{
+    background:#08a0ad;
+    color:white;
 }
 
-.btn-outline:hover{
-    border-color:#087cf5;
+.btn-secondary{
+    background:white;
+    color:#087ea4;
+    border:1px solid #cceef5;
 }
 
+/* INFO STRIP */
 
-/* HERO CARD */
-
-.hero-card{
+.info-strip{
+    margin-top:-25px;
     position:relative;
-    background:#fff;
-    border-radius:30px;
-    padding:28px;
-    box-shadow:0 25px 70px rgba(35,85,125,.14);
-    border:1px solid rgba(255,255,255,.8);
+    z-index:5;
 }
 
-.hero-main-icon{
-    height:230px;
-    border-radius:24px;
-    background:
-        radial-gradient(circle at 25% 20%,rgba(0,198,255,.35),transparent 25%),
-        linear-gradient(135deg,#eaf7ff,#f4efff);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:95px;
-    margin-bottom:20px;
-}
-
-.hero-card h3{
-    font-size:22px;
-    margin-bottom:6px;
-}
-
-.hero-card p{
-    font-size:14px;
-    margin-bottom:20px;
-}
-
-.hero-mini-grid{
+.info-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
 }
 
-.hero-mini{
-    padding:12px 8px;
+.info-box{
+    background:white;
+    padding:20px;
+    border-radius:18px;
     text-align:center;
-    background:#f7fbff;
-    border-radius:14px;
-    font-size:11px;
-    font-weight:700;
-    color:#557087;
+    box-shadow:0 8px 28px rgba(26,90,120,.10);
 }
 
-.hero-mini strong{
+.info-box strong{
     display:block;
-    font-size:18px;
-    color:#087cf5;
-}
-
-
-/* =========================
-   COMMON SECTION
-========================= */
-
-section{
-    padding:80px 20px;
-}
-
-.section-container{
-    max-width:1200px;
-    margin:auto;
-}
-
-.section-head{
-    text-align:center;
-    max-width:700px;
-    margin:0 auto 45px;
-}
-
-.section-label{
-    color:#087cf5;
-    font-size:12px;
-    font-weight:900;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    margin-bottom:9px;
-}
-
-.section-head h2{
-    font-size:clamp(30px,4vw,44px);
-    line-height:1.15;
-    margin-bottom:12px;
-    color:#17324d;
-}
-
-.section-head p{
-    color:#718396;
+    color:#087ea4;
     font-size:15px;
 }
 
-
-/* =========================
-   SERVICES
-========================= */
-
-.services{
-    background:#fff;
+.info-box span{
+    font-size:12px;
+    color:#68798a;
 }
 
-.service-grid{
+/* SECTIONS */
+
+section{
+    padding:75px 0;
+    scroll-margin-top:80px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.section-title span{
+    color:#08a0ad;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    font-size:34px;
+    color:#123b55;
+    margin:7px 0;
+}
+
+.section-title p{
+    color:#68798a;
+}
+
+/* SERVICES */
+
+.services{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:18px;
 }
 
-.service-card{
-    background:#fff;
-    border:1px solid #e7eef5;
+.service{
+    background:white;
+    padding:28px 20px;
     border-radius:22px;
-    padding:27px 20px;
-    transition:.25s ease;
-    box-shadow:0 10px 35px rgba(30,75,110,.05);
-}
-
-.service-card:hover{
-    transform:translateY(-6px);
-    box-shadow:var(--shadow);
-    border-color:#cce5fa;
+    border:1px solid #e2eef4;
+    box-shadow:0 7px 25px rgba(25,85,115,.07);
+    text-align:center;
 }
 
 .service-icon{
-    width:55px;
-    height:55px;
-    border-radius:17px;
+    width:58px;
+    height:58px;
+    margin:0 auto 15px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:27px;
-    background:linear-gradient(135deg,#e7f6ff,#f0eaff);
-    margin-bottom:18px;
+    border-radius:50%;
+    background:#e8f9fc;
+    font-size:26px;
 }
 
-.service-card h3{
-    font-size:18px;
+.service h3{
+    color:#163f58;
     margin-bottom:7px;
 }
 
-.service-card p{
-    font-size:13px;
-    color:#718396;
-}
-
-
-/* =========================
-   TESTS
-========================= */
-
-.tests-section{
-    background:#f7fbff;
-}
-
-.test-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.test-card{
-    background:#fff;
-    border:1px solid #e7eef5;
-    border-radius:17px;
-    padding:18px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:12px;
-    transition:.25s ease;
-}
-
-.test-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 35px rgba(30,75,110,.08);
-}
-
-.test-name{
-    font-weight:700;
+.service p{
+    color:#718090;
     font-size:14px;
 }
 
-.test-price{
-    color:#087cf5;
-    font-weight:900;
-    white-space:nowrap;
-}
-
-
-/* =========================
-   PACKAGES
-========================= */
+/* PACKAGES */
 
 .packages-section{
-    background:#fff;
+    background:linear-gradient(180deg,#f5fcff,#ffffff);
 }
 
-.package-grid{
+.packages-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
@@ -486,733 +314,958 @@ section{
 
 .package-card{
     position:relative;
-    background:#fff;
-    border:1px solid #e2ebf3;
-    border-radius:25px;
+    background:#ffffff;
+    border:1px solid #dcecf3;
+    border-radius:24px;
     padding:28px;
+    box-shadow:0 10px 30px rgba(25,85,115,.08);
     overflow:hidden;
-    box-shadow:0 12px 40px rgba(25,75,110,.06);
-    transition:.25s ease;
-}
-
-.package-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 22px 55px rgba(25,75,110,.12);
 }
 
 .package-card.featured{
-    border:2px solid #087cf5;
+    border:2px solid #08a0ad;
 }
 
-.package-top{
-    display:flex;
-    justify-content:space-between;
-    gap:15px;
-    align-items:flex-start;
+.package-badge{
+    display:inline-block;
+    background:#e9f9fc;
+    color:#087ea4;
+    border-radius:20px;
+    padding:5px 10px;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1px;
+    margin-bottom:13px;
 }
 
 .package-card h3{
-    font-size:20px;
+    font-size:22px;
+    color:#173e56;
+    margin-bottom:7px;
 }
 
 .package-price{
-    color:#087cf5;
-    font-size:24px;
+    color:#08a0ad;
+    font-size:30px;
     font-weight:900;
-    white-space:nowrap;
-}
-
-.package-card p{
-    color:#72869a;
-    font-size:13px;
-    margin:13px 0 18px;
-}
-
-.package-list{
-    list-style:none;
-}
-
-.package-list li{
-    padding:7px 0;
-    color:#536d82;
-    font-size:13px;
-    border-bottom:1px dashed #e8eef3;
-}
-
-.package-list li:last-child{
-    border-bottom:0;
-}
-
-.package-list li::before{
-    content:"✓";
-    color:#16b878;
-    font-weight:900;
-    margin-right:8px;
-}
-
-.package-button{
-    display:block;
-    text-align:center;
-    margin-top:20px;
-    padding:12px;
-    background:#eef7ff;
-    color:#087cf5;
-    border-radius:12px;
-    font-size:13px;
-    font-weight:800;
-}
-
-.package-button:hover{
-    background:#087cf5;
-    color:#fff;
-}
-
-
-/* =========================
-   HOME COLLECTION
-========================= */
-
-.collection{
-    background:
-        radial-gradient(circle at 90% 20%,rgba(0,198,255,.20),transparent 30%),
-        linear-gradient(135deg,#0757b8,#087cf5);
-    color:#fff;
-}
-
-.collection-container{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:50px;
-}
-
-.collection h2{
-    font-size:clamp(30px,4vw,46px);
-    line-height:1.1;
     margin-bottom:15px;
 }
 
-.collection p{
-    color:rgba(255,255,255,.84);
-    margin-bottom:25px;
+.package-card ul{
+    list-style:none;
+    margin-bottom:20px;
 }
 
-.collection-features{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
+.package-card li{
+    padding:7px 0;
+    color:#637586;
+    font-size:14px;
+    border-bottom:1px solid #eef4f7;
 }
 
-.collection-feature{
-    padding:16px;
-    background:rgba(255,255,255,.12);
-    border:1px solid rgba(255,255,255,.15);
-    border-radius:16px;
-    font-size:13px;
+.package-card li:before{
+    content:"✓";
+    color:#08a0ad;
+    font-weight:bold;
+    margin-right:8px;
+}
+
+.package-btn{
+    display:block;
+    text-align:center;
+    background:#08a0ad;
+    color:#fff;
+    padding:12px;
+    border-radius:25px;
     font-weight:700;
 }
 
-.collection-feature span{
-    font-size:21px;
-    display:block;
-    margin-bottom:4px;
+.package-btn:hover{
+    background:#087f98;
+}
+
+/* TESTS */
+
+.tests-box{
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 8px 30px rgba(20,80,120,.07);
+    border:1px solid #e1edf3;
+}
+
+.search{
+    width:100%;
+    padding:15px 18px;
+    border:1px solid #d9e8ef;
+    border-radius:30px;
+    outline:none;
+    margin-bottom:20px;
+    font-size:15px;
+}
+
+.search:focus{
+    border-color:#08a0ad;
+}
+
+.table-wrap{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:500px;
+}
+
+th{
+    background:#e9f9fc;
+    color:#087ea4;
+    text-align:left;
+    padding:14px;
+}
+
+td{
+    padding:13px 14px;
+    border-bottom:1px solid #edf2f5;
+}
+
+td:last-child{
+    font-weight:800;
+    color:#08a0ad;
+}
+
+/* HOME COLLECTION */
+
+.collection{
+    background:linear-gradient(135deg,#e8fbff,#f5f9ff);
 }
 
 .collection-box{
-    background:rgba(255,255,255,.12);
-    border:1px solid rgba(255,255,255,.20);
-    border-radius:30px;
-    padding:35px;
+    background:white;
+    border-radius:28px;
+    padding:40px;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:30px;
+    align-items:center;
+    box-shadow:0 10px 35px rgba(20,80,120,.09);
+}
+
+.collection h2{
+    font-size:35px;
+    color:#123b55;
+    margin-bottom:12px;
+}
+
+.collection p{
+    color:#637586;
+    margin-bottom:20px;
+}
+
+.collection-points{
+    list-style:none;
+}
+
+.collection-points li{
+    padding:8px 0;
+}
+
+.collection-points li:before{
+    content:"✓";
+    color:#08a0ad;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+.collection-card{
+    padding:30px;
+    border-radius:22px;
+    background:#effbfe;
     text-align:center;
 }
 
-.collection-box-icon{
-    font-size:80px;
-    margin-bottom:12px;
+.collection-card strong{
+    display:block;
+    font-size:30px;
+    color:#087ea4;
 }
 
-.collection-box h3{
-    font-size:25px;
-    margin-bottom:7px;
-}
-
-.collection-box p{
-    margin:0;
-}
-
-
-/* =========================
-   WHY US
-========================= */
-
-.why{
-    background:#f7fbff;
-}
-
-.why-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.why-card{
-    background:#fff;
-    border-radius:22px;
-    padding:27px;
-    border:1px solid #e7eef5;
-}
-
-.why-number{
-    font-size:14px;
-    font-weight:900;
-    color:#087cf5;
-    margin-bottom:12px;
-}
-
-.why-card h3{
-    font-size:18px;
-    margin-bottom:7px;
-}
-
-.why-card p{
-    color:#718396;
-    font-size:13px;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-    background:#fff;
-}
+/* CONTACT */
 
 .contact-grid{
     display:grid;
-    grid-template-columns:.9fr 1.1fr;
-    gap:25px;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
 .contact-card{
-    background:#f7fbff;
-    border:1px solid #e5eef5;
-    border-radius:25px;
+    background:white;
+    border:1px solid #e0edf3;
+    border-radius:24px;
     padding:30px;
+    box-shadow:0 8px 28px rgba(20,80,120,.07);
 }
 
 .contact-item{
-    display:flex;
-    gap:15px;
-    padding:16px 0;
-    border-bottom:1px solid #e5edf4;
+    padding:14px 0;
+    border-bottom:1px solid #edf2f5;
 }
 
 .contact-item:last-child{
     border-bottom:0;
 }
 
-.contact-icon{
-    width:45px;
-    height:45px;
-    min-width:45px;
-    background:#eaf6ff;
-    border-radius:13px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:21px;
-}
-
 .contact-item strong{
     display:block;
-    font-size:14px;
-    margin-bottom:2px;
+    color:#173e56;
+    margin-bottom:4px;
 }
 
-.contact-item span,
 .contact-item a{
-    font-size:13px;
-    color:#718396;
+    color:#087ea4;
 }
 
-.contact-item a:hover{
-    color:#087cf5;
-}
-
-.map-card{
+.map-btn{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    padding:14px;
     border-radius:25px;
-    overflow:hidden;
-    min-height:400px;
-    border:1px solid #e5eef5;
-    box-shadow:var(--shadow);
+    background:#123b55;
+    color:white;
+    font-weight:700;
 }
 
-.map-card iframe{
-    width:100%;
-    height:100%;
-    min-height:400px;
-    border:0;
-}
-
-
-/* =========================
-   CTA
-========================= */
-
-.cta{
-    padding:55px 20px;
-    background:#f7fbff;
-}
-
-.cta-box{
-    max-width:1200px;
-    margin:auto;
-    border-radius:28px;
-    padding:42px;
-    background:linear-gradient(135deg,#eef8ff,#f4efff);
-    border:1px solid #e1ebf5;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:25px;
-}
-
-.cta-box h2{
-    font-size:30px;
-    margin-bottom:5px;
-}
-
-.cta-box p{
-    color:#718396;
-    font-size:14px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
-    background:#102d47;
-    color:#fff;
-    padding:45px 20px 25px;
-}
-
-.footer-container{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr;
-    gap:40px;
-}
-
-.footer-brand h3{
-    font-size:22px;
-    margin-bottom:10px;
-}
-
-.footer-brand p{
-    color:#a9bbca;
-    font-size:13px;
-    max-width:430px;
-}
-
-.footer-column h4{
-    margin-bottom:12px;
-    font-size:14px;
-}
-
-.footer-column a{
-    display:block;
-    color:#a9bbca;
-    font-size:13px;
-    margin:8px 0;
-}
-
-.footer-column a:hover{
-    color:#fff;
-}
-
-.footer-bottom{
-    max-width:1200px;
-    margin:30px auto 0;
-    padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.10);
-    color:#91a8ba;
-    font-size:12px;
+    background:#123b55;
+    color:#dbeaf1;
+    padding:35px 0 95px;
     text-align:center;
 }
 
+footer strong{
+    color:white;
+}
 
-/* =========================
-   FLOATING WHATSAPP
-========================= */
+footer p{
+    font-size:13px;
+    margin-top:7px;
+}
 
-.whatsapp{
+/* FLOATING WHATSAPP */
+
+.whatsapp-float{
     position:fixed;
     right:18px;
-    bottom:18px;
+    bottom:85px;
     width:58px;
     height:58px;
     border-radius:50%;
     background:#25D366;
-    color:#fff;
+    color:white;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:29px;
-    box-shadow:0 12px 30px rgba(0,0,0,.20);
-    z-index:10000;
-    transition:.25s ease;
+    font-size:27px;
+    z-index:9999;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
 }
 
-.whatsapp:hover{
-    transform:scale(1.08);
+/* MOBILE BAR */
+
+.mobile-bar{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:9998;
+    display:none;
+    grid-template-columns:1fr 1fr 1fr;
+    background:white;
+    box-shadow:0 -5px 20px rgba(0,0,0,.12);
 }
 
+.mobile-bar a{
+    text-align:center;
+    padding:12px 5px;
+    font-size:12px;
+    font-weight:700;
+    color:#173e56;
+    border-right:1px solid #e8eef2;
+}
 
-/* =========================
-   MOBILE
-========================= */
+.mobile-bar a:last-child{
+    border-right:0;
+}
 
-@media(max-width:1000px){
+.mobile-bar span{
+    display:block;
+    font-size:19px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .nav{
+        min-height:65px;
+    }
 
     .nav-links{
-        gap:11px;
+        display:none;
     }
 
-    .nav-links a{
-        font-size:12px;
+    .info-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .hero-container{
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .packages-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .collection-box{
         grid-template-columns:1fr;
     }
 
-    .hero{
-        padding-top:55px;
+    .contact-grid{
+        grid-template-columns:1fr;
     }
-
-    .service-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .test-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .package-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .why-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
 }
 
-
-@media(max-width:700px){
-
-    .topbar{
-        font-size:11px;
-        padding:8px;
-    }
-
-    .topbar span{
-        display:none;
-    }
-
-    .nav-inner{
-        min-height:65px;
-        padding:10px 15px;
-    }
-
-    .logo{
-        font-size:14px;
-    }
-
-    .logo-icon{
-        width:39px;
-        height:39px;
-        font-size:20px;
-        border-radius:12px;
-    }
-
-    .logo-text small{
-        font-size:8px;
-    }
-
-    .nav-links{
-        display:none;
-    }
+@media(max-width:600px){
 
     .hero{
-        padding:50px 17px 60px;
-    }
-
-    .hero-container{
-        gap:35px;
+        padding:65px 0 55px;
     }
 
     .hero h1{
-        font-size:42px;
-        letter-spacing:-1.5px;
+        font-size:38px;
     }
 
     .hero p{
         font-size:15px;
     }
 
-    .hero-main-icon{
-        height:180px;
-        font-size:75px;
-    }
-
     section{
-        padding:60px 16px;
+        padding:55px 0;
     }
 
-    .section-head{
-        margin-bottom:30px;
+    .section-title h2{
+        font-size:28px;
     }
 
-    .service-grid,
-    .test-grid,
-    .package-grid,
-    .why-grid{
-        grid-template-columns:1fr;
-    }
-
-    .collection-container{
-        grid-template-columns:1fr;
-        gap:30px;
-    }
-
-    .collection-features{
+    .info-grid{
         grid-template-columns:1fr 1fr;
+    }
+
+    .info-box{
+        padding:15px 8px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .packages-grid{
+        grid-template-columns:1fr;
+    }
+
+    .collection-box{
+        padding:25px;
+    }
+
+    .collection h2{
+        font-size:28px;
     }
 
     .contact-grid{
         grid-template-columns:1fr;
     }
 
-    .map-card{
-        min-height:300px;
+    .mobile-bar{
+        display:grid;
     }
 
-    .map-card iframe{
-        min-height:300px;
+    .whatsapp-float{
+        bottom:75px;
     }
 
-    .cta-box{
-        padding:30px 22px;
-        flex-direction:column;
-        align-items:flex-start;
+    footer{
+        padding-bottom:90px;
     }
-
-    .cta-box h2{
-        font-size:25px;
-    }
-
-    .footer-container{
-        grid-template-columns:1fr;
-        gap:25px;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-    }
-
-    .btn{
-        width:100%;
-    }
-
 }
-
-
-/* =========================
-   EXTRA SMALL
-========================= */
-
-@media(max-width:380px){
-
-    .hero h1{
-        font-size:36px;
-    }
-
-    .hero-mini-grid{
-        grid-template-columns:1fr;
-    }
-
-    .collection-features{
-        grid-template-columns:1fr;
-    }
-
-}
-
 </style>
 </head>
 
-
 <body>
 
+<!-- HEADER -->
+<header>
+<div class="container nav">
 
-<!-- =========================
-     TOP BAR
-========================= -->
+<a href="#home" class="logo">
+Blood Test & Laboratory
+<small>NABL ACCREDITED LAB</small>
+</a>
 
-<div class="topbar">
-    🕒 Open Daily: 8:00 AM – 7:30 PM
-    <span>•</span>
-    🏠 Home Sample Collection Available
+<nav class="nav-links">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#packages">Packages</a>
+<a href="#tests">Tests & Prices</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </div>
-
-
-<!-- =========================
-     NAVBAR
-========================= -->
-
-<header class="navbar">
-
-    <div class="nav-inner">
-
-        <a href="#home" class="logo">
-
-            <div class="logo-icon">🩸</div>
-
-            <div class="logo-text">
-                Blood Test & Laboratory
-                <small>NABL ACCREDITED LAB</small>
-            </div>
-
-        </a>
-
-
-        <nav class="nav-links">
-
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#tests">Tests</a>
-            <a href="#packages">Packages</a>
-            <a href="#home-collection">Home Collection</a>
-            <a href="#contact">Contact</a>
-
-            <a
-                href="tel:+919818962098"
-                class="nav-call">
-                📞 Call Now
-            </a>
-
-        </nav>
-
-    </div>
-
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
-
+<!-- HERO -->
 <section class="hero" id="home">
+<div class="container hero-content">
 
-    <div class="hero-container">
+<div class="badge">NABL ACCREDITED LAB</div>
 
-        <div>
+<h1>
+Reliable Testing.<br>
+<span>Better Health.</span>
+</h1>
 
-            <div class="badge">
-                <span class="badge-dot"></span>
-                Trusted Laboratory Services
-            </div>
+<p>
+Quality laboratory testing, health packages and convenient
+home sample collection — all in one place.
+</p>
 
-            <h1>
-                Better Health Starts
-                With <span>Better Testing.</span>
-            </h1>
+<div class="buttons">
 
-            <p>
-                Reliable laboratory testing with convenient
-                home sample collection in Greater Kailash,
-                New Delhi.
-            </p>
+<a class="btn btn-primary"
+href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20a%20blood%20test"
+target="_blank">
+💬 Book on WhatsApp
+</a>
 
-            <div class="hero-buttons">
+<a class="btn btn-secondary"
+href="tel:+919818962098">
+📞 Call Now
+</a>
 
-                <a
-                    class="btn btn-primary"
-                    href="https://wa.me/919818962098?text=Hello%20I%20want%20to%20book%20a%20blood%20test."
-                    target="_blank">
-                    💬 Book on WhatsApp
-                </a>
+<a class="btn btn-secondary"
+href="https://maps.app.goo.gl/goz6WmqaSdZ8zSHPA"
+target="_blank">
+📍 Get Directions
+</a>
 
-                <a
-                    class="btn btn-outline"
-                    href="#tests">
-                    🔬 View Tests
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="hero-card">
-
-            <div class="hero-main-icon">
-                🧪
-            </div>
-
-            <h3>
-                Complete Laboratory Testing
-            </h3>
-
-            <p>
-                Blood tests, pathology, biochemistry,
-                urine testing and health packages.
-            </p>
-
-            <div class="hero-mini-grid">
-
-                <div class="hero-mini">
-                    <strong>19+</strong>
-                    Tests
-                </div>
-
-                <div class="hero-mini">
-                    <strong>6</strong>
-                    Packages
-                </div>
-
-                <div class="hero-mini">
-                    <strong>8–7:30</strong>
-                    Timing
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
 
 
-<!-- =========================
-     SERVICES
-========================= -->
+<!-- INFO -->
+<div class="info-strip">
+<div class="container info-grid">
 
-<section class="services" id="services">
+<div class="info-box">
+<strong>🧪 Quality Testing</strong>
+<span>Reliable laboratory services</span>
+</div>
 
-    <div class="section-container">
+<div class="info-box">
+<strong>🏠 Home Collection</strong>
+<span>Sample collection available</span>
+</div>
 
-        <div class="section-head">
+<div class="info-box">
+<strong>⏰ 8 AM – 7:30 PM</strong>
+<span>Daily laboratory timing</span>
+</div>
 
-            <div class="section-label">
-                Our Services
-            </div>
+<div class="info-box">
+<strong>📞 Easy Booking</strong>
+<span>Call or WhatsApp us</span>
+</div>
 
-            <h
+</div>
+</div>
+
+
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+
+<div class="section-title">
+<span>OUR SERVICES</span>
+<h2>Complete Laboratory Services</h2>
+<p>Convenient testing for your routine health needs.</p>
+</div>
+
+<div class="services">
+
+<div class="service">
+<div class="service-icon">🩸</div>
+<h3>Blood Tests</h3>
+<p>CBC, HbA1c, lipid profile and other routine blood investigations.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🧪</div>
+<h3>Pathology</h3>
+<p>Routine pathology and diagnostic investigations.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🔬</div>
+<h3>Biochemistry</h3>
+<p>Biochemistry tests for comprehensive health evaluation.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🏠</div>
+<h3>Home Collection</h3>
+<p>Convenient sample collection from your home.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PACKAGES -->
+<section id="packages" class="packages-section">
+<div class="container">
+
+<div class="section-title">
+<span>HEALTH PACKAGES</span>
+<h2>Choose Your Health Package</h2>
+<p>Affordable packages for different testing needs.</p>
+</div>
+
+<div class="packages-grid">
+
+
+<!-- SILVER -->
+<div class="package-card">
+
+<div class="package-badge">POPULAR</div>
+
+<h3>Silver Health Package</h3>
+
+<div class="package-price">₹1500</div>
+
+<ul>
+<li>Complete Health Screening</li>
+<li>Basic Blood Tests</li>
+<li>Routine Health Checkup</li>
+</ul>
+
+<a class="package-btn"
+href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20Silver%20Health%20Package"
+target="_blank">
+Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- GOLD -->
+<div class="package-card featured">
+
+<div class="package-badge">BEST VALUE</div>
+
+<h3>Gold / Jubilee Health Package</h3>
+
+<div class="package-price">₹2500</div>
+
+<ul>
+<li>Complete Health Screening</li>
+<li>Advanced Blood Tests</li>
+<li>Routine Health Checkup</li>
+</ul>
+
+<a class="package-btn"
+href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20Gold%20Jubilee%20Health%20Package"
+target="_blank">
+Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- FEVER 1.1 -->
+<div class="package-card">
+
+<div class="package-badge">FEVER CARE</div>
+
+<h3>Fever Package 1.1</h3>
+
+<div class="package-price">₹950</div>
+
+<ul>
+<li>CBC</li>
+<li>Malaria Antigen</li>
+<li>Widal</li>
+<li>Typhidot IgG & IgM</li>
+</ul>
+
+<a class="package-btn"
+href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20Fever%20Package%201.1"
+target="_blank">
+Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- FEVER 1.2 -->
+<div class="package-card">
+
+<div class="package-badge">FEVER CARE</div>
+
+<h3>Fever Package 1.2</h3>
+
+<div class="package-price">₹500</div>
+
+<ul>
+<li>Malaria Parasite (Slide)</li>
+<li>CBC</li>
+<li>Widal</li>
+<li>Urine Routine & Microscopy</li>
+</ul>
+
+<a class="package-btn"
+href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20Fever%20Package%201.2"
+target="_blank">
+Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- VITAMIN -->
+<div class="package-card">
+
+<div class="package-badge">VITAMIN CARE</div>
+
+<h3>Vitamin Profile</h3>
+
+<div class="package-price">₹1250</div>
+
+<ul>
+<li>Vitamin D (25-OH Hydroxy)</li>
+<li>Vitamin B12</li>
+</ul>
+
+<a class="package-btn"
+href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20Vitamin%20Profile"
+target="_blank">
+Book on WhatsApp
+</a>
+
+</div>
+
+
+<!-- STD -->
+<div class="package-card">
+
+<div class="package-badge">SPECIAL PANEL</div>
+
+<h3>STD Panel</h3>
+
+<div class="package-price">₹2050</div>
+
+<ul>
+<li>HIV I & II</li>
+<li>HSV Combined</li>
+<li>Chlamydia - M</li>
+<li>TPHA</li>
+</ul>
+
+<a class="package-btn"
+href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20STD%20Panel"
+target="_blank">
+Book on WhatsApp
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- TESTS -->
+<section id="tests">
+<div class="container">
+
+<div class="section-title">
+<span>TEST MENU</span>
+<h2>Tests & Prices</h2>
+<p>Search for your required laboratory test.</p>
+</div>
+
+<div class="tests-box">
+
+<input
+type="text"
+id="testSearch"
+class="search"
+placeholder="🔎 Search test e.g. CBC, Vitamin D, LFT..."
+onkeyup="searchTests()">
+
+<div class="table-wrap">
+
+<table id="testTable">
+
+<thead>
+<tr>
+<th>Test</th>
+<th>Price</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>CBC</td><td>₹300</td></tr>
+<tr><td>LFT</td><td>₹600</td></tr>
+<tr><td>Lipid Profile</td><td>₹600</td></tr>
+<tr><td>BSF</td><td>₹100</td></tr>
+<tr><td>HbA1c</td><td>₹400</td></tr>
+<tr><td>Urine RM</td><td>₹100</td></tr>
+<tr><td>Vitamin D</td><td>₹1500</td></tr>
+<tr><td>Vitamin B12</td><td>₹1000</td></tr>
+<tr><td>Iron Profile</td><td>₹500</td></tr>
+<tr><td>Beta HCG</td><td>₹600</td></tr>
+<tr><td>Iron</td><td>₹400</td></tr>
+<tr><td>LH</td><td>₹500</td></tr>
+<tr><td>FSH</td><td>₹500</td></tr>
+<tr><td>Phosphorus</td><td>₹300</td></tr>
+<tr><td>Magnesium</td><td>₹1000</td></tr>
+<tr><td>Hb</td><td>₹100</td></tr>
+<tr><td>Blood Group</td><td>₹100</td></tr>
+<tr><td>Prolactin</td><td>₹500</td></tr>
+<tr><td>PT / INR</td><td>₹400</td></tr>
+
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- HOME COLLECTION -->
+<section class="collection">
+<div class="container">
+
+<div class="collection-box">
+
+<div>
+
+<h2>Home Sample Collection</h2>
+
+<p>
+Can't visit the laboratory? Get your sample collected
+conveniently from your home.
+</p>
+
+<ul class="collection-points">
+<li>Easy WhatsApp booking</li>
+<li>Convenient home sample collection</li>
+<li>Professional laboratory service</li>
+<li>Suitable for routine testing</li>
+</ul>
+
+<br>
+
+<a class="btn btn-primary"
+href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20Home%20Sample%20Collection"
+target="_blank">
+Book Home Collection
+</a>
+
+</div>
+
+<div class="collection-card">
+
+<div style="font-size:45px;">🏠</div>
+
+<strong>Home Collection</strong>
+
+<p>Call / WhatsApp for booking</p>
+
+<a href="tel:+919818962098"
+class="btn btn-secondary">
+📞 +91 98189 62098
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+
+<div class="section-title">
+<span>CONTACT US</span>
+<h2>Visit or Contact Our Laboratory</h2>
+<p>We are here to assist you with your testing needs.</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<div class="contact-item">
+<strong>📞 Phone / WhatsApp</strong>
+<a href="tel:+919818962098">+91 98189 62098</a>
+</div>
+
+<div class="contact-item">
+<strong>⏰ Laboratory Timing</strong>
+<span>8:00 AM – 7:30 PM</span>
+</div>
+
+<div class="contact-item">
+<strong>🏠 Home Sample Collection</strong>
+<span>Available</span>
+</div>
+
+<a class="map-btn"
+href="https://maps.app.goo.gl/goz6WmqaSdZ8zSHPA"
+target="_blank">
+📍 Open Location in Google Maps
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3 style="color:#123b55;margin-bottom:12px;">
+Blood Test & Laboratory
+</h3>
+
+<p style="color:#68798a;margin-bottom:20px;">
+NABL ACCREDITED LAB
+</p>
+
+<p style="color:#68798a;">
+For test bookings, health packages, home sample collection
+or general enquiries, contact us directly by phone or WhatsApp.
+</p>
+
+<br>
+
+<div class="buttons" style="justify-content:flex-start;">
+
+<a class="btn btn-primary"
+href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20information%20about%20your%20laboratory%20services"
+target="_blank">
+💬 WhatsApp
+</a>
+
+<a class="btn btn-secondary"
+href="tel:+919818962098">
+📞 Call
+</a>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="container">
+
+<strong>Blood Test & Laboratory</strong>
+
+<p>NABL ACCREDITED LAB</p>
+
+<p>
+© 2026 Blood Test & Laboratory. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+class="whatsapp-float"
+href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20contact%20Blood%20Test%20%26%20Laboratory"
+target="_blank"
+aria-label="WhatsApp">
+💬
+</a>
+
+
+<!-- MOBILE BOTTOM BAR -->
+
+<div class="mobile-bar">
+
+<a href="tel:+919818962098">
+<span>📞</span>
+Call
+</a>
+
+<a href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20a%20test"
+target="_blank">
+<span>💬</span>
+WhatsApp
+</a>
+
+<a href="https://maps.app.goo.gl/goz6WmqaSdZ8zSHPA"
+target="_blank">
+<span>📍</span>
+Location
+</a>
+
+</div>
+
+
+<script>
+
+/* TEST SEARCH */
+
+function searchTests(){
+
+    var input = document.getElementById("testSearch");
+    var filter = input.value.toLowerCase();
+    var table = document.getElementById("testTable");
+    var rows = table.getElementsByTagName("tr");
+
+    for(var i = 1; i < rows.length; i++){
+
+        var text = rows[i].innerText.toLowerCase();
+
+        if(text.indexOf(filter) > -1){
+            rows[i].style.display = "";
+        }else{
+            rows[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
