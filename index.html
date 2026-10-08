@@ -98,6 +98,7 @@
 
     img {
       max-width: 100%;
+      display: block;
     }
 
     .container {
@@ -254,6 +255,7 @@
       font-weight: 800;
       font-size: 14px;
       transition: .25s;
+      cursor: pointer;
     }
 
     .btn-primary {
@@ -491,6 +493,82 @@
 
     .package li:last-child {
       border-bottom: none;
+    }
+
+
+    /* ================= PACKAGE POSTER ================= */
+
+    .poster-section {
+      width: 100%;
+      margin: 0 auto 45px;
+    }
+
+    .poster-card {
+      max-width: 850px;
+      margin: auto;
+      padding: 18px;
+      background:
+        linear-gradient(145deg, #ffffff, #f0fbfa);
+      border: 1px solid #dcefed;
+      border-radius: 30px;
+      box-shadow: 0 18px 50px rgba(11,143,138,.13);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .poster-card::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(53,199,188,.12);
+      top: -90px;
+      left: -90px;
+    }
+
+    .poster-card::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(86,171,255,.10);
+      bottom: -100px;
+      right: -90px;
+    }
+
+    .poster-card img {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 22px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 12px 30px rgba(0,0,0,.10);
+    }
+
+    .poster-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .poster-buttons .btn {
+      min-width: 190px;
+    }
+
+    .poster-note {
+      margin-top: 14px;
+      color: #688084;
+      font-size: 13px;
+      position: relative;
+      z-index: 2;
     }
 
 
@@ -771,6 +849,24 @@
         padding: 60px 0;
       }
 
+      .poster-card {
+        padding: 10px;
+        border-radius: 22px;
+      }
+
+      .poster-card img {
+        border-radius: 16px;
+      }
+
+      .poster-buttons {
+        flex-direction: column;
+      }
+
+      .poster-buttons .btn {
+        width: 100%;
+        min-width: 0;
+      }
+
       .footer-grid {
         flex-direction: column;
         align-items: flex-start;
@@ -892,7 +988,8 @@
             <a
               class="btn btn-primary"
               href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB,%20I%20want%20to%20book%20a%20test."
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               💬 Book on WhatsApp
             </a>
 
@@ -1192,6 +1289,44 @@
         </div>
 
 
+        <!-- ================= PACKAGE POSTER ================= -->
+
+        <div class="poster-section reveal">
+
+          <div class="poster-card">
+
+            <img
+              src="health-package-1500.png"
+              alt="MAXO Diagnostic Lab Health Package ₹1500">
+
+            <div class="poster-buttons">
+
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB,%20I%20want%20details%20of%20the%20₹1500%20Health%20Package."
+                target="_blank"
+                rel="noopener">
+                💬 Book on WhatsApp
+              </a>
+
+              <a
+                class="btn btn-light"
+                href="tel:+919818962098">
+                📞 Call Now
+              </a>
+
+            </div>
+
+            <div class="poster-note">
+              Health Package ₹1,500 • Contact us to confirm availability and booking
+            </div>
+
+          </div>
+
+        </div>
+
+
+
         <div class="package-grid">
 
 
@@ -1215,7 +1350,8 @@
               class="btn btn-primary"
               style="width:100%;"
               href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB,%20I%20want%20details%20of%20the%20Silver%20Health%20Package."
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               Enquire Now
             </a>
 
@@ -1243,7 +1379,8 @@
               class="btn btn-primary"
               style="width:100%;"
               href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB,%20I%20want%20details%20of%20the%20Gold%20Health%20Package."
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               Enquire Now
             </a>
 
@@ -1272,7 +1409,8 @@
               class="btn btn-primary"
               style="width:100%;"
               href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB,%20I%20want%20to%20book%20Fever%20Package%201.1."
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               Book Package
             </a>
 
@@ -1301,7 +1439,8 @@
               class="btn btn-primary"
               style="width:100%;"
               href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB,%20I%20want%20to%20book%20Fever%20Package%201.2."
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               Book Package
             </a>
 
@@ -1328,7 +1467,8 @@
               class="btn btn-primary"
               style="width:100%;"
               href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB,%20I%20want%20to%20book%20the%20Vitamin%20Profile."
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               Book Package
             </a>
 
@@ -1357,7 +1497,8 @@
               class="btn btn-primary"
               style="width:100%;"
               href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB,%20I%20want%20details%20of%20the%20STD%20Panel."
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               Enquire Now
             </a>
 
@@ -1536,7 +1677,8 @@
           <a
             class="btn btn-light"
             href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB,%20I%20want%20to%20enquire%20about%20a%20blood%20test."
-            target="_blank">
+            target="_blank"
+            rel="noopener">
             💬 WhatsApp Us
           </a>
 
@@ -1633,7 +1775,8 @@
               class="btn btn-primary"
               style="margin-top:15px;"
               href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB,%20I%20want%20to%20enquire%20about%20a%20test."
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               💬 WhatsApp for Enquiry
             </a>
 
@@ -1655,7 +1798,8 @@
             <a
               class="btn btn-primary"
               href="https://maps.app.goo.gl/goz6WmqaSdZ8zSHPA?g_st=awb"
-              target="_blank">
+              target="_blank"
+              rel="noopener">
               📍 Open Google Maps
             </a>
 
@@ -1711,6 +1855,7 @@
     class="whatsapp-float"
     href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB,%20I%20want%20to%20enquire%20about%20a%20test."
     target="_blank"
+    rel="noopener"
     aria-label="Contact MAXO Diagnostic Lab on WhatsApp">
 
     💬
