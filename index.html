@@ -128,13 +128,75 @@ body>*{position:relative;z-index:1}header,.header,footer,.sticky-cta{z-index:60}
 @media(max-width:720px){.draw-grid{grid-template-columns:1fr;gap:24px}.draw-stage{min-height:290px}.draw-section{padding:62px 0}.draw-status{font-size:10px}.motion-control{bottom:76px;right:10px}}
 @media(prefers-reduced-motion:reduce){body:before,body:after{animation:none!important}.draw-stage:before,.draw-stage:after{animation:none!important}.tube-liquid,.blood-drop,.arm-glow{animation:none!important}.btn:after{display:none}}
 
+
+/* ===== MAXO SIGNATURE EDITION: premium motion layer ===== */
+:root{--maxo-electric:#65f5d0;--maxo-violet:#7c8cff;--maxo-glass:rgba(255,255,255,.72)}
+body{background:linear-gradient(135deg,#f5fffc 0%,#f4f7ff 28%,#fff8f1 54%,#eafff8 78%,#f7f5ff 100%);background-size:350% 350%;animation:maxoAurora 24s ease-in-out infinite;}
+@keyframes maxoAurora{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+/* slow, large aurora glows */
+body:before{content:"";position:fixed;inset:-20%;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 15% 20%,#65f5d022,transparent 32%),radial-gradient(ellipse at 82% 34%,#7c8cff1b,transparent 29%),radial-gradient(ellipse at 58% 85%,#ffbc9f20,transparent 31%);filter:blur(20px);animation:maxoAuraDrift 22s ease-in-out infinite alternate}
+@keyframes maxoAuraDrift{0%{transform:translate3d(-2%,0,0) rotate(0deg)}100%{transform:translate3d(2%,-2%,0) rotate(5deg)}}
+/* elegant watermark always behind content; shifts gently with scroll */
+.brand-watermark{position:fixed!important;inset:0!important;z-index:0!important;pointer-events:none!important;opacity:.045!important;overflow:hidden!important;background-image:repeating-linear-gradient(-28deg,transparent 0 145px,transparent 145px 175px)!important}
+.brand-watermark:before{content:"MAXO  •  DIAGNOSTIC LAB  •  MAXO  •  DIAGNOSTIC LAB";position:absolute;left:-18%;top:43%;width:140%;white-space:nowrap;font-size:clamp(24px,4vw,54px);font-weight:1000;letter-spacing:.24em;color:#087f7b;transform:rotate(-19deg) translateY(var(--wm-shift,0px));animation:maxoWatermark 38s linear infinite}
+@keyframes maxoWatermark{0%{margin-left:-12%}100%{margin-left:8%}}
+main,header,footer,.announcement,.quick-strip,.health-poster-section,.draw-section,.contact-section{position:relative;z-index:1}
+/* glowing top announcement and scrolling service ticker */
+.announcement{position:relative;overflow:hidden;background:linear-gradient(100deg,#d9fa8b,#bdf7e8,#d8e6ff,#d9fa8b);background-size:250% 100%;animation:maxoTickerGlow 10s linear infinite;box-shadow:0 5px 25px #0d9e9a13}
+@keyframes maxoTickerGlow{to{background-position:250% 0}}
+.maxo-motion-ticker{position:relative;z-index:2;overflow:hidden;background:#062e36;color:#d8fff4;border-bottom:1px solid #65f5d033;font-size:11px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
+.maxo-motion-track{display:flex;width:max-content;gap:34px;padding:10px 0;animation:maxoTickerRun 34s linear infinite}
+.maxo-motion-track span{display:flex;align-items:center;gap:12px;white-space:nowrap}.maxo-motion-track b{color:#d9fa8b;font-size:15px}
+@keyframes maxoTickerRun{to{transform:translateX(-50%)}}
+/* stronger cinematic hero */
+.hero{background:radial-gradient(ellipse at 80% 15%,#0d9e9a55,transparent 35%),radial-gradient(ellipse at 5% 100%,#7c8cff24,transparent 32%),linear-gradient(125deg,#041f2a 0%,#073b45 46%,#075c62 100%)!important}
+.hero:before{width:min(75vw,900px)!important;height:min(75vw,900px)!important;right:-22%!important;top:-48%!important;background:conic-gradient(from 30deg,transparent,#65f5d02b,transparent,#7c8cff20,transparent)!important;filter:blur(2px);animation:maxoHeroOrbit 28s linear infinite}
+@keyframes maxoHeroOrbit{to{transform:rotate(360deg)}}
+.hero:after{border-color:#bdf7e82b!important;box-shadow:0 0 0 38px #bdf7e808,0 0 0 78px #bdf7e807,0 0 0 118px #bdf7e805!important;animation:maxoRingPulse 8s ease-in-out infinite}
+@keyframes maxoRingPulse{50%{transform:scale(1.04);opacity:.6}}
+.hero h1{background:linear-gradient(100deg,#fff 8%,#d9fa8b 42%,#bdf7e8 67%,#fff 90%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:maxoTextShine 9s linear infinite}
+.hero h1 em{color:#d9fa8b!important;-webkit-text-fill-color:#d9fa8b;filter:drop-shadow(0 0 22px #d9fa8b28)}
+@keyframes maxoTextShine{to{background-position:220% center}}
+.visual{perspective:1000px}.lab-art{filter:drop-shadow(0 30px 35px #001a2055);animation:maxoLabFloat 6s ease-in-out infinite;transform-origin:50% 70%}
+@keyframes maxoLabFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-13px) rotate(1deg)}}
+.visual-orbit{border-color:#bdf7e844!important;box-shadow:0 0 0 24px #bdf7e809,0 0 0 52px #bdf7e806,0 0 80px #0d9e9a30!important;animation:maxoOrbitPulse 7s ease-in-out infinite}
+@keyframes maxoOrbitPulse{50%{transform:scale(1.07) rotate(12deg);opacity:.55}}
+.float-card{border:1px solid #ffffff80!important;background:linear-gradient(135deg,#ffffffed,#eafff6e8)!important;box-shadow:0 22px 60px #001b2738,0 0 0 5px #ffffff0a!important;backdrop-filter:blur(18px);animation:maxoCardBob 5s ease-in-out infinite}
+.float-card.two{animation-delay:-2.2s}@keyframes maxoCardBob{50%{transform:translateY(-9px)}}
+/* glass cards, vibrant edges and restrained lift */
+.service-card,.department-card,.package-card,.price-card,.faq-item,.contact-card,.poster-card,.process-card,.quality-card{border:1px solid #dce9e6!important;box-shadow:0 12px 35px #073b4510;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s!important;}
+.service-card:hover,.department-card:hover,.package-card:hover,.price-card:hover,.faq-item:hover,.poster-card:hover,.process-card:hover{transform:translateY(-8px)!important;box-shadow:0 25px 65px #073b4520,0 0 0 1px #0d9e9a30!important;border-color:#7bdacb!important}
+.packages-section,.health-poster-section,#services,#departments,#tests,#quality,.faq{position:relative;isolation:isolate}
+.packages-section:before,.health-poster-section:before,#services:before,#departments:before,#tests:before,#quality:before,.faq:before{content:"";position:absolute;z-index:-1;pointer-events:none;width:260px;height:260px;border-radius:50%;right:-150px;top:15%;background:radial-gradient(circle,#65f5d01b,transparent 68%);animation:maxoOrb 13s ease-in-out infinite alternate}
+@keyframes maxoOrb{to{transform:translate(-70px,35px) scale(1.25)}}
+.btn{position:relative;overflow:hidden;isolation:isolate;transition:transform .25s,box-shadow .25s!important}
+.btn:after{content:"";position:absolute;z-index:-1;top:-50%;left:-80%;width:42%;height:200%;transform:rotate(24deg);background:linear-gradient(90deg,transparent,#ffffff88,transparent);transition:left .65s ease}
+.btn:hover{transform:translateY(-3px)!important;box-shadow:0 14px 30px #073b4524!important}.btn:hover:after{left:140%}
+/* animated heartbeat line in the sample section */
+.draw-stage{border:1px solid #bdf7e83b!important;background:radial-gradient(circle at 50% 40%,#1db7a41c,transparent 60%),linear-gradient(135deg,#ffffff0b,#ffffff02)!important;box-shadow:inset 0 0 60px #bdf7e808,0 25px 70px #001b2720}
+.draw-stage:after{content:"";position:absolute;left:8%;right:8%;top:18%;height:30px;opacity:.45;pointer-events:none;background-repeat:repeat-x;background-size:180px 30px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 30'%3E%3Cpath d='M0 16H48L58 16L66 4L76 27L87 10L96 16H180' fill='none' stroke='%2365f5d0' stroke-width='2'/%3E%3C/svg%3E");animation:maxoHeartbeat 4s linear infinite}
+@keyframes maxoHeartbeat{to{background-position:-180px 0}}
+/* scroll progress and floating quick-contact buttons */
+#maxo-scroll-progress{position:fixed;top:0;left:0;width:0;height:4px;z-index:9999;background:linear-gradient(90deg,#d9fa8b,#65f5d0,#7c8cff);box-shadow:0 0 16px #65f5d088}
+.maxo-float-contact{position:fixed;right:18px;bottom:22px;z-index:500;display:flex;flex-direction:column;gap:10px}
+.maxo-float-contact a{display:flex;align-items:center;justify-content:center;gap:9px;padding:12px 16px;border-radius:999px;font-size:12px;font-weight:900;text-decoration:none;box-shadow:0 12px 32px #001b2733;transition:transform .25s,box-shadow .25s;border:1px solid #ffffff60;backdrop-filter:blur(12px)}
+.maxo-float-contact a:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 18px 40px #001b2740}.maxo-call{background:#073b45;color:white}.maxo-wa{background:#d9fa8b;color:#073b45}
+/* typography and details */
+.section-head h2{letter-spacing:-.045em}.section-head p{max-width:680px}.quick-strip{box-shadow:0 18px 40px #073b450a}.health-poster-section{background:linear-gradient(135deg,#f6fffc,#f4f6ff 55%,#fffaf4)!important}
+.motion-paused *, .motion-paused *:before, .motion-paused *:after{animation-play-state:paused!important;scroll-behavior:auto!important}
+@media(max-width:700px){.hero{padding:54px 0 62px!important}.hero-grid{gap:25px!important}.hero h1{font-size:clamp(40px,12vw,58px)!important}.maxo-float-contact{right:10px;bottom:10px;flex-direction:row}.maxo-float-contact a{padding:11px 13px;font-size:11px}.brand-watermark:before{font-size:25px;letter-spacing:.15em}.maxo-motion-track{font-size:10px}.float-card{max-width:155px}.draw-stage{min-height:290px!important}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
 </style>
 </head>
 <body>
+<div id="maxo-scroll-progress" aria-hidden="true"></div>
+<div class="maxo-float-contact" aria-label="Quick contact"><a class="maxo-call" href="tel:+919818962098" aria-label="Call MAXO Diagnostic Lab">☎ Call</a><a class="maxo-wa" href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB%2C%20I%20want%20to%20enquire%20about%20a%20test." target="_blank" rel="noopener" aria-label="WhatsApp MAXO Diagnostic Lab">✦ WhatsApp</a></div>
 <div class="brand-watermark" aria-hidden="true"></div>
 <div class="medical-motion-bg" aria-hidden="true"><span class="med-orb orb-a"></span><span class="med-orb orb-b"></span><span class="blood-drop drop-1"></span><span class="blood-drop drop-2"></span><span class="blood-drop drop-3"></span><span class="tube tube-a"></span><span class="tube tube-b"></span><span class="syringe"></span></div>
 
 <div class="announcement">MAXO DIAGNOSTIC LAB · Greater Kailash Part 1, New Delhi</div>
+<div class="maxo-motion-ticker" aria-label="MAXO diagnostic services"><div class="maxo-motion-track" aria-hidden="true"><span><b>✦</b> Blood Test Enquiries</span><span><b>✦</b> Health Packages</span><span><b>✦</b> Routine Investigations</span><span><b>✦</b> Greater Kailash Part 1</span><span><b>✦</b> Call or WhatsApp</span><span><b>✦</b> Sample Collection Enquiries</span><span><b>✦</b> Blood Test Enquiries</span><span><b>✦</b> Health Packages</span><span><b>✦</b> Routine Investigations</span><span><b>✦</b> Greater Kailash Part 1</span><span><b>✦</b> Call or WhatsApp</span><span><b>✦</b> Sample Collection Enquiries</span></div></div>
 <header class="header"><div class="container nav">
 <a class="brand" href="#home" aria-label="MAXO Diagnostic Lab home"><svg class="brandmark" viewBox="0 0 64 64" role="img" aria-label="MAXO lab symbol"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d9e9a"/><stop offset="1" stop-color="#073b45"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="20" fill="url(#lg)"/><path d="M17 18v28h6V29l9 12 9-12v17h6V18h-7L32 31 24 18z" fill="#d9fa8b"/><path d="M48 14l4 4-4 4-4-4z" fill="#bdf7e8"/></svg><span class="brandname">MAXO DIAGNOSTIC LAB<small>CLARITY · CARE · CONFIDENCE</small></span></a>
 <nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="#services">Services</a><a href="#departments">Lab Departments</a><a href="#packages">Packages</a><a href="#tests">Test Prices</a><a href="#quality">Quality Info</a><a href="#contact">Contact</a></nav>
@@ -283,6 +345,18 @@ body>*{position:relative;z-index:1}header,.header,footer,.sticky-cta{z-index:60}
  pause.addEventListener('click',function(){const paused=body.classList.toggle('motion-paused');pause.textContent=paused?'▶ Resume animation':'Ⅱ Pause animation';pause.setAttribute('aria-pressed',String(paused));pause.setAttribute('aria-label',paused?'Resume decorative animations':'Pause decorative animations');});
  const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  if(!reduce){let ticking=false;window.addEventListener('scroll',function(){if(!ticking){window.requestAnimationFrame(function(){body.style.setProperty('--wm-shift',Math.round(window.scrollY*.055)+'px');ticking=false;});ticking=true;}},{passive:true});}
+})();
+</script>
+
+
+<script>
+/* MAXO premium interactions: lightweight scroll progress + reveal polish */
+(function(){
+ const bar=document.getElementById('maxo-scroll-progress');
+ function update(){if(!bar)return;const d=document.documentElement;const max=d.scrollHeight-window.innerHeight;bar.style.width=(max>0?(window.scrollY/max)*100:0)+'%';}
+ window.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);update();
+ // Add accessible motion pause control if the existing one is absent.
+ if(!document.querySelector('.motion-control')){const b=document.createElement('button');b.className='motion-control';b.type='button';b.textContent='Ⅱ Pause motion';b.setAttribute('aria-pressed','false');b.style.cssText='position:fixed;left:12px;bottom:12px;z-index:499;border:1px solid #ffffff80;border-radius:999px;padding:9px 12px;background:#073b45;color:#fff;font-size:11px;font-weight:800;box-shadow:0 8px 22px #001b2722';document.body.appendChild(b);b.addEventListener('click',function(){const paused=document.body.classList.toggle('motion-paused');b.textContent=paused?'▶ Resume motion':'Ⅱ Pause motion';b.setAttribute('aria-pressed',String(paused));});}
 })();
 </script>
 
