@@ -113,7 +113,10 @@ html{scroll-behavior:smooth}
 /* MAXO premium motion layer: slow water flow + subtle branded watermark */
 body:before{content:"MAXO  •  DIAGNOSTIC LAB";position:fixed;z-index:0;pointer-events:none;left:-8vw;top:32vh;width:116vw;text-align:center;font-weight:1000;letter-spacing:.17em;font-size:clamp(28px,7.4vw,104px);white-space:nowrap;color:rgba(7,59,69,.026);transform:translate3d(0,var(--wm-shift,0px),0) rotate(-13deg);transition:transform .15s linear}
 body:after{content:"";position:fixed;z-index:0;pointer-events:none;inset:0;background:radial-gradient(circle at 8% 25%,rgba(13,158,154,.055),transparent 28%),radial-gradient(circle at 88% 72%,rgba(217,250,139,.075),transparent 26%);animation:waterBloom 19s ease-in-out infinite alternate}
-body>*{position:relative;z-index:1}header,.header,footer,.sticky-cta{z-index:60}section{isolation:isolate}section:before{content:"MAXO";position:absolute;z-index:-1;right:-18px;top:12%;font-weight:1000;letter-spacing:.14em;font-size:clamp(60px,13vw,170px);color:rgba(7,59,69,.022);pointer-events:none;transform:rotate(-90deg);transform-origin:center}
+/* FIX: do not override fixed-position contact buttons with body-child positioning */
+body>*{z-index:1}
+body>.maxo-float-contact{position:fixed!important;right:18px;bottom:22px;top:auto;left:auto;z-index:500!important}
+header,.header,footer,.sticky-cta{z-index:60}section{isolation:isolate}section:before{content:"MAXO";position:absolute;z-index:-1;right:-18px;top:12%;font-weight:1000;letter-spacing:.14em;font-size:clamp(60px,13vw,170px);color:rgba(7,59,69,.022);pointer-events:none;transform:rotate(-90deg);transform-origin:center}
 @keyframes waterBloom{0%{opacity:.48;transform:translate3d(-1%,0,0)}100%{opacity:1;transform:translate3d(1%,0,0)}}
 .btn{position:relative;overflow:hidden}.btn:after{content:"";position:absolute;inset:-60% auto -60% -45%;width:35%;transform:rotate(22deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transition:left .6s}.btn:hover:after{left:125%}
 /* Animated educational illustration; not a real patient procedure */
