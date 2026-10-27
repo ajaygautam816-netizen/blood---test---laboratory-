@@ -187,6 +187,52 @@ main,header,footer,.announcement,.quick-strip,.health-poster-section,.draw-secti
 @media(max-width:700px){.hero{padding:54px 0 62px!important}.hero-grid{gap:25px!important}.hero h1{font-size:clamp(40px,12vw,58px)!important}.maxo-float-contact{right:10px;bottom:10px;flex-direction:row}.maxo-float-contact a{padding:11px 13px;font-size:11px}.brand-watermark:before{font-size:25px;letter-spacing:.15em}.maxo-motion-track{font-size:10px}.float-card{max-width:155px}.draw-stage{min-height:290px!important}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
+
+/* MAXO FAST MODE: preserve the premium look while avoiding costly full-screen repainting */
+body{background:linear-gradient(135deg,#f4fbf9 0%,#f5f9ff 55%,#fffaf5 100%)!important;background-size:auto!important;animation:none!important}
+body:before{animation:none!important;transform:none!important;opacity:.035!important}
+.medical-motion-bg{display:none!important}
+.brand-watermark:before{animation:none!important;transform:rotate(-19deg)!important;left:-12%!important;opacity:.55!important}
+.header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(246,250,248,.98)!important}
+.motion-control,.maxo-float-contact{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+/* Avoid expensive blur, pulsing glows and card bobbing; keep short interaction transitions. */
+.maxo-ticker-glow,.maxo-aura,.maxo-orb,.med-orbit,.water-bloom{animation:none!important;filter:none!important}
+.float-card,.hero-orbit,.hero-ring,.maxo-orbit,.maxo-orb{animation:none!important;filter:none!important}
+.test-card,.package-card,.health-poster-card,.service-card{transition:transform .18s ease,opacity .18s ease!important;box-shadow:0 8px 22px rgba(5,49,56,.08)!important}
+#maxo-scroll-progress{transform-origin:left center;box-shadow:none!important}
+@media(max-width:720px){
+ .brand-watermark:before{font-size:20px!important;letter-spacing:.12em!important}
+ .draw-stage{filter:none!important}
+ .health-poster-card img{content-visibility:auto}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+
+/* MAXO Chocolate-Cream Signature Upgrade — lightweight, content-preserving */
+:root{--navy:#32190f;--navy2:#4a2618;--teal:#7b452b;--mint:#f2dfc8;--lime:#d8b16d;--paper:#fffaf4;--white:#fffdf9;--ink:#2b1a13;--muted:#75665d;--line:#eadbce;--shadow:0 14px 38px rgba(63,34,20,.09);--radius:22px}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{background:#fffaf4!important;background-image:radial-gradient(ellipse at 8% 0%,rgba(216,177,109,.13),transparent 34%),radial-gradient(ellipse at 96% 18%,rgba(123,69,43,.07),transparent 28%)!important;background-size:auto!important;animation:none!important;color:var(--ink)}
+.announcement{background:#32190f!important;color:#fff8ef!important;letter-spacing:.07em}.announcement strong{color:#f0d3a2!important}
+.header{background:rgba(255,250,244,.96)!important;backdrop-filter:none!important;border-bottom:1px solid #eadbce!important;box-shadow:0 5px 22px rgba(50,25,15,.05)}
+.brandname small,.navlinks a:hover,.eyebrow,.section-kicker{color:#87502e!important}
+.btn,.button,.primary-btn,.nav-actions a,.cta-button{transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease!important}
+.btn-primary,.btn.primary,.primary-btn,.nav-actions .btn:first-child{background:#32190f!important;color:#fffaf4!important;border-color:#32190f!important;box-shadow:0 7px 18px rgba(50,25,15,.16)}
+.btn-secondary,.btn-outline{border-color:#b88a58!important;color:#4a2618!important;background:#fffaf4!important}
+.btn:hover,.button:hover,.primary-btn:hover,.nav-actions a:hover,.cta-button:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(50,25,15,.15)}
+.card,.service-card,.package-card,.test-card,.feature-card,.poster-card,.price-card{border-color:#eadbce!important;box-shadow:0 8px 26px rgba(63,34,20,.055)!important;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease!important}
+.card:hover,.service-card:hover,.package-card:hover,.test-card:hover,.feature-card:hover,.poster-card:hover,.price-card:hover{transform:translateY(-3px);border-color:#cda77c!important;box-shadow:0 14px 30px rgba(63,34,20,.10)!important}
+section{position:relative}section:nth-of-type(even){background-color:rgba(242,223,200,.16)}
+.hero,.hero-section{background:linear-gradient(125deg,#32190f 0%,#4a2618 58%,#71472f 100%)!important;color:#fffaf4!important;position:relative;isolation:isolate;overflow:hidden}
+.hero h1,.hero-section h1,.hero h2,.hero-section h2{color:#fffaf4!important}.hero p,.hero-section p{color:#f4e6d8!important}.hero .highlight,.hero .accent{color:#f0d3a2!important}
+.hero:after,.hero-section:after{content:"MAXO  •  DIAGNOSTIC LAB";position:absolute;z-index:-1;right:-3%;bottom:3%;font-size:clamp(28px,7vw,94px);font-weight:900;letter-spacing:.12em;color:rgba(255,250,244,.045);white-space:nowrap;pointer-events:none}
+/* Subtle accent line instead of costly full-page moving effects */
+section h2:after{content:"";display:block;width:54px;height:3px;margin-top:12px;border-radius:9px;background:linear-gradient(90deg,#87502e,#d8b16d)}
+#maxo-scroll-progress{background:linear-gradient(90deg,#87502e,#d8b16d)!important;height:3px!important;box-shadow:0 0 7px rgba(216,177,109,.25)!important}
+footer,.footer{background:#32190f!important;color:#fff5e9!important}footer a,.footer a{color:#f0d3a2!important}
+.poster-card img,.package-card img{border-radius:14px}
+/* Keep all motion modest and respect visitors who prefer reduced motion. */
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+@media(max-width:700px){.header{backdrop-filter:none!important}.card:hover,.service-card:hover,.package-card:hover,.test-card:hover,.feature-card:hover,.poster-card:hover,.price-card:hover{transform:none}}
+
 </style>
 </head>
 <body>
@@ -337,26 +383,19 @@ main,header,footer,.announcement,.quick-strip,.health-poster-section,.draw-secti
 </script>
 
 <script>
-(function(){
- const body=document.body;
- const pause=document.createElement('button');
- pause.className='motion-control';pause.type='button';pause.setAttribute('aria-pressed','false');pause.textContent='Ⅱ Pause animation';pause.setAttribute('aria-label','Pause decorative animations');
- document.body.appendChild(pause);
- pause.addEventListener('click',function(){const paused=body.classList.toggle('motion-paused');pause.textContent=paused?'▶ Resume animation':'Ⅱ Pause animation';pause.setAttribute('aria-pressed',String(paused));pause.setAttribute('aria-label',paused?'Resume decorative animations':'Pause decorative animations');});
- const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- if(!reduce){let ticking=false;window.addEventListener('scroll',function(){if(!ticking){window.requestAnimationFrame(function(){body.style.setProperty('--wm-shift',Math.round(window.scrollY*.055)+'px');ticking=false;});ticking=true;}},{passive:true});}
-})();
 </script>
 
 
 <script>
-/* MAXO premium interactions: lightweight scroll progress + reveal polish */
+/* Lightweight scroll progress only; decorative animations are CSS-driven. */
 (function(){
  const bar=document.getElementById('maxo-scroll-progress');
- function update(){if(!bar)return;const d=document.documentElement;const max=d.scrollHeight-window.innerHeight;bar.style.width=(max>0?(window.scrollY/max)*100:0)+'%';}
- window.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);update();
- // Add accessible motion pause control if the existing one is absent.
- if(!document.querySelector('.motion-control')){const b=document.createElement('button');b.className='motion-control';b.type='button';b.textContent='Ⅱ Pause motion';b.setAttribute('aria-pressed','false');b.style.cssText='position:fixed;left:12px;bottom:12px;z-index:499;border:1px solid #ffffff80;border-radius:999px;padding:9px 12px;background:#073b45;color:#fff;font-size:11px;font-weight:800;box-shadow:0 8px 22px #001b2722';document.body.appendChild(b);b.addEventListener('click',function(){const paused=document.body.classList.toggle('motion-paused');b.textContent=paused?'▶ Resume motion':'Ⅱ Pause motion';b.setAttribute('aria-pressed',String(paused));});}
+ if(!bar)return;
+ let ticking=false;
+ function update(){const d=document.documentElement;const max=d.scrollHeight-window.innerHeight;bar.style.transform='scaleX('+(max>0?window.scrollY/max:0)+')';ticking=false;}
+ bar.style.transformOrigin='left center';
+ window.addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(update);ticking=true;}},{passive:true});
+ window.addEventListener('resize',update,{passive:true});update();
 })();
 </script>
 
