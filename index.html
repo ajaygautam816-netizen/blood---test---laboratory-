@@ -8,7 +8,7 @@
   <title>MAXO DIAGNOSTIC LAB | Blood Tests & Health Packages</title>
   <meta name="description" content="MAXO DIAGNOSTIC LAB, Greater Kailash Part 1, New Delhi. Blood test booking, health packages, home sample collection and WhatsApp enquiries.">
   <meta name="keywords" content="Maxo Diagnostic Lab, blood test Greater Kailash, diagnostic lab Delhi, blood test prices, home sample collection, health packages">
-  <meta name="theme-color" content="#087f8c">
+  <meta name="theme-color" content="#174f43">
   <link rel="canonical" href="https://maxodiagnosticlab.in/">
   <meta property="og:title" content="MAXO DIAGNOSTIC LAB">
   <meta property="og:description" content="Blood tests, health packages and sample collection in Greater Kailash, New Delhi.">
@@ -442,7 +442,87 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition: none !important; }
     }
-  </style>
+  
+/* MAXO patient-first visual upgrade */
+:root{--forest:#174f43;--forest2:#236b58;--cream:#fbf8ef;--sand:#f0e8d7;--coral:#e88768;--ink:#18352f;--muted:#63766f;--line:#e1e9df;--paper:#fffefa;--shadow:0 18px 48px rgba(24,53,47,.10)}
+body{background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+.top-strip{background:var(--forest);letter-spacing:.01em}
+header,.site-header,.navbar,.nav-wrap{background:rgba(255,254,250,.96)!important;backdrop-filter:blur(14px)}
+a{transition:color .2s ease,transform .2s ease}
+button,.btn,.button{border-radius:999px!important}
+.container{width:min(1200px,92%)}
+section{scroll-margin-top:100px}
+h1,h2,h3{letter-spacing:-.035em;line-height:1.12}
+h1{font-size:clamp(2.4rem,5vw,4.8rem)!important;max-width:760px}
+h2{font-size:clamp(1.8rem,3vw,2.7rem)!important}
+p{line-height:1.72}
+.card,.package-card,.test-card,.service-card,.price-card{border:1px solid var(--line)!important;border-radius:24px!important;box-shadow:0 10px 28px rgba(24,53,47,.055)!important;background:var(--paper)!important}
+.card:hover,.package-card:hover,.test-card:hover,.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)!important}
+.primary,.btn-primary,.button-primary{background:var(--forest)!important;color:white!important}
+.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#f8f4e8 0%,#edf5ed 58%,#e1eee5 100%)!important;padding:clamp(44px,7vw,90px) 0!important}
+.hero:before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:#e6bda8;opacity:.22;right:-100px;top:-110px}
+.hero:after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;border:1px solid rgba(23,79,67,.15);right:10%;bottom:-150px}
+.hero .container,.hero-inner,.hero-content{position:relative;z-index:1}
+.maxo-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center}
+.maxo-eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #cbdccf;background:#fffdf6;padding:8px 13px;border-radius:999px;font-size:.8rem;font-weight:750;color:var(--forest);margin-bottom:20px}
+.maxo-eyebrow span{width:8px;height:8px;border-radius:50%;background:#4e9a72;box-shadow:0 0 0 4px #dceddf}
+.maxo-hero-copy{max-width:660px}
+.maxo-hero-copy p{font-size:1.08rem;max-width:600px;color:#52685f}
+.maxo-search{display:flex;gap:10px;max-width:590px;background:#fffefa;padding:8px;border:1px solid #dce6dc;border-radius:18px;box-shadow:0 12px 30px rgba(24,53,47,.07);margin:24px 0 14px}
+.maxo-search input{min-width:0;flex:1;border:0;outline:0;background:transparent;padding:12px 14px;color:var(--ink)}
+.maxo-search button{border:0;background:var(--forest);color:white;padding:12px 18px;font-weight:750;cursor:pointer}
+.maxo-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.maxo-pills a{font-size:.82rem;padding:8px 12px;background:#fffdf7;border:1px solid #dce5d9;border-radius:999px}
+.maxo-visual{position:relative;min-height:360px;display:grid;place-items:center}
+.maxo-visual .visual-panel{width:min(100%,470px);border-radius:34px;background:linear-gradient(145deg,#e0ede2,#fff9e9);border:1px solid #d3e1d4;padding:20px;box-shadow:0 26px 60px rgba(23,79,67,.13)}
+.maxo-visual svg{display:block;width:100%;height:auto}
+.maxo-float-card{position:absolute;background:#fffefa;border:1px solid #dfe8dc;border-radius:18px;padding:13px 16px;box-shadow:var(--shadow);font-size:.85rem;font-weight:750}
+.maxo-float-card small{display:block;color:var(--muted);font-weight:500}
+.maxo-float-card.one{left:-4px;top:45px}.maxo-float-card.two{right:-4px;bottom:45px}
+.maxo-trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px auto 0}
+.maxo-trust-item{background:rgba(255,254,250,.75);border:1px solid #dfe8dc;border-radius:16px;padding:15px;display:flex;gap:10px;align-items:center;font-size:.88rem;font-weight:700}
+.maxo-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:#e4efe4;color:var(--forest);flex-shrink:0}
+.maxo-section{padding:clamp(46px,6vw,78px) 0}
+.maxo-section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px}
+.maxo-section-head p{max-width:560px;color:var(--muted);margin-bottom:0}
+.maxo-grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.maxo-grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.maxo-info-card{padding:24px;border:1px solid var(--line);border-radius:24px;background:var(--paper);box-shadow:0 10px 25px rgba(24,53,47,.04)}
+.maxo-info-card .icon{width:54px;height:54px;border-radius:17px;display:grid;place-items:center;background:#e7f0e5;font-size:1.5rem;margin-bottom:18px}
+.maxo-info-card h3{font-size:1.18rem;margin:0 0 9px}
+.maxo-info-card p{font-size:.93rem;color:var(--muted);margin:0}
+.maxo-info-card .meta{display:inline-block;margin-top:15px;font-size:.78rem;font-weight:750;color:var(--forest);background:#e9f2e7;padding:6px 9px;border-radius:8px}
+.maxo-test-library{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.maxo-test{border:1px solid var(--line);border-radius:22px;background:#fffefa;padding:21px;display:flex;flex-direction:column;gap:10px}
+.maxo-test .test-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.maxo-test .test-symbol{width:44px;height:44px;border-radius:14px;background:#e7f0e5;display:grid;place-items:center;font-size:1.3rem}
+.maxo-test .test-tag{font-size:.72rem;background:#f5eddf;color:#765d37;border-radius:999px;padding:5px 8px;font-weight:750}
+.maxo-test h3{font-size:1.1rem;margin:0}
+.maxo-test p{font-size:.9rem;color:var(--muted);margin:0}
+.maxo-test .test-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid #edf0e9}
+.maxo-test .test-foot strong{font-size:1.03rem}
+.maxo-test .test-foot a{font-size:.82rem;font-weight:800;color:var(--forest);text-decoration:underline;text-underline-offset:3px}
+.maxo-note{border-left:4px solid var(--coral);background:#fff4ec;border-radius:0 16px 16px 0;padding:16px 18px;color:#644b40;font-size:.9rem}
+.maxo-prep{background:#edf3e8;border-radius:28px;padding:clamp(22px,4vw,38px);display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:start}
+.maxo-prep ul{margin:0;padding-left:20px}.maxo-prep li{padding:5px 0;color:#50675d}
+.maxo-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.maxo-step{padding:22px;border-radius:22px;background:#fffefa;border:1px solid var(--line)}
+.maxo-step .number{width:34px;height:34px;border-radius:50%;background:var(--forest);color:white;display:grid;place-items:center;font-weight:800;margin-bottom:15px}
+.maxo-step p{font-size:.9rem;color:var(--muted);margin-bottom:0}
+.maxo-faq details{padding:18px 0;border-bottom:1px solid var(--line)}
+.maxo-faq summary{font-weight:800;cursor:pointer}
+.maxo-faq details p{color:var(--muted);margin-bottom:0}
+.maxo-disclaimer{font-size:.82rem;color:#718077;max-width:950px}
+.maxo-cta{border-radius:30px;padding:clamp(26px,5vw,48px);background:var(--forest);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:22px}
+.maxo-cta p{color:#d8e6db;margin-bottom:0}
+.maxo-cta a{background:#fff8e9;color:var(--forest);padding:13px 20px;border-radius:999px;font-weight:800;white-space:nowrap}
+.maxo-section.alt{background:#f2f0e5}
+.maxo-mini-label{font-size:.77rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--forest2)}
+@media(max-width:850px){.maxo-hero-grid{grid-template-columns:1fr}.maxo-visual{min-height:280px;max-width:520px;margin:auto;width:100%}.maxo-grid-4,.maxo-trust-row{grid-template-columns:repeat(2,1fr)}.maxo-grid-3,.maxo-test-library{grid-template-columns:repeat(2,minmax(0,1fr))}.maxo-steps{grid-template-columns:repeat(2,1fr)}.maxo-prep{grid-template-columns:1fr}}
+@media(max-width:560px){.maxo-grid-3,.maxo-test-library,.maxo-grid-4,.maxo-trust-row,.maxo-steps{grid-template-columns:1fr}.maxo-section-head{display:block}.maxo-search{flex-wrap:wrap}.maxo-search input{flex-basis:100%}.maxo-search button{width:100%}.maxo-float-card.one{left:0;top:10px}.maxo-float-card.two{right:0;bottom:10px}.maxo-cta{display:block}.maxo-cta a{display:inline-block;margin-top:18px}.maxo-visual{min-height:260px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+</style>
 
 <style id="maxo-upgrade-2026">
 :root{--mx-forest:#164b3d;--mx-leaf:#2f8065;--mx-cream:#fbf8f0;--mx-gold:#d4a85c;--mx-ink:#17332c}
@@ -501,50 +581,78 @@ html{scroll-behavior:smooth;scroll-padding-top:92px} body{background:linear-grad
         <a href="#contact"><span class="qicon">💬</span><span>Talk to MAXO<small>Call or WhatsApp</small></span></a>
       </div>
     </section>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">✦ YOUR HEALTH, OUR PRIORITY</span>
-          <h1>Clear information.<br><span>Careful collection.</span></h1>
-          <p>
-            Welcome to MAXO DIAGNOSTIC LAB, Greater Kailash Part 1, New Delhi.
-            Enquire about blood tests, health packages and home sample collection.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/919818962098?text=Hello%20MAXO%20DIAGNOSTIC%20LAB%2C%20I%20want%20to%20book%20a%20test." target="_blank" rel="noopener">✆ Book on WhatsApp</a>
-            <a class="btn btn-secondary" href="#tests">⌕ View Test Prices</a>
-          </div>
-          <p class="hero-note">Please confirm test preparation, availability and final price before visiting or booking.</p>
-
-          <div class="trust-row">
-            <div class="trust-item"><span class="trust-icon">🕗</span><span>Open daily<br>8 AM – 7:30 PM</span></div>
-            <div class="trust-item"><span class="trust-icon">🏠</span><span>Home sample<br>collection enquiries</span></div>
-            <div class="trust-item"><span class="trust-icon">📍</span><span>Greater Kailash 1<br>New Delhi</span></div>
-          </div>
+    
+<section class="hero" id="home">
+  <div class="container">
+    <div class="maxo-hero-grid">
+      <div class="maxo-hero-copy">
+        <div class="maxo-eyebrow"><span></span> Diagnostic information, made easier</div>
+        <h1>Understand your tests.<br><span style="color:#236b58">Take the next step with clarity.</span></h1>
+        <p>Explore common blood and urine tests, learn what they generally measure, review MAXO's listed prices, and contact our team to confirm preparation, availability and collection details.</p>
+        <form class="maxo-search" id="maxoSearchForm">
+          <input id="maxoTestSearch" type="search" placeholder="Search CBC, thyroid, vitamin D, sugar…" aria-label="Search tests">
+          <button type="submit">Find a test ↗</button>
+        </form>
+        <div class="maxo-pills">
+          <a href="#test-library">Browse tests</a><a href="#packages">Health packages</a><a href="#home-collection">Home collection enquiry</a>
         </div>
-
-        <div class="hero-visual">
-          <div class="floating-chip chip-one">🧪 Diagnostic Services</div>
-          <div class="visual-card">
-            <div class="visual-icon">
-              <svg width="190" height="140" viewBox="0 0 190 140" fill="none" aria-hidden="true">
-                <circle cx="95" cy="70" r="62" fill="#D5F5ED"/>
-                <path d="M45 35h32M51 35v47a15 15 0 0 0 30 0V35" stroke="#087F8C" stroke-width="5" stroke-linecap="round"/>
-                <path d="M51 66h30M57 78h18" stroke="#27B6A3" stroke-width="5" stroke-linecap="round"/>
-                <path d="M112 25l28 28M106 31l28 28M120 17l20 20" stroke="#337CC0" stroke-width="5" stroke-linecap="round"/>
-                <path d="M113 51l-20 31a13 13 0 0 0 22 14l20-31" stroke="#337CC0" stroke-width="5" stroke-linecap="round"/>
-                <path d="M102 68l14 9" stroke="#337CC0" stroke-width="5" stroke-linecap="round"/>
-                <circle cx="137" cy="99" r="10" fill="#F1C36E"/>
-                <path d="M132 99l4 4 7-8" stroke="#805813" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Simple, convenient booking</h3>
-            <p>Ask about available tests, packages, sample collection and preparation instructions.</p>
-          </div>
-          <div class="floating-chip chip-two">💚 Patient-focused service</div>
+        <div class="maxo-trust-row">
+          <div class="maxo-trust-item"><span class="maxo-icon">⌕</span>Clear test information</div>
+          <div class="maxo-trust-item"><span class="maxo-icon">₹</span>Listed prices</div>
+          <div class="maxo-trust-item"><span class="maxo-icon">⌂</span>Collection enquiry</div>
+          <div class="maxo-trust-item"><span class="maxo-icon">✓</span>Details confirmed before booking</div>
         </div>
       </div>
-    </section>
+      <div class="maxo-visual" aria-label="Original illustration of diagnostic sample tubes and laboratory report">
+        <div class="visual-panel">
+          <svg viewBox="0 0 520 430" role="img" aria-label="Illustration of blood sample tubes, microscope and lab report">
+            <defs>
+              <linearGradient id="tube" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fffefa"/><stop offset="1" stop-color="#dcebe0"/></linearGradient>
+              <linearGradient id="sample" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#d96d61"/><stop offset="1" stop-color="#a83c3d"/></linearGradient>
+            </defs>
+            <circle cx="270" cy="210" r="168" fill="#f9f2df"/>
+            <circle cx="270" cy="210" r="138" fill="#dbe9dc"/>
+            <path d="M55 340 Q140 285 210 330 T460 326" fill="none" stroke="#b6cdbb" stroke-width="3" stroke-linecap="round"/>
+            <g transform="translate(245 62) rotate(8)">
+              <rect x="0" y="0" width="160" height="230" rx="18" fill="#fffefa" stroke="#d0dfd1" stroke-width="3"/>
+              <rect x="20" y="22" width="85" height="12" rx="6" fill="#174f43"/>
+              <rect x="20" y="45" width="118" height="7" rx="3.5" fill="#d8e5d9"/>
+              <rect x="20" y="61" width="100" height="7" rx="3.5" fill="#d8e5d9"/>
+              <rect x="20" y="88" width="120" height="58" rx="10" fill="#edf4e9"/>
+              <path d="M30 128 L52 115 L73 122 L96 101 L125 109" fill="none" stroke="#e88768" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="20" y="164" width="120" height="7" rx="3.5" fill="#d8e5d9"/>
+              <rect x="20" y="180" width="90" height="7" rx="3.5" fill="#d8e5d9"/>
+              <rect x="20" y="196" width="105" height="7" rx="3.5" fill="#d8e5d9"/>
+            </g>
+            <g transform="translate(100 110) rotate(-9)">
+              <rect x="0" y="0" width="62" height="190" rx="20" fill="url(#tube)" stroke="#a8c6b0" stroke-width="3"/>
+              <rect x="5" y="88" width="52" height="94" rx="15" fill="url(#sample)"/>
+              <rect x="-4" y="-10" width="70" height="32" rx="9" fill="#174f43"/>
+              <rect x="12" y="36" width="38" height="8" rx="4" fill="#d0dfd1"/>
+            </g>
+            <g transform="translate(174 154) rotate(8)">
+              <rect x="0" y="0" width="54" height="168" rx="18" fill="url(#tube)" stroke="#a8c6b0" stroke-width="3"/>
+              <rect x="5" y="80" width="44" height="82" rx="13" fill="#e7a35f"/>
+              <rect x="-5" y="-10" width="64" height="30" rx="8" fill="#236b58"/>
+              <rect x="10" y="34" width="34" height="7" rx="3.5" fill="#d0dfd1"/>
+            </g>
+            <g transform="translate(332 290)">
+              <circle cx="0" cy="0" r="42" fill="#fffefa" stroke="#c9ddcb" stroke-width="3"/>
+              <path d="M-16 -6 L-4 7 L20 -18" fill="none" stroke="#236b58" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <g transform="translate(54 315)">
+              <rect x="0" y="0" width="100" height="56" rx="16" fill="#fffefa" stroke="#d4e1d3" stroke-width="2"/>
+              <path d="M20 35 L33 22 L47 29 L62 15 L80 20" fill="none" stroke="#236b58" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="maxo-float-card one">Test information<small>Know what a test measures</small></div>
+        <div class="maxo-float-card two">Ask before you book<small>Confirm preparation & price</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
     <section class="mx-how section" aria-labelledby="mx-how-title">
       <div class="container">
         <div class="mx-section-head"><span class="eyebrow">A SIMPLE PROCESS</span><h2 id="mx-how-title">Getting started is easy</h2><p>Find the test, confirm the details with our team, and plan your visit or ask about home sample collection.</p></div>
@@ -558,7 +666,134 @@ html{scroll-behavior:smooth;scroll-padding-top:92px} body{background:linear-grad
     </section>
 
 
-    <section id="services">
+    
+<section class="maxo-section" id="test-library">
+  <div class="container">
+    <div class="maxo-section-head">
+      <div><div class="maxo-mini-label">Explore the basics</div><h2>Popular tests, explained simply</h2></div>
+      <p>Learn what each test commonly measures and what to ask before sample collection. A test alone does not confirm a diagnosis.</p>
+    </div>
+    <div class="maxo-test-library" id="maxoTestCards">
+      <article class="maxo-test" data-search="cbc complete blood count hemoglobin red white cells platelets">
+        <div class="test-top"><div class="test-symbol">🩸</div><span class="test-tag">Blood count</span></div><h3>CBC / Complete Blood Count</h3>
+        <p>Measures red blood cells, white blood cells, haemoglobin and platelets. Clinicians may use it when assessing anaemia, infection clues or general health.</p>
+        <div class="test-foot"><strong>MAXO listed price: ₹300</strong><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20CBC%20test%20price%20and%20preparation.">Ask / enquire ↗</a></div>
+      </article>
+      <article class="maxo-test" data-search="thyroid profile t3 t4 tsh thyroid function">
+        <div class="test-top"><div class="test-symbol">🦋</div><span class="test-tag">Hormones</span></div><h3>Thyroid Profile (T3, T4, TSH)</h3>
+        <p>Measures thyroid-related hormones to help a clinician assess thyroid function. The exact profile may differ; confirm which components are included.</p>
+        <div class="test-foot"><strong>Price on enquiry</strong><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20thyroid%20profile%20components%2C%20price%20and%20preparation.">Ask price ↗</a></div>
+      </article>
+      <article class="maxo-test" data-search="hba1c glycated hemoglobin average blood sugar diabetes">
+        <div class="test-top"><div class="test-symbol">◉</div><span class="test-tag">Blood sugar</span></div><h3>HbA1c</h3>
+        <p>Reflects average blood glucose over roughly the past 2–3 months. Doctors use it for diabetes screening and monitoring when appropriate.</p>
+        <div class="test-foot"><strong>MAXO listed price: ₹400</strong><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20HbA1c%20price%20and%20sample%20details.">Ask / enquire ↗</a></div>
+      </article>
+      <article class="maxo-test" data-search="lft liver function test enzymes bilirubin protein">
+        <div class="test-top"><div class="test-symbol">🧪</div><span class="test-tag">Liver health</span></div><h3>LFT / Liver Function Tests</h3>
+        <p>A group of blood measurements that may include liver enzymes, bilirubin and proteins. Results need to be interpreted alongside symptoms and medical history.</p>
+        <div class="test-foot"><strong>MAXO listed price: ₹600</strong><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20LFT%20components%20and%20price.">Ask / enquire ↗</a></div>
+      </article>
+      <article class="maxo-test" data-search="lipid profile cholesterol triglycerides heart cardiovascular">
+        <div class="test-top"><div class="test-symbol">♡</div><span class="test-tag">Heart health</span></div><h3>Lipid Profile</h3>
+        <p>Measures types of fats in the blood, commonly including total cholesterol, HDL, LDL and triglycerides. Preparation requirements can vary.</p>
+        <div class="test-foot"><strong>MAXO listed price: ₹600</strong><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20lipid%20profile%20price%20and%20whether%20fasting%20is%20needed.">Ask / enquire ↗</a></div>
+      </article>
+      <article class="maxo-test" data-search="vitamin d 25 hydroxy bone health deficiency">
+        <div class="test-top"><div class="test-symbol">☀</div><span class="test-tag">Vitamins</span></div><h3>Vitamin D (25-OH)</h3>
+        <p>Measures 25-hydroxy vitamin D, used to assess vitamin D status. A clinician can advise whether testing is useful based on your situation.</p>
+        <div class="test-foot"><strong>MAXO listed price: ₹1,500</strong><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20Vitamin%20D%20test%20price.">Ask / enquire ↗</a></div>
+      </article>
+      <article class="maxo-test" data-search="vitamin b12 cobalamin red blood cells nerves">
+        <div class="test-top"><div class="test-symbol">🌿</div><span class="test-tag">Vitamins</span></div><h3>Vitamin B12</h3>
+        <p>Helps assess B12 levels, which are relevant to red blood cell formation and nerve function. A result is interpreted with clinical context.</p>
+        <div class="test-foot"><strong>MAXO listed price: ₹1,000</strong><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20Vitamin%20B12%20test%20price.">Ask / enquire ↗</a></div>
+      </article>
+      <article class="maxo-test" data-search="urine routine microscopy urine rm cells crystals infection">
+        <div class="test-top"><div class="test-symbol">💧</div><span class="test-tag">Urine analysis</span></div><h3>Urine Routine & Microscopy</h3>
+        <p>Examines urine characteristics and may identify cells, crystals or other findings that help a clinician assess urinary and general health.</p>
+        <div class="test-foot"><strong>MAXO listed price: ₹100</strong><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20urine%20routine%20test%20price%20and%20collection%20instructions.">Ask / enquire ↗</a></div>
+      </article>
+      <article class="maxo-test" data-search="kft rft kidney function creatinine urea electrolytes">
+        <div class="test-top"><div class="test-symbol">🫧</div><span class="test-tag">Kidney health</span></div><h3>KFT / RFT</h3>
+        <p>Kidney-function panels may include creatinine, urea and electrolytes. The exact panel varies, so ask which measurements are included and the price.</p>
+        <div class="test-foot"><strong>Price on enquiry</strong><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20share%20KFT%2FRFT%20components%20and%20price.">Ask price ↗</a></div>
+      </article>
+    </div>
+    <p class="maxo-disclaimer" style="margin-top:20px">Prices marked “MAXO listed price” are from the existing website content and should be reconfirmed before booking. Other prices are intentionally not guessed. Test selection and interpretation should be guided by a qualified healthcare professional.</p>
+  </div>
+</section>
+
+<section class="maxo-section alt" id="before-test">
+  <div class="container">
+    <div class="maxo-section-head">
+      <div><div class="maxo-mini-label">Before your sample</div><h2>Prepare with confidence</h2></div>
+      <p>Preparation depends on the test and your clinician's instructions. If you are unsure, contact MAXO before travelling or collecting a sample.</p>
+    </div>
+    <div class="maxo-prep">
+      <div><div class="maxo-mini-label">Quick checklist</div><h3 style="font-size:1.55rem;margin:.6rem 0 1rem">A few simple things to check</h3><p style="color:var(--muted)">These general pointers help you ask the right questions—follow the instructions given for your specific test.</p></div>
+      <ul>
+        <li><strong>Fasting:</strong> do not fast unless the specific test or your clinician requires it; confirm the duration in advance.</li>
+        <li><strong>Medicines:</strong> do not stop prescribed medicines unless your clinician tells you to.</li>
+        <li><strong>Water:</strong> ask whether plain water is permitted during any required fasting period.</li>
+        <li><strong>Urine sample:</strong> ask for the correct container and whether a clean-catch or midstream sample is required.</li>
+        <li><strong>Previous reports:</strong> keep relevant old reports available for your doctor to compare.</li>
+        <li><strong>Timing:</strong> confirm sample collection hours, price, test components and expected report time directly with MAXO.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="maxo-section" id="quality">
+  <div class="container">
+    <div class="maxo-section-head">
+      <div><div class="maxo-mini-label">Clarity before booking</div><h2>What to confirm with your lab</h2></div>
+      <p>Professional service starts with clear answers. Here are useful questions to ask before you book any diagnostic test.</p>
+    </div>
+    <div class="maxo-grid-3">
+      <article class="maxo-info-card"><div class="icon">🔬</div><h3>Which test is included?</h3><p>Ask for the exact test name, panel components and sample type. Similar names can refer to different panels.</p><span class="meta">Test details</span></article>
+      <article class="maxo-info-card"><div class="icon">🧾</div><h3>What is the total price?</h3><p>Confirm the current price, any collection charge, and whether the listed package includes every test you need.</p><span class="meta">Price transparency</span></article>
+      <article class="maxo-info-card"><div class="icon">🧑‍⚕️</div><h3>Who interprets the report?</h3><p>Laboratory results are not a diagnosis by themselves. Discuss abnormal, unexpected or worrying results with your doctor.</p><span class="meta">Clinical context matters</span></article>
+    </div>
+    <div class="maxo-note" style="margin-top:18px"><strong>Accreditation and quality note:</strong> MAXO's website should display NABL or other accreditation claims only if the centre or testing laboratory has current, verifiable accreditation for the relevant scope. Do not assume a partner lab's accreditation automatically applies to every service. Ask the team for applicable details.</div>
+  </div>
+</section>
+
+<section class="maxo-section alt" id="home-collection">
+  <div class="container">
+    <div class="maxo-section-head">
+      <div><div class="maxo-mini-label">Simple process</div><h2>How to arrange a test enquiry</h2></div>
+      <p>Start with an enquiry. MAXO can confirm availability and the next steps before any appointment is finalised.</p>
+    </div>
+    <div class="maxo-steps">
+      <article class="maxo-step"><div class="number">1</div><h3>Choose a test</h3><p>Search the test list or share the name written on your prescription.</p></article>
+      <article class="maxo-step"><div class="number">2</div><h3>Confirm details</h3><p>Ask for the current price, test components and preparation instructions.</p></article>
+      <article class="maxo-step"><div class="number">3</div><h3>Discuss collection</h3><p>Confirm whether collection is available at the centre or at home for your area.</p></article>
+      <article class="maxo-step"><div class="number">4</div><h3>Ask about reports</h3><p>Confirm the expected reporting time and how results will be shared.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="maxo-section" id="faq">
+  <div class="container">
+    <div class="maxo-section-head"><div><div class="maxo-mini-label">Helpful answers</div><h2>Frequently asked questions</h2></div></div>
+    <div class="maxo-faq">
+      <details><summary>Do I need a prescription for every test?</summary><p>Requirements depend on the test and local rules. For advice on which investigation is appropriate, speak with a qualified clinician.</p></details>
+      <details><summary>Should I fast before a blood test?</summary><p>Not every blood test requires fasting. Confirm the specific test instructions with the lab or the clinician who ordered it.</p></details>
+      <details><summary>Can I choose a test based only on symptoms?</summary><p>Symptoms can have many causes. Avoid self-diagnosing or ordering a large panel without guidance; a clinician can help decide which tests are relevant.</p></details>
+      <details><summary>Does a high or low result always mean disease?</summary><p>No. Results need to be interpreted alongside reference ranges, symptoms, medical history, medicines and sometimes repeat or additional testing.</p></details>
+      <details><summary>How do I confirm price and availability?</summary><p>Use the WhatsApp enquiry link or call MAXO at 9818962098 before visiting. Prices and availability can change.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="maxo-section">
+  <div class="container">
+    <div class="maxo-cta"><div><div class="maxo-mini-label" style="color:#cce3d1">Need help choosing the next step?</div><h2 style="margin:.5rem 0">Share your test name with MAXO.</h2><p>Confirm current pricing, preparation and collection availability before booking.</p></div><a href="https://wa.me/919818962098?text=Hello%20MAXO%20Diagnostic%20Lab%2C%20I%20would%20like%20to%20enquire%20about%20a%20test.">Enquire on WhatsApp ↗</a></div>
+  </div>
+</section>
+
+<section id="services">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">OUR SERVICES</span>
@@ -889,5 +1124,29 @@ html{scroll-behavior:smooth;scroll-padding-top:92px} body{background:linear-grad
     // Automatically update footer year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+<script>
+(function(){
+  const form=document.getElementById('maxoSearchForm');
+  const input=document.getElementById('maxoTestSearch');
+  const cards=Array.from(document.querySelectorAll('#maxoTestCards .maxo-test'));
+  function runSearch(q){
+    const query=(q||'').trim().toLowerCase();
+    let matches=0;
+    cards.forEach(card=>{
+      const text=((card.innerText||'')+' '+(card.getAttribute('data-search')||'')).toLowerCase();
+      const show=!query||text.includes(query);
+      card.style.display=show?'flex':'none';
+      if(show)matches++;
+    });
+    let notice=document.getElementById('maxoSearchNotice');
+    if(!notice){notice=document.createElement('p');notice.id='maxoSearchNotice';notice.setAttribute('aria-live','polite');notice.style.cssText='font-weight:700;color:#174f43;margin:0 0 16px';document.getElementById('maxoTestCards').before(notice);}
+    notice.textContent=query?(matches?('Showing '+matches+' matching test entr'+(matches===1?'y':'ies')+'.'):'No match in this quick list. WhatsApp MAXO to ask about another test.'):'';
+    if(query) document.getElementById('test-library').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  if(form&&input){form.addEventListener('submit',function(e){e.preventDefault();runSearch(input.value);});input.addEventListener('input',function(){if(input.value.trim().length>=2)runSearch(input.value);else if(!input.value.trim())runSearch('');});}
+})();
+</script>
+
 </body>
 </html>
