@@ -51,7 +51,7 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -76,7 +76,6 @@
     header {
       position: sticky;
       top: 0;
-      width: 100%;
       z-index: 100;
       background: rgba(255,255,255,.96);
       backdrop-filter: blur(12px);
@@ -406,7 +405,7 @@
       .nav-links {
         display: none;
         position: absolute;
-        top: 69px; left: 0; right: 0; max-height: calc(100vh - 80px); overflow-y: auto;
+        top: 69px; left: 0; right: 0;
         background: white;
         padding: 15px 4% 20px;
         border-bottom: 1px solid var(--line);
@@ -443,108 +442,21 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition: none !important; }
     }
-
-
-    /* MAXO SCIENCE MOTION: lightweight CSS/SVG accents, no animation libraries */
-    :root{--cream:#fbf8ef;--beige:#eee4d3;--forest:#164e45;--sage:#cfe5d6;--cocoa:#553b32;--coral:#df6b62;--lime:#d9f27b}
-    body{background:var(--cream);overflow-x:clip}
-    .top-strip{background:var(--forest);letter-spacing:.25px}
-    header{top:0;background:rgba(251,248,239,.96);border-bottom-color:#d8e4d7;backdrop-filter:blur(8px)}
-    .brand-mark{background:linear-gradient(145deg,#e2f4e7,#f3e6d4);border-color:#c8dfd0}
-    .brand-tag{color:var(--forest)}
-    .nav-links a:hover{color:#b35b4e}
-    .nav-cta,.btn-primary{background:var(--forest)}
-    .btn-secondary{color:var(--forest);border-color:#d8e4d7;background:#fffdf7}
-    .hero{position:relative;isolation:isolate;background:radial-gradient(circle at 86% 18%,rgba(217,242,123,.35),transparent 28%),radial-gradient(circle at 8% 88%,rgba(207,229,214,.8),transparent 34%),linear-gradient(125deg,#fbf8ef,#edf5e9 55%,#f4e7d8)}
-    .hero:before{content:"MAXO  •  DIAGNOSTIC  •  LAB";position:absolute;z-index:-1;right:-4%;top:15%;font-size:clamp(30px,6vw,82px);font-weight:900;letter-spacing:.12em;white-space:nowrap;color:rgba(22,78,69,.045);transform:rotate(-9deg);pointer-events:none}
-    h1 span{color:var(--forest)}
-    .eyebrow{background:#e4efe1;color:var(--forest);border-color:#d0e2d0}
-    .hero-visual{perspective:900px}
-    .visual-card{background:rgba(255,253,247,.91);border-color:#dce9d9;box-shadow:0 18px 45px rgba(35,72,55,.10);animation:cardFloat 6s ease-in-out infinite}
-    .visual-icon{position:relative;overflow:hidden;background:linear-gradient(145deg,#e7f2e6,#f6e9d7)}
-    .visual-icon:after{content:"";position:absolute;left:-30%;top:0;width:25%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);animation:labShine 5.5s ease-in-out infinite}
-    .floating-chip{background:#fffdf7;border-color:#dfe8d8;color:var(--forest)}
-    .chip-one{animation:chipFloat 5s ease-in-out infinite}
-    .chip-two{animation:chipFloat 5.8s ease-in-out infinite reverse}
-    .trust-item{border-color:#e2e7d8;background:rgba(255,253,247,.88)}
-    section{position:relative}
-    #services{background:linear-gradient(180deg,#fbf8ef,#f3f6ec)}
-    .service-card{border-color:#e1e5d8;background:#fffdf8}
-    .service-card:hover{border-color:#b9d6c0}
-    .service-icon{background:linear-gradient(145deg,#e1f0df,#f4e7d7)}
-    .packages-section{background:linear-gradient(180deg,#eaf3e8,#f7f1e6)}
-    .package-card{background:#fffdf8;border-color:#e1e3d6}
-    .package-card.featured{border-color:var(--forest);box-shadow:0 15px 34px rgba(22,78,69,.12)}
-    .package-tag{background:#e5efe0;color:var(--forest)}
-    .price{color:var(--forest)}
-    .tests-wrap{background:#fffdf8;border-color:#e4e4d9;box-shadow:0 12px 30px rgba(61,67,47,.06)}
-    th{background:#eef4e9;color:#3c5a4b}
-    .search-box:focus{border-color:var(--forest);box-shadow:0 0 0 3px #e1efdf}
-    .process-card{background:#fffdf8;border-color:#e1e5d8}
-    .step-number{background:var(--forest)}
-    .contact-section{background:linear-gradient(135deg,#153f39,#1b5549 60%,#2c6251)}
-    .notice{background:#fff6e5;border-color:#ead9b8;color:#70552d}
-    footer{background:#102f2b}
-    .mobile-bar{background:rgba(251,248,239,.97);border-top-color:#dbe4d7}
-    .maxo-watermark{position:fixed;z-index:0;left:-3vw;bottom:12vh;pointer-events:none;user-select:none;font-size:clamp(48px,11vw,150px);font-weight:1000;letter-spacing:.1em;color:rgba(22,78,69,.035);transform:rotate(-90deg);transform-origin:left bottom;white-space:nowrap}
-    .lab-orbit{position:absolute;right:2%;top:30%;width:90px;height:90px;border:1px solid rgba(22,78,69,.12);border-radius:50%;pointer-events:none;animation:orbitSpin 18s linear infinite}
-    .lab-orbit:before,.lab-orbit:after{content:"";position:absolute;border-radius:50%;background:#df6b62;opacity:.7}
-    .lab-orbit:before{width:9px;height:9px;top:8px;left:12px}
-    .lab-orbit:after{width:6px;height:6px;bottom:10px;right:6px;background:#b9d76c}
-    @keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-    @keyframes chipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-    @keyframes labShine{0%,55%{left:-35%}85%,100%{left:120%}}
-    @keyframes orbitSpin{to{transform:rotate(360deg)}}
-    @media(max-width:680px){.maxo-watermark{display:none}.lab-orbit{width:55px;height:55px;right:0;top:18%;opacity:.6}.visual-card{animation:none}.chip-one,.chip-two{animation:none}.hero:before{top:8%;font-size:28px}}
-    @media(prefers-reduced-motion:reduce){.visual-card,.chip-one,.chip-two,.visual-icon:after,.lab-orbit{animation:none!important}}
-
-
-    /* Patient-first, mobile-friendly test discovery */
-    :root{--teal:#087f7b;--teal-dark:#075d59;--mint:#e5f8f2;--blue:#edf5ff;--ink:#18323a;--muted:#61757b;--line:#e1ece9;--forest:#075d50;--radius:22px;--shadow:0 12px 32px rgba(18,70,63,.08)}
-    body{background:#f7faf8;color:#18323a}
-    .top-strip{background:#064d45}
-    header{box-shadow:0 4px 18px rgba(18,70,63,.045)}
-    .brand-mark{background:linear-gradient(145deg,#e5f8f2,#eef5ff);border-radius:17px}
-    .nav-cta{background:#087f7b;border-radius:12px}
-    .hero{background:radial-gradient(circle at 88% 12%,rgba(100,211,174,.18),transparent 30%),linear-gradient(120deg,#f4fbf8,#f3f7ff)}
-    .discover-section{padding:34px 0 60px;background:#fff}
-    .discover-panel{padding:clamp(22px,4vw,42px);border:1px solid #e3efea;border-radius:28px;background:linear-gradient(125deg,#f0faf6,#f5f8ff);box-shadow:0 15px 42px rgba(14,83,70,.06)}
-    .discover-copy h2,.popular-head h2{font-size:clamp(25px,3vw,35px);line-height:1.2;letter-spacing:-.8px;margin:12px 0 8px}
-    .discover-copy p{color:#60767a;max-width:700px;margin:0 0 22px}
-    .discover-search{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #d9e8e2;border-radius:16px;padding:8px 9px 8px 17px;box-shadow:0 8px 25px rgba(14,83,70,.06);max-width:850px}
-    .discover-search>span{font-size:27px;color:#087f7b;line-height:1}
-    .discover-search input{min-width:0;flex:1;border:0;outline:0;background:transparent;padding:12px 4px;color:#18323a}
-    .discover-search button{border:0;border-radius:11px;padding:12px 20px;background:#087f7b;color:#fff;font-weight:800;cursor:pointer;white-space:nowrap}
-    .discover-search button:hover{background:#075d59}
-    .quick-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}
-    .quick-links a{display:inline-flex;align-items:center;gap:7px;padding:10px 13px;border:1px solid #e0ebe6;background:rgba(255,255,255,.82);border-radius:999px;font-size:13px;font-weight:700;color:#31514d;transition:transform .2s,border-color .2s}
-    .quick-links a:hover{transform:translateY(-2px);border-color:#8acbbc;color:#087f7b}
-    .popular-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:42px 0 19px}
-    .popular-head h2{margin-bottom:0}
-    .text-link{font-size:14px;font-weight:800;color:#087f7b;white-space:nowrap}
-    .popular-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
-    .popular-card{display:flex;align-items:center;gap:12px;min-width:0;padding:17px 15px;background:#fff;border:1px solid #e3ece8;border-radius:18px;box-shadow:0 7px 24px rgba(20,64,56,.045);transition:transform .2s,box-shadow .2s,border-color .2s}
-    .popular-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,64,56,.09);border-color:#b9ddd2}
-    .popular-icon{width:45px;height:45px;flex:0 0 45px;display:grid;place-items:center;border-radius:14px;font-size:22px}
-    .icon-red{background:#fff0ee}.icon-blue{background:#edf4ff}.icon-green{background:#e8f8ef}.icon-purple{background:#f3efff}
-    .popular-info{min-width:0;flex:1}.popular-info h3{font-size:15px;margin:0 0 2px}.popular-info p{font-size:11px;color:#6b7f82;margin:0 0 7px;line-height:1.35}.popular-info strong{font-size:17px;color:#075d50}
-    .popular-card>a{display:grid;place-items:center;flex:0 0 31px;width:31px;height:31px;border-radius:10px;background:#e9f7f1;color:#087f7b;font-weight:900}
-    .section-heading h2{letter-spacing:-.8px}
-    .service-card,.package-card,.tests-wrap,.contact-card{border-color:#e1ece8;box-shadow:0 10px 28px rgba(20,64,56,.055)}
-    .btn-primary{background:#087f7b}
-    .btn-primary:hover{background:#075d59}
-    .search-box{border-radius:12px;border-color:#d9e8e2}
-    .table-scroll table th{background:#eff8f4}
-    a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #7bd4bf;outline-offset:3px}
-    @media(max-width:900px){.popular-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{gap:28px}}
-    @media(max-width:600px){.discover-section{padding:22px 0 40px}.discover-panel{padding:20px 16px;border-radius:20px}.discover-search{gap:7px;padding-left:11px}.discover-search button{padding:11px 13px}.discover-search input{font-size:14px}.quick-links{gap:8px}.quick-links a{font-size:12px;padding:9px 11px}.popular-head{align-items:start;margin-top:30px}.popular-head h2{font-size:24px}.popular-grid{grid-template-columns:1fr;gap:10px}.popular-card{padding:13px}.nav{min-height:70px}.brand-name{font-size:14px}.brand-tag{font-size:9px;letter-spacing:1.2px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
-
   </style>
+
+<style id="maxo-upgrade-2026">
+:root{--mx-forest:#164b3d;--mx-leaf:#2f8065;--mx-cream:#fbf8f0;--mx-gold:#d4a85c;--mx-ink:#17332c}
+html{scroll-behavior:smooth;scroll-padding-top:92px} body{background:linear-gradient(180deg,#fbf9f3 0%,#fff 34%,#f4f8f4 100%);color:var(--mx-ink)}
+.top-strip{background:#123c31!important;color:#f7f1df!important} header{background:rgba(255,255,255,.96)!important;backdrop-filter:blur(14px);box-shadow:0 8px 30px #173b2c0c;border-bottom:1px solid #e7eee6}
+.brand-mark{background:#e5f1e7!important;border-radius:15px}.brand-name{color:var(--mx-forest)!important}.nav-cta,.btn-primary{background:linear-gradient(135deg,#174d3d,#2c8063)!important;box-shadow:0 10px 22px #164b3d24!important}.hero{background:radial-gradient(circle at 80% 15%,#e2f0df 0,transparent 31%),linear-gradient(135deg,#fbf8f0,#f1f7ef)!important;overflow:hidden;position:relative}.hero:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #2f80651f;border-radius:50%;right:-90px;bottom:-120px;pointer-events:none}.hero h1{letter-spacing:-.045em}.eyebrow{color:#287358!important;letter-spacing:.13em}.visual-card,.package-card,.service-card,.test-card,.contact-card{border:1px solid #e4ece2!important;box-shadow:0 14px 40px #1b44330a!important;border-radius:22px!important;transition:transform .22s ease,box-shadow .22s ease}.visual-card:hover,.package-card:hover,.service-card:hover,.test-card:hover{transform:translateY(-4px);box-shadow:0 18px 42px #1b44331b!important}.btn{border-radius:13px!important}.section{padding-top:76px;padding-bottom:76px}.mx-quick{padding:24px 0 8px}.mx-quick-inner{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.mx-quick a{display:flex;align-items:center;gap:12px;padding:17px 18px;border:1px solid #e1eade;background:#fff;border-radius:17px;color:#183e31;text-decoration:none;font-weight:700;box-shadow:0 8px 24px #173b2c08;transition:.2s}.mx-quick a:hover{border-color:#91bca2;transform:translateY(-3px)}.mx-quick .qicon{display:grid;place-items:center;width:42px;height:42px;flex:0 0 42px;border-radius:13px;background:#e9f3e8;font-size:21px}.mx-quick small{display:block;color:#6d8174;font-weight:500;margin-top:3px}.mx-how{background:#f2f6ee;border-block:1px solid #e5ece0}.mx-how-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.mx-step{background:#fff;border:1px solid #e2eadd;border-radius:20px;padding:23px;min-height:175px}.mx-step .num{display:inline-grid;place-items:center;width:35px;height:35px;background:#174d3d;color:#fff;border-radius:12px;font-weight:800;margin-bottom:15px}.mx-step h3{margin:0 0 8px;font-size:1.05rem}.mx-step p{margin:0;color:#65766b;line-height:1.65;font-size:.94rem}.mx-section-head{max-width:720px;margin:0 auto 28px;text-align:center}.mx-section-head h2{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.035em}.mx-section-head p{color:#66796d;line-height:1.7}.tests-toolbar{gap:16px}.search-box{border:1px solid #d7e4d6!important;border-radius:13px!important;min-height:48px}.tests-wrap{border-radius:20px;overflow:hidden;border:1px solid #e3ebe0;box-shadow:0 14px 35px #173b2c09}#tests table th{background:#eaf2e7!important;color:#234e3a}#tests table td{background:#fff}#tests table tr:hover td{background:#f8fbf6}.table-note{color:#65766b}.footer{background:#123c31!important}
+@media(max-width:800px){.mx-quick-inner{grid-template-columns:repeat(2,minmax(0,1fr))}.mx-how-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section{padding-top:54px;padding-bottom:54px}}
+@media(max-width:480px){.mx-quick-inner{gap:9px}.mx-quick a{padding:12px 10px;gap:8px;font-size:.9rem}.mx-quick .qicon{width:35px;height:35px;flex-basis:35px;font-size:18px}.mx-how-grid{grid-template-columns:1fr}.hero-actions{flex-wrap:wrap}.hero-actions .btn{width:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+
 </head>
 
 <body>
-  <div class="maxo-watermark" aria-hidden="true">MAXO LAB</div>
   <div class="top-strip">
     <strong>MAXO DIAGNOSTIC LAB</strong> &nbsp;|&nbsp; Daily: 8:00 AM – 7:30 PM
   </div>
@@ -581,8 +493,15 @@
   </header>
 
   <main>
+    <section class="mx-quick" aria-label="Quick links">
+      <div class="container mx-quick-inner">
+        <a href="#tests"><span class="qicon">🔎</span><span>Find a test<small>Search test names</small></span></a>
+        <a href="#packages"><span class="qicon">🩺</span><span>Health packages<small>Explore checkups</small></span></a>
+        <a href="#services"><span class="qicon">🏡</span><span>Home collection<small>Ask about availability</small></span></a>
+        <a href="#contact"><span class="qicon">💬</span><span>Talk to MAXO<small>Call or WhatsApp</small></span></a>
+      </div>
+    </section>
     <section class="hero" id="home">
-      <div class="lab-orbit" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">✦ YOUR HEALTH, OUR PRIORITY</span>
@@ -626,39 +545,18 @@
         </div>
       </div>
     </section>
-
-    <section class="discover-section" id="discover">
+    <section class="mx-how section" aria-labelledby="mx-how-title">
       <div class="container">
-        <div class="discover-panel">
-          <div class="discover-copy">
-            <span class="eyebrow">FIND A TEST WITH EASE</span>
-            <h2>What test are you looking for?</h2>
-            <p>Search our listed tests, check indicative prices, then message MAXO to confirm availability and booking details.</p>
-          </div>
-          <form class="discover-search" id="discoverSearchForm" role="search">
-            <span aria-hidden="true">⌕</span>
-            <input id="discoverSearch" type="search" placeholder="Try CBC, Vitamin D, LFT…" aria-label="Search available tests">
-            <button type="submit">Find test</button>
-          </form>
-          <div class="quick-links" aria-label="Quick test categories">
-            <a href="#tests" data-test-query="CBC">🩸 Blood tests</a>
-            <a href="#tests" data-test-query="Urine">🧪 Urine tests</a>
-            <a href="#packages">💚 Health packages</a>
-            <a href="#contact">🏠 Home collection enquiry</a>
-          </div>
-        </div>
-        <div class="popular-head">
-          <div><span class="eyebrow">POPULAR TESTS</span><h2>Quick access to common tests</h2></div>
-          <a class="text-link" href="#tests">View all tests <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="popular-grid">
-          <article class="popular-card"><div class="popular-icon icon-red">🩸</div><div class="popular-info"><h3>CBC</h3><p>Complete Blood Count</p><strong>₹300</strong></div><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20I%20want%20to%20enquire%20about%20CBC." target="_blank" rel="noopener" aria-label="Enquire about CBC">↗</a></article>
-          <article class="popular-card"><div class="popular-icon icon-blue">🧬</div><div class="popular-info"><h3>HbA1c</h3><p>Glycated haemoglobin</p><strong>₹400</strong></div><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20I%20want%20to%20enquire%20about%20HbA1c." target="_blank" rel="noopener" aria-label="Enquire about HbA1c">↗</a></article>
-          <article class="popular-card"><div class="popular-icon icon-green">🧫</div><div class="popular-info"><h3>LFT</h3><p>Liver Function Test</p><strong>₹600</strong></div><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20I%20want%20to%20enquire%20about%20LFT." target="_blank" rel="noopener" aria-label="Enquire about LFT">↗</a></article>
-          <article class="popular-card"><div class="popular-icon icon-purple">💧</div><div class="popular-info"><h3>Urine R/M</h3><p>Routine & microscopy</p><strong>₹100</strong></div><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20I%20want%20to%20enquire%20about%20Urine%20R%2FM." target="_blank" rel="noopener" aria-label="Enquire about Urine R/M">↗</a></article>
+        <div class="mx-section-head"><span class="eyebrow">A SIMPLE PROCESS</span><h2 id="mx-how-title">Getting started is easy</h2><p>Find the test, confirm the details with our team, and plan your visit or ask about home sample collection.</p></div>
+        <div class="mx-how-grid">
+          <article class="mx-step"><span class="num">01</span><h3>Find your test</h3><p>Use the test search or browse the available health packages.</p></article>
+          <article class="mx-step"><span class="num">02</span><h3>Confirm details</h3><p>Ask us about current price, availability and any preparation required.</p></article>
+          <article class="mx-step"><span class="num">03</span><h3>Plan collection</h3><p>Contact the lab to discuss a visit or home sample collection availability.</p></article>
+          <article class="mx-step"><span class="num">04</span><h3>Ask about reports</h3><p>Confirm the expected report timing and how the report will be shared.</p></article>
         </div>
       </div>
     </section>
+
 
     <section id="services">
       <div class="container">
@@ -822,6 +720,14 @@
                 <tr><td>Blood Group</td><td>₹100</td><td><a href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20Blood%20Group%20test." target="_blank" rel="noopener">Enquire ↗</a></td></tr>
                 <tr><td>Prolactin</td><td>₹500</td><td><a href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20Prolactin." target="_blank" rel="noopener">Enquire ↗</a></td></tr>
                 <tr><td>PT/INR</td><td>₹400</td><td><a href="https://wa.me/919818962098?text=Hello%2C%20I%20want%20to%20book%20PT%2FINR." target="_blank" rel="noopener">Enquire ↗</a></td></tr>
+                <tr><td>Thyroid Profile (T3, T4, TSH)</td><td>Ask for price</td><td><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20the%20price%20and%20availability%20for%20Thyroid%20Profile." target="_blank" rel="noopener">Enquire ↗</a></td></tr>
+                <tr><td>Kidney Function Test (KFT/RFT)</td><td>Ask for price</td><td><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20the%20price%20and%20availability%20for%20KFT." target="_blank" rel="noopener">Enquire ↗</a></td></tr>
+                <tr><td>Fasting Blood Sugar (FBS)</td><td>Ask for price</td><td><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20the%20price%20and%20availability%20for%20FBS." target="_blank" rel="noopener">Enquire ↗</a></td></tr>
+                <tr><td>ESR (Erythrocyte Sedimentation Rate)</td><td>Ask for price</td><td><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20the%20price%20and%20availability%20for%20ESR." target="_blank" rel="noopener">Enquire ↗</a></td></tr>
+                <tr><td>CRP (C-Reactive Protein)</td><td>Ask for price</td><td><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20the%20price%20and%20availability%20for%20CRP." target="_blank" rel="noopener">Enquire ↗</a></td></tr>
+                <tr><td>Dengue NS1 Antigen</td><td>Ask for price</td><td><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20the%20price%20and%20availability%20for%20Dengue%20NS1." target="_blank" rel="noopener">Enquire ↗</a></td></tr>
+                <tr><td>Malaria Antigen</td><td>Ask for price</td><td><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20the%20price%20and%20availability%20for%20Malaria%20Antigen." target="_blank" rel="noopener">Enquire ↗</a></td></tr>
+                <tr><td>Vitamin B9 (Folic Acid)</td><td>Ask for price</td><td><a href="https://wa.me/919818962098?text=Hello%20MAXO%2C%20please%20confirm%20the%20price%20and%20availability%20for%20Vitamin%20B9." target="_blank" rel="noopener">Enquire ↗</a></td></tr>
               </tbody>
             </table>
           </div>
@@ -961,27 +867,6 @@
         menuToggle.textContent = "☰";
       });
     });
-
-
-    // Top-level test search mirrors into the complete price-list search.
-    var discoverForm = document.getElementById("discoverSearchForm");
-    var discoverInput = document.getElementById("discoverSearch");
-    var fullTestSearch = document.getElementById("testSearch");
-    if (discoverForm && discoverInput && fullTestSearch) {
-      discoverForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        fullTestSearch.value = discoverInput.value.trim();
-        fullTestSearch.dispatchEvent(new Event("input", { bubbles: true }));
-        document.getElementById("tests").scrollIntoView({ behavior: "smooth", block: "start" });
-        setTimeout(function(){ fullTestSearch.focus({preventScroll:true}); }, 350);
-      });
-      document.querySelectorAll("[data-test-query]").forEach(function(link){
-        link.addEventListener("click", function(){
-          fullTestSearch.value = link.getAttribute("data-test-query") || "";
-          fullTestSearch.dispatchEvent(new Event("input", { bubbles: true }));
-        });
-      });
-    }
 
     // Search test names and prices
     const testSearch = document.getElementById("testSearch");
